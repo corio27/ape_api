@@ -28,6 +28,12 @@ func init() {
 			),
 		),
 
+		beego.NSNamespace("/componente",
+			beego.NSInclude(
+				&controllers.ComponenteController{},
+			),
+		),
+
 		beego.NSNamespace("/departamento",
 			beego.NSInclude(
 				&controllers.DepartamentoController{},
@@ -64,9 +70,45 @@ func init() {
 			),
 		),
 
+		beego.NSNamespace("/preparacion",
+			beego.NSInclude(
+				&controllers.PreparacionController{},
+			),
+		),
+
+		beego.NSNamespace("/producto",
+			beego.NSInclude(
+				&controllers.ProductoController{},
+			),
+		),
+
+		beego.NSNamespace("/proveedor",
+			beego.NSInclude(
+				&controllers.ProveedorController{},
+			),
+		),
+
 		beego.NSNamespace("/rango_edad",
 			beego.NSInclude(
 				&controllers.RangoEdadController{},
+			),
+		),
+
+		beego.NSNamespace("/rol",
+			beego.NSInclude(
+				&controllers.RolController{},
+			),
+		),
+
+		beego.NSNamespace("/rol_persona_institucion",
+			beego.NSInclude(
+				&controllers.RolPersonaInstitucionController{},
+			),
+		),
+
+		beego.NSNamespace("/tipo_alimento",
+			beego.NSInclude(
+				&controllers.TipoAlimentoController{},
 			),
 		),
 

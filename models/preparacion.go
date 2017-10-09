@@ -9,48 +9,45 @@ import (
 	"github.com/astaxie/beego/orm"
 )
 
-type ComplementoInstitucion struct {
-	Id            int `orm:"column(id);auto"`
-	ComplementoId int `orm:"column(complemento_id);null"`
-	JornadaId     int `orm:"column(jornada_id);null"`
-	Cantidad      int `orm:"column(cantidad);null"`
-	InstitucionId int `orm:"column(institucion_id);null"`
-	RangoEdadId   int `orm:"column(rango_edad_id);null"`
+type Preparacion struct {
+	Id           int    `orm:"column(id);pk"`
+	Nombre       string `orm:"column(nombre);size(100);null"`
+	ComponenteId int    `orm:"column(componente_id);null"`
 }
 
-func (t *ComplementoInstitucion) TableName() string {
-	return "complemento_institucion"
+func (t *Preparacion) TableName() string {
+	return "preparacion"
 }
 
 func init() {
-	orm.RegisterModel(new(ComplementoInstitucion))
+	orm.RegisterModel(new(Preparacion))
 }
 
-// AddComplementoInstitucion insert a new ComplementoInstitucion into database and returns
+// AddPreparacion insert a new Preparacion into database and returns
 // last inserted Id on success.
-func AddComplementoInstitucion(m *ComplementoInstitucion) (id int64, err error) {
+func AddPreparacion(m *Preparacion) (id int64, err error) {
 	o := orm.NewOrm()
 	id, err = o.Insert(m)
 	return
 }
 
-// GetComplementoInstitucionById retrieves ComplementoInstitucion by Id. Returns error if
+// GetPreparacionById retrieves Preparacion by Id. Returns error if
 // Id doesn't exist
-func GetComplementoInstitucionById(id int) (v *ComplementoInstitucion, err error) {
+func GetPreparacionById(id int) (v *Preparacion, err error) {
 	o := orm.NewOrm()
-	v = &ComplementoInstitucion{Id: id}
+	v = &Preparacion{Id: id}
 	if err = o.Read(v); err == nil {
 		return v, nil
 	}
 	return nil, err
 }
 
-// GetAllComplementoInstitucion retrieves all ComplementoInstitucion matches certain condition. Returns empty list if
+// GetAllPreparacion retrieves all Preparacion matches certain condition. Returns empty list if
 // no records exist
-func GetAllComplementoInstitucion(query map[string]string, fields []string, sortby []string, order []string,
+func GetAllPreparacion(query map[string]string, fields []string, sortby []string, order []string,
 	offset int64, limit int64) (ml []interface{}, err error) {
 	o := orm.NewOrm()
-	qs := o.QueryTable(new(ComplementoInstitucion))
+	qs := o.QueryTable(new(Preparacion))
 	// query k=v
 	for k, v := range query {
 		// rewrite dot-notation to Object__Attribute
@@ -96,7 +93,7 @@ func GetAllComplementoInstitucion(query map[string]string, fields []string, sort
 		}
 	}
 
-	var l []ComplementoInstitucion
+	var l []Preparacion
 	qs = qs.OrderBy(sortFields...)
 	if _, err = qs.Limit(limit, offset).All(&l, fields...); err == nil {
 		if len(fields) == 0 {
@@ -119,11 +116,11 @@ func GetAllComplementoInstitucion(query map[string]string, fields []string, sort
 	return nil, err
 }
 
-// UpdateComplementoInstitucion updates ComplementoInstitucion by Id and returns error if
+// UpdatePreparacion updates Preparacion by Id and returns error if
 // the record to be updated doesn't exist
-func UpdateComplementoInstitucionById(m *ComplementoInstitucion) (err error) {
+func UpdatePreparacionById(m *Preparacion) (err error) {
 	o := orm.NewOrm()
-	v := ComplementoInstitucion{Id: m.Id}
+	v := Preparacion{Id: m.Id}
 	// ascertain id exists in the database
 	if err = o.Read(&v); err == nil {
 		var num int64
@@ -134,15 +131,15 @@ func UpdateComplementoInstitucionById(m *ComplementoInstitucion) (err error) {
 	return
 }
 
-// DeleteComplementoInstitucion deletes ComplementoInstitucion by Id and returns error if
+// DeletePreparacion deletes Preparacion by Id and returns error if
 // the record to be deleted doesn't exist
-func DeleteComplementoInstitucion(id int) (err error) {
+func DeletePreparacion(id int) (err error) {
 	o := orm.NewOrm()
-	v := ComplementoInstitucion{Id: id}
+	v := Preparacion{Id: id}
 	// ascertain id exists in the database
 	if err = o.Read(&v); err == nil {
 		var num int64
-		if num, err = o.Delete(&ComplementoInstitucion{Id: id}); err == nil {
+		if num, err = o.Delete(&Preparacion{Id: id}); err == nil {
 			fmt.Println("Number of records deleted in database:", num)
 		}
 	}

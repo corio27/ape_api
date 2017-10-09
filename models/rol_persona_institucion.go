@@ -9,48 +9,46 @@ import (
 	"github.com/astaxie/beego/orm"
 )
 
-type ComplementoInstitucion struct {
+type RolPersonaInstitucion struct {
 	Id            int `orm:"column(id);auto"`
-	ComplementoId int `orm:"column(complemento_id);null"`
-	JornadaId     int `orm:"column(jornada_id);null"`
-	Cantidad      int `orm:"column(cantidad);null"`
+	PersonaId     int `orm:"column(persona_id);null"`
+	RolId         int `orm:"column(rol_id);null"`
 	InstitucionId int `orm:"column(institucion_id);null"`
-	RangoEdadId   int `orm:"column(rango_edad_id);null"`
 }
 
-func (t *ComplementoInstitucion) TableName() string {
-	return "complemento_institucion"
+func (t *RolPersonaInstitucion) TableName() string {
+	return "rol_persona_institucion"
 }
 
 func init() {
-	orm.RegisterModel(new(ComplementoInstitucion))
+	orm.RegisterModel(new(RolPersonaInstitucion))
 }
 
-// AddComplementoInstitucion insert a new ComplementoInstitucion into database and returns
+// AddRolPersonaInstitucion insert a new RolPersonaInstitucion into database and returns
 // last inserted Id on success.
-func AddComplementoInstitucion(m *ComplementoInstitucion) (id int64, err error) {
+func AddRolPersonaInstitucion(m *RolPersonaInstitucion) (id int64, err error) {
 	o := orm.NewOrm()
 	id, err = o.Insert(m)
 	return
 }
 
-// GetComplementoInstitucionById retrieves ComplementoInstitucion by Id. Returns error if
+// GetRolPersonaInstitucionById retrieves RolPersonaInstitucion by Id. Returns error if
 // Id doesn't exist
-func GetComplementoInstitucionById(id int) (v *ComplementoInstitucion, err error) {
+func GetRolPersonaInstitucionById(id int) (v *RolPersonaInstitucion, err error) {
 	o := orm.NewOrm()
-	v = &ComplementoInstitucion{Id: id}
+	v = &RolPersonaInstitucion{Id: id}
 	if err = o.Read(v); err == nil {
 		return v, nil
 	}
 	return nil, err
 }
 
-// GetAllComplementoInstitucion retrieves all ComplementoInstitucion matches certain condition. Returns empty list if
+// GetAllRolPersonaInstitucion retrieves all RolPersonaInstitucion matches certain condition. Returns empty list if
 // no records exist
-func GetAllComplementoInstitucion(query map[string]string, fields []string, sortby []string, order []string,
+func GetAllRolPersonaInstitucion(query map[string]string, fields []string, sortby []string, order []string,
 	offset int64, limit int64) (ml []interface{}, err error) {
 	o := orm.NewOrm()
-	qs := o.QueryTable(new(ComplementoInstitucion))
+	qs := o.QueryTable(new(RolPersonaInstitucion))
 	// query k=v
 	for k, v := range query {
 		// rewrite dot-notation to Object__Attribute
@@ -96,7 +94,7 @@ func GetAllComplementoInstitucion(query map[string]string, fields []string, sort
 		}
 	}
 
-	var l []ComplementoInstitucion
+	var l []RolPersonaInstitucion
 	qs = qs.OrderBy(sortFields...)
 	if _, err = qs.Limit(limit, offset).All(&l, fields...); err == nil {
 		if len(fields) == 0 {
@@ -119,11 +117,11 @@ func GetAllComplementoInstitucion(query map[string]string, fields []string, sort
 	return nil, err
 }
 
-// UpdateComplementoInstitucion updates ComplementoInstitucion by Id and returns error if
+// UpdateRolPersonaInstitucion updates RolPersonaInstitucion by Id and returns error if
 // the record to be updated doesn't exist
-func UpdateComplementoInstitucionById(m *ComplementoInstitucion) (err error) {
+func UpdateRolPersonaInstitucionById(m *RolPersonaInstitucion) (err error) {
 	o := orm.NewOrm()
-	v := ComplementoInstitucion{Id: m.Id}
+	v := RolPersonaInstitucion{Id: m.Id}
 	// ascertain id exists in the database
 	if err = o.Read(&v); err == nil {
 		var num int64
@@ -134,15 +132,15 @@ func UpdateComplementoInstitucionById(m *ComplementoInstitucion) (err error) {
 	return
 }
 
-// DeleteComplementoInstitucion deletes ComplementoInstitucion by Id and returns error if
+// DeleteRolPersonaInstitucion deletes RolPersonaInstitucion by Id and returns error if
 // the record to be deleted doesn't exist
-func DeleteComplementoInstitucion(id int) (err error) {
+func DeleteRolPersonaInstitucion(id int) (err error) {
 	o := orm.NewOrm()
-	v := ComplementoInstitucion{Id: id}
+	v := RolPersonaInstitucion{Id: id}
 	// ascertain id exists in the database
 	if err = o.Read(&v); err == nil {
 		var num int64
-		if num, err = o.Delete(&ComplementoInstitucion{Id: id}); err == nil {
+		if num, err = o.Delete(&RolPersonaInstitucion{Id: id}); err == nil {
 			fmt.Println("Number of records deleted in database:", num)
 		}
 	}

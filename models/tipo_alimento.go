@@ -9,48 +9,44 @@ import (
 	"github.com/astaxie/beego/orm"
 )
 
-type ComplementoInstitucion struct {
-	Id            int `orm:"column(id);auto"`
-	ComplementoId int `orm:"column(complemento_id);null"`
-	JornadaId     int `orm:"column(jornada_id);null"`
-	Cantidad      int `orm:"column(cantidad);null"`
-	InstitucionId int `orm:"column(institucion_id);null"`
-	RangoEdadId   int `orm:"column(rango_edad_id);null"`
+type TipoAlimento struct {
+	Id     int    `orm:"column(id);auto"`
+	Nombre string `orm:"column(nombre);size(100);null"`
 }
 
-func (t *ComplementoInstitucion) TableName() string {
-	return "complemento_institucion"
+func (t *TipoAlimento) TableName() string {
+	return "tipo_alimento"
 }
 
 func init() {
-	orm.RegisterModel(new(ComplementoInstitucion))
+	orm.RegisterModel(new(TipoAlimento))
 }
 
-// AddComplementoInstitucion insert a new ComplementoInstitucion into database and returns
+// AddTipoAlimento insert a new TipoAlimento into database and returns
 // last inserted Id on success.
-func AddComplementoInstitucion(m *ComplementoInstitucion) (id int64, err error) {
+func AddTipoAlimento(m *TipoAlimento) (id int64, err error) {
 	o := orm.NewOrm()
 	id, err = o.Insert(m)
 	return
 }
 
-// GetComplementoInstitucionById retrieves ComplementoInstitucion by Id. Returns error if
+// GetTipoAlimentoById retrieves TipoAlimento by Id. Returns error if
 // Id doesn't exist
-func GetComplementoInstitucionById(id int) (v *ComplementoInstitucion, err error) {
+func GetTipoAlimentoById(id int) (v *TipoAlimento, err error) {
 	o := orm.NewOrm()
-	v = &ComplementoInstitucion{Id: id}
+	v = &TipoAlimento{Id: id}
 	if err = o.Read(v); err == nil {
 		return v, nil
 	}
 	return nil, err
 }
 
-// GetAllComplementoInstitucion retrieves all ComplementoInstitucion matches certain condition. Returns empty list if
+// GetAllTipoAlimento retrieves all TipoAlimento matches certain condition. Returns empty list if
 // no records exist
-func GetAllComplementoInstitucion(query map[string]string, fields []string, sortby []string, order []string,
+func GetAllTipoAlimento(query map[string]string, fields []string, sortby []string, order []string,
 	offset int64, limit int64) (ml []interface{}, err error) {
 	o := orm.NewOrm()
-	qs := o.QueryTable(new(ComplementoInstitucion))
+	qs := o.QueryTable(new(TipoAlimento))
 	// query k=v
 	for k, v := range query {
 		// rewrite dot-notation to Object__Attribute
@@ -96,7 +92,7 @@ func GetAllComplementoInstitucion(query map[string]string, fields []string, sort
 		}
 	}
 
-	var l []ComplementoInstitucion
+	var l []TipoAlimento
 	qs = qs.OrderBy(sortFields...)
 	if _, err = qs.Limit(limit, offset).All(&l, fields...); err == nil {
 		if len(fields) == 0 {
@@ -119,11 +115,11 @@ func GetAllComplementoInstitucion(query map[string]string, fields []string, sort
 	return nil, err
 }
 
-// UpdateComplementoInstitucion updates ComplementoInstitucion by Id and returns error if
+// UpdateTipoAlimento updates TipoAlimento by Id and returns error if
 // the record to be updated doesn't exist
-func UpdateComplementoInstitucionById(m *ComplementoInstitucion) (err error) {
+func UpdateTipoAlimentoById(m *TipoAlimento) (err error) {
 	o := orm.NewOrm()
-	v := ComplementoInstitucion{Id: m.Id}
+	v := TipoAlimento{Id: m.Id}
 	// ascertain id exists in the database
 	if err = o.Read(&v); err == nil {
 		var num int64
@@ -134,15 +130,15 @@ func UpdateComplementoInstitucionById(m *ComplementoInstitucion) (err error) {
 	return
 }
 
-// DeleteComplementoInstitucion deletes ComplementoInstitucion by Id and returns error if
+// DeleteTipoAlimento deletes TipoAlimento by Id and returns error if
 // the record to be deleted doesn't exist
-func DeleteComplementoInstitucion(id int) (err error) {
+func DeleteTipoAlimento(id int) (err error) {
 	o := orm.NewOrm()
-	v := ComplementoInstitucion{Id: id}
+	v := TipoAlimento{Id: id}
 	// ascertain id exists in the database
 	if err = o.Read(&v); err == nil {
 		var num int64
-		if num, err = o.Delete(&ComplementoInstitucion{Id: id}); err == nil {
+		if num, err = o.Delete(&TipoAlimento{Id: id}); err == nil {
 			fmt.Println("Number of records deleted in database:", num)
 		}
 	}

@@ -10,10 +10,10 @@ import (
 )
 
 type Municipio struct {
-	Id             int           `orm:"column(id);auto"`
-	Nombre         string        `orm:"column(nombre);size(100);null"`
-	DepartamentoId *Departamento `orm:"column(departamento_id);rel(fk)"`
-	CodigoDivipola string        `orm:"column(codigo_divipola);size(100);null"`
+	Id             int    `orm:"column(id);auto"`
+	Nombre         string `orm:"column(nombre);size(100);null"`
+	DepartamentoId int    `orm:"column(departamento_id)"`
+	CodigoDivipola string `orm:"column(codigo_divipola);size(100);null"`
 }
 
 func (t *Municipio) TableName() string {

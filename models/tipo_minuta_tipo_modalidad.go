@@ -10,9 +10,9 @@ import (
 )
 
 type TipoMinutaTipoModalidad struct {
-	Id              int            `orm:"column(id);auto"`
-	TipoMinutaId    *TipoMinuta    `orm:"column(tipo_minuta_id);rel(fk)"`
-	TipoModalidadId *TipoModalidad `orm:"column(tipo_modalidad_id);rel(fk)"`
+	Id              int `orm:"column(id);auto"`
+	TipoMinutaId    int `orm:"column(tipo_minuta_id);null"`
+	TipoModalidadId int `orm:"column(tipo_modalidad_id);null"`
 }
 
 func (t *TipoMinutaTipoModalidad) TableName() string {

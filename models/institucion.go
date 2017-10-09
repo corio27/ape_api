@@ -10,19 +10,16 @@ import (
 )
 
 type Institucion struct {
-	Id                        int                      `orm:"column(id);auto"`
-	Nombre                    string                   `orm:"column(nombre);size(100);null"`
-	CodigoDane                int64                    `orm:"column(codigo_dane);null"`
-	TipoInstitucionId         *TipoInstitucion         `orm:"column(tipo_institucion_id);rel(fk)"`
-	MunicipioId               *Municipio               `orm:"column(municipio_id);rel(fk)"`
-	EtcId                     *Etc                     `orm:"column(etc_id);rel(fk)"`
-	CantidadManipuladoras     int                      `orm:"column(cantidad_manipuladoras);null"`
-	EsPrincipal               int8                     `orm:"column(es_principal);null"`
-	CodigoDanePrincipal       int64                    `orm:"column(codigo_dane_principal);null"`
-	RectorId                  *Persona                 `orm:"column(rector_id);rel(fk)"`
-	CoordinadorPma            *Persona                 `orm:"column(coordinador_pma);rel(fk)"`
-	CoordinadorFundalianza    *Persona                 `orm:"column(coordinador_fundalianza);rel(fk)"`
-	TipoMinutaTipoModalidadId *TipoMinutaTipoModalidad `orm:"column(tipo_minuta_tipo_modalidad_id);rel(fk)"`
+	Id                        int    `orm:"column(id);auto"`
+	Nombre                    string `orm:"column(nombre);size(100);null"`
+	CodigoDane                int64  `orm:"column(codigo_dane);null"`
+	TipoInstitucionId         int    `orm:"column(tipo_institucion_id);null"`
+	MunicipioId               int    `orm:"column(municipio_id);null"`
+	EtcId                     int64  `orm:"column(etc_id);null"`
+	CantidadManipuladoras     int    `orm:"column(cantidad_manipuladoras);null"`
+	EsPrincipal               int8   `orm:"column(es_principal);null"`
+	CodigoDanePrincipal       int64  `orm:"column(codigo_dane_principal);null"`
+	TipoMinutaTipoModalidadId int    `orm:"column(tipo_minuta_tipo_modalidad_id);null"`
 }
 
 func (t *Institucion) TableName() string {
