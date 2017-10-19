@@ -10,7 +10,6 @@ import (
 )
 
 type Institucion struct {
-<<<<<<< HEAD
 	Id                    int    `orm:"column(id);auto"`
 	Nombre                string `orm:"column(nombre);size(100);null"`
 	CodigoDane            int64  `orm:"column(codigo_dane);null"`
@@ -23,18 +22,6 @@ type Institucion struct {
 	Descripcion           string `orm:"column(descripcion);size(45);null"`
 	TipoMinuta            int    `orm:"column(tipo_minuta);null"`
 	TipoModalidad         int    `orm:"column(tipo_modalidad);null"`
-=======
-	Id                        int    `orm:"column(id);auto"`
-	Nombre                    string `orm:"column(nombre);size(100);null"`
-	CodigoDane                int64  `orm:"column(codigo_dane);null"`
-	TipoInstitucionId         int    `orm:"column(tipo_institucion_id);null"`
-	MunicipioId               int    `orm:"column(municipio_id);null"`
-	EtcId                     int64  `orm:"column(etc_id);null"`
-	CantidadManipuladoras     int    `orm:"column(cantidad_manipuladoras);null"`
-	EsPrincipal               int8   `orm:"column(es_principal);null"`
-	CodigoDanePrincipal       int64  `orm:"column(codigo_dane_principal);null"`
-	TipoMinutaTipoModalidadId int    `orm:"column(tipo_minuta_tipo_modalidad_id);null"`
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
 }
 
 func (t *Institucion) TableName() string {
@@ -74,15 +61,11 @@ func GetAllInstitucion(query map[string]string, fields []string, sortby []string
 	for k, v := range query {
 		// rewrite dot-notation to Object__Attribute
 		k = strings.Replace(k, ".", "__", -1)
-<<<<<<< HEAD
 		if strings.Contains(k, "isnull") {
 			qs = qs.Filter(k, (v == "true" || v == "1"))
 		} else {
 			qs = qs.Filter(k, v)
 		}
-=======
-		qs = qs.Filter(k, v)
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
 	}
 	// order by:
 	var sortFields []string

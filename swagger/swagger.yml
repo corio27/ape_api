@@ -7,12 +7,8 @@ info:
   contact:
     email: astaxie@gmail.com
   license:
-<<<<<<< HEAD
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0.html
-=======
-    name: Url http://www.apache.org/licenses/LICENSE-2.0.html
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
 basePath: /v1
 paths:
   /complemento/:
@@ -49,17 +45,11 @@ paths:
         type: string
       responses:
         "200":
-<<<<<<< HEAD
           description: ""
           schema:
             $ref: '#/definitions/models.Complemento'
         "403":
           description: ""
-=======
-          schema:
-            $ref: '#/definitions/Complemento'
-        "403": {}
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
     post:
       tags:
       - complemento
@@ -71,11 +61,7 @@ paths:
         description: body for Complemento content
         required: true
         schema:
-<<<<<<< HEAD
           $ref: '#/definitions/models.Complemento'
-=======
-          $ref: '#/definitions/Complemento'
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
       responses:
         "201":
           description: '{int} models.Complemento'
@@ -95,14 +81,9 @@ paths:
         type: string
       responses:
         "200":
-<<<<<<< HEAD
           description: ""
           schema:
             $ref: '#/definitions/models.Complemento'
-=======
-          schema:
-            $ref: '#/definitions/Complemento'
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
         "403":
           description: :id is empty
     put:
@@ -121,20 +102,12 @@ paths:
         description: body for Complemento content
         required: true
         schema:
-<<<<<<< HEAD
           $ref: '#/definitions/models.Complemento'
       responses:
         "200":
           description: ""
           schema:
             $ref: '#/definitions/models.Complemento'
-=======
-          $ref: '#/definitions/Complemento'
-      responses:
-        "200":
-          schema:
-            $ref: '#/definitions/Complemento'
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
         "403":
           description: :id is not int
     delete:
@@ -187,17 +160,11 @@ paths:
         type: string
       responses:
         "200":
-<<<<<<< HEAD
           description: ""
           schema:
             $ref: '#/definitions/models.ComplementoInstitucion'
         "403":
           description: ""
-=======
-          schema:
-            $ref: '#/definitions/ComplementoInstitucion'
-        "403": {}
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
     post:
       tags:
       - complemento_institucion
@@ -209,11 +176,7 @@ paths:
         description: body for ComplementoInstitucion content
         required: true
         schema:
-<<<<<<< HEAD
           $ref: '#/definitions/models.ComplementoInstitucion'
-=======
-          $ref: '#/definitions/ComplementoInstitucion'
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
       responses:
         "201":
           description: '{int} models.ComplementoInstitucion'
@@ -233,14 +196,9 @@ paths:
         type: string
       responses:
         "200":
-<<<<<<< HEAD
           description: ""
           schema:
             $ref: '#/definitions/models.ComplementoInstitucion'
-=======
-          schema:
-            $ref: '#/definitions/ComplementoInstitucion'
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
         "403":
           description: :id is empty
     put:
@@ -259,20 +217,12 @@ paths:
         description: body for ComplementoInstitucion content
         required: true
         schema:
-<<<<<<< HEAD
           $ref: '#/definitions/models.ComplementoInstitucion'
       responses:
         "200":
           description: ""
           schema:
             $ref: '#/definitions/models.ComplementoInstitucion'
-=======
-          $ref: '#/definitions/ComplementoInstitucion'
-      responses:
-        "200":
-          schema:
-            $ref: '#/definitions/ComplementoInstitucion'
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
         "403":
           description: :id is not int
     delete:
@@ -291,7 +241,6 @@ paths:
           description: '{string} delete success!'
         "403":
           description: id is empty
-<<<<<<< HEAD
   /componente/:
     get:
       tags:
@@ -522,8 +471,6 @@ paths:
           description: '{string} delete success!'
         "403":
           description: id is empty
-=======
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
   /departamento/:
     get:
       tags:
@@ -558,17 +505,11 @@ paths:
         type: string
       responses:
         "200":
-<<<<<<< HEAD
           description: ""
           schema:
             $ref: '#/definitions/models.Departamento'
         "403":
           description: ""
-=======
-          schema:
-            $ref: '#/definitions/Departamento'
-        "403": {}
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
     post:
       tags:
       - departamento
@@ -580,11 +521,7 @@ paths:
         description: body for Departamento content
         required: true
         schema:
-<<<<<<< HEAD
           $ref: '#/definitions/models.Departamento'
-=======
-          $ref: '#/definitions/Departamento'
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
       responses:
         "201":
           description: '{int} models.Departamento'
@@ -604,14 +541,9 @@ paths:
         type: string
       responses:
         "200":
-<<<<<<< HEAD
           description: ""
           schema:
             $ref: '#/definitions/models.Departamento'
-=======
-          schema:
-            $ref: '#/definitions/Departamento'
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
         "403":
           description: :id is empty
     put:
@@ -630,20 +562,12 @@ paths:
         description: body for Departamento content
         required: true
         schema:
-<<<<<<< HEAD
           $ref: '#/definitions/models.Departamento'
       responses:
         "200":
           description: ""
           schema:
             $ref: '#/definitions/models.Departamento'
-=======
-          $ref: '#/definitions/Departamento'
-      responses:
-        "200":
-          schema:
-            $ref: '#/definitions/Departamento'
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
         "403":
           description: :id is not int
     delete:
@@ -696,17 +620,11 @@ paths:
         type: string
       responses:
         "200":
-<<<<<<< HEAD
           description: ""
           schema:
             $ref: '#/definitions/models.Etc'
         "403":
           description: ""
-=======
-          schema:
-            $ref: '#/definitions/Etc'
-        "403": {}
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
     post:
       tags:
       - etc
@@ -718,17 +636,12 @@ paths:
         description: body for Etc content
         required: true
         schema:
-<<<<<<< HEAD
           $ref: '#/definitions/models.Etc'
-=======
-          $ref: '#/definitions/Etc'
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
       responses:
         "201":
           description: '{int} models.Etc'
         "403":
           description: body is empty
-<<<<<<< HEAD
   /etc/{id}:
     get:
       tags:
@@ -1885,14 +1798,6 @@ paths:
       - productos_proveedor
       description: get ProductosProveedor by id
       operationId: ProductosProveedorController.Get One
-=======
-  /etc/{id}:
-    get:
-      tags:
-      - etc
-      description: get Etc by id
-      operationId: EtcController.Get One
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
       parameters:
       - in: path
         name: id
@@ -1901,27 +1806,16 @@ paths:
         type: string
       responses:
         "200":
-<<<<<<< HEAD
           description: ""
           schema:
             $ref: '#/definitions/models.ProductosProveedor'
-=======
-          schema:
-            $ref: '#/definitions/Etc'
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
         "403":
           description: :id is empty
     put:
       tags:
-<<<<<<< HEAD
       - productos_proveedor
       description: update the ProductosProveedor
       operationId: ProductosProveedorController.Put
-=======
-      - etc
-      description: update the Etc
-      operationId: EtcController.Put
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
       parameters:
       - in: path
         name: id
@@ -1930,7 +1824,6 @@ paths:
         type: string
       - in: body
         name: body
-<<<<<<< HEAD
         description: body for ProductosProveedor content
         required: true
         schema:
@@ -1940,29 +1833,13 @@ paths:
           description: ""
           schema:
             $ref: '#/definitions/models.ProductosProveedor'
-=======
-        description: body for Etc content
-        required: true
-        schema:
-          $ref: '#/definitions/Etc'
-      responses:
-        "200":
-          schema:
-            $ref: '#/definitions/Etc'
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
         "403":
           description: :id is not int
     delete:
       tags:
-<<<<<<< HEAD
       - productos_proveedor
       description: delete the ProductosProveedor
       operationId: ProductosProveedorController.Delete
-=======
-      - etc
-      description: delete the Etc
-      operationId: EtcController.Delete
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
       parameters:
       - in: path
         name: id
@@ -1974,21 +1851,12 @@ paths:
           description: '{string} delete success!'
         "403":
           description: id is empty
-<<<<<<< HEAD
   /proveedor/:
     get:
       tags:
       - proveedor
       description: get Proveedor
       operationId: ProveedorController.Get All
-=======
-  /institucion/:
-    get:
-      tags:
-      - institucion
-      description: get Institucion
-      operationId: InstitucionController.Get All
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
       parameters:
       - in: query
         name: query
@@ -2017,7 +1885,6 @@ paths:
         type: string
       responses:
         "200":
-<<<<<<< HEAD
           description: ""
           schema:
             $ref: '#/definitions/models.Proveedor'
@@ -2046,34 +1913,6 @@ paths:
       - proveedor
       description: get Proveedor by id
       operationId: ProveedorController.Get One
-=======
-          schema:
-            $ref: '#/definitions/Institucion'
-        "403": {}
-    post:
-      tags:
-      - institucion
-      description: create Institucion
-      operationId: InstitucionController.Post
-      parameters:
-      - in: body
-        name: body
-        description: body for Institucion content
-        required: true
-        schema:
-          $ref: '#/definitions/Institucion'
-      responses:
-        "201":
-          description: '{int} models.Institucion'
-        "403":
-          description: body is empty
-  /institucion/{id}:
-    get:
-      tags:
-      - institucion
-      description: get Institucion by id
-      operationId: InstitucionController.Get One
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
       parameters:
       - in: path
         name: id
@@ -2082,27 +1921,16 @@ paths:
         type: string
       responses:
         "200":
-<<<<<<< HEAD
           description: ""
           schema:
             $ref: '#/definitions/models.Proveedor'
-=======
-          schema:
-            $ref: '#/definitions/Institucion'
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
         "403":
           description: :id is empty
     put:
       tags:
-<<<<<<< HEAD
       - proveedor
       description: update the Proveedor
       operationId: ProveedorController.Put
-=======
-      - institucion
-      description: update the Institucion
-      operationId: InstitucionController.Put
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
       parameters:
       - in: path
         name: id
@@ -2111,7 +1939,6 @@ paths:
         type: string
       - in: body
         name: body
-<<<<<<< HEAD
         description: body for Proveedor content
         required: true
         schema:
@@ -2121,29 +1948,13 @@ paths:
           description: ""
           schema:
             $ref: '#/definitions/models.Proveedor'
-=======
-        description: body for Institucion content
-        required: true
-        schema:
-          $ref: '#/definitions/Institucion'
-      responses:
-        "200":
-          schema:
-            $ref: '#/definitions/Institucion'
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
         "403":
           description: :id is not int
     delete:
       tags:
-<<<<<<< HEAD
       - proveedor
       description: delete the Proveedor
       operationId: ProveedorController.Delete
-=======
-      - institucion
-      description: delete the Institucion
-      operationId: InstitucionController.Delete
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
       parameters:
       - in: path
         name: id
@@ -2155,21 +1966,12 @@ paths:
           description: '{string} delete success!'
         "403":
           description: id is empty
-<<<<<<< HEAD
   /rango_edad/:
     get:
       tags:
       - rango_edad
       description: get RangoEdad
       operationId: RangoEdadController.Get All
-=======
-  /jornada/:
-    get:
-      tags:
-      - jornada
-      description: get Jornada
-      operationId: JornadaController.Get All
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
       parameters:
       - in: query
         name: query
@@ -2198,7 +2000,6 @@ paths:
         type: string
       responses:
         "200":
-<<<<<<< HEAD
           description: ""
           schema:
             $ref: '#/definitions/models.RangoEdad'
@@ -2227,34 +2028,6 @@ paths:
       - rango_edad
       description: get RangoEdad by id
       operationId: RangoEdadController.Get One
-=======
-          schema:
-            $ref: '#/definitions/Jornada'
-        "403": {}
-    post:
-      tags:
-      - jornada
-      description: create Jornada
-      operationId: JornadaController.Post
-      parameters:
-      - in: body
-        name: body
-        description: body for Jornada content
-        required: true
-        schema:
-          $ref: '#/definitions/Jornada'
-      responses:
-        "201":
-          description: '{int} models.Jornada'
-        "403":
-          description: body is empty
-  /jornada/{id}:
-    get:
-      tags:
-      - jornada
-      description: get Jornada by id
-      operationId: JornadaController.Get One
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
       parameters:
       - in: path
         name: id
@@ -2263,27 +2036,16 @@ paths:
         type: string
       responses:
         "200":
-<<<<<<< HEAD
           description: ""
           schema:
             $ref: '#/definitions/models.RangoEdad'
-=======
-          schema:
-            $ref: '#/definitions/Jornada'
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
         "403":
           description: :id is empty
     put:
       tags:
-<<<<<<< HEAD
       - rango_edad
       description: update the RangoEdad
       operationId: RangoEdadController.Put
-=======
-      - jornada
-      description: update the Jornada
-      operationId: JornadaController.Put
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
       parameters:
       - in: path
         name: id
@@ -2292,7 +2054,6 @@ paths:
         type: string
       - in: body
         name: body
-<<<<<<< HEAD
         description: body for RangoEdad content
         required: true
         schema:
@@ -2302,29 +2063,13 @@ paths:
           description: ""
           schema:
             $ref: '#/definitions/models.RangoEdad'
-=======
-        description: body for Jornada content
-        required: true
-        schema:
-          $ref: '#/definitions/Jornada'
-      responses:
-        "200":
-          schema:
-            $ref: '#/definitions/Jornada'
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
         "403":
           description: :id is not int
     delete:
       tags:
-<<<<<<< HEAD
       - rango_edad
       description: delete the RangoEdad
       operationId: RangoEdadController.Delete
-=======
-      - jornada
-      description: delete the Jornada
-      operationId: JornadaController.Delete
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
       parameters:
       - in: path
         name: id
@@ -2336,21 +2081,12 @@ paths:
           description: '{string} delete success!'
         "403":
           description: id is empty
-<<<<<<< HEAD
   /rol/:
     get:
       tags:
       - rol
       description: get Rol
       operationId: RolController.Get All
-=======
-  /municipio/:
-    get:
-      tags:
-      - municipio
-      description: get Municipio
-      operationId: MunicipioController.Get All
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
       parameters:
       - in: query
         name: query
@@ -2379,7 +2115,6 @@ paths:
         type: string
       responses:
         "200":
-<<<<<<< HEAD
           description: ""
           schema:
             $ref: '#/definitions/models.Rol'
@@ -2408,34 +2143,6 @@ paths:
       - rol
       description: get Rol by id
       operationId: RolController.Get One
-=======
-          schema:
-            $ref: '#/definitions/Municipio'
-        "403": {}
-    post:
-      tags:
-      - municipio
-      description: create Municipio
-      operationId: MunicipioController.Post
-      parameters:
-      - in: body
-        name: body
-        description: body for Municipio content
-        required: true
-        schema:
-          $ref: '#/definitions/Municipio'
-      responses:
-        "201":
-          description: '{int} models.Municipio'
-        "403":
-          description: body is empty
-  /municipio/{id}:
-    get:
-      tags:
-      - municipio
-      description: get Municipio by id
-      operationId: MunicipioController.Get One
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
       parameters:
       - in: path
         name: id
@@ -2444,27 +2151,16 @@ paths:
         type: string
       responses:
         "200":
-<<<<<<< HEAD
           description: ""
           schema:
             $ref: '#/definitions/models.Rol'
-=======
-          schema:
-            $ref: '#/definitions/Municipio'
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
         "403":
           description: :id is empty
     put:
       tags:
-<<<<<<< HEAD
       - rol
       description: update the Rol
       operationId: RolController.Put
-=======
-      - municipio
-      description: update the Municipio
-      operationId: MunicipioController.Put
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
       parameters:
       - in: path
         name: id
@@ -2473,7 +2169,6 @@ paths:
         type: string
       - in: body
         name: body
-<<<<<<< HEAD
         description: body for Rol content
         required: true
         schema:
@@ -2483,29 +2178,13 @@ paths:
           description: ""
           schema:
             $ref: '#/definitions/models.Rol'
-=======
-        description: body for Municipio content
-        required: true
-        schema:
-          $ref: '#/definitions/Municipio'
-      responses:
-        "200":
-          schema:
-            $ref: '#/definitions/Municipio'
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
         "403":
           description: :id is not int
     delete:
       tags:
-<<<<<<< HEAD
       - rol
       description: delete the Rol
       operationId: RolController.Delete
-=======
-      - municipio
-      description: delete the Municipio
-      operationId: MunicipioController.Delete
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
       parameters:
       - in: path
         name: id
@@ -2517,21 +2196,12 @@ paths:
           description: '{string} delete success!'
         "403":
           description: id is empty
-<<<<<<< HEAD
   /rol_persona_institucion/:
     get:
       tags:
       - rol_persona_institucion
       description: get RolPersonaInstitucion
       operationId: RolPersonaInstitucionController.Get All
-=======
-  /persona/:
-    get:
-      tags:
-      - persona
-      description: get Persona
-      operationId: PersonaController.Get All
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
       parameters:
       - in: query
         name: query
@@ -2560,7 +2230,6 @@ paths:
         type: string
       responses:
         "200":
-<<<<<<< HEAD
           description: ""
           schema:
             $ref: '#/definitions/models.RolPersonaInstitucion'
@@ -2589,34 +2258,6 @@ paths:
       - rol_persona_institucion
       description: get RolPersonaInstitucion by id
       operationId: RolPersonaInstitucionController.Get One
-=======
-          schema:
-            $ref: '#/definitions/Persona'
-        "403": {}
-    post:
-      tags:
-      - persona
-      description: create Persona
-      operationId: PersonaController.Post
-      parameters:
-      - in: body
-        name: body
-        description: body for Persona content
-        required: true
-        schema:
-          $ref: '#/definitions/Persona'
-      responses:
-        "201":
-          description: '{int} models.Persona'
-        "403":
-          description: body is empty
-  /persona/{id}:
-    get:
-      tags:
-      - persona
-      description: get Persona by id
-      operationId: PersonaController.Get One
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
       parameters:
       - in: path
         name: id
@@ -2625,27 +2266,16 @@ paths:
         type: string
       responses:
         "200":
-<<<<<<< HEAD
           description: ""
           schema:
             $ref: '#/definitions/models.RolPersonaInstitucion'
-=======
-          schema:
-            $ref: '#/definitions/Persona'
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
         "403":
           description: :id is empty
     put:
       tags:
-<<<<<<< HEAD
       - rol_persona_institucion
       description: update the RolPersonaInstitucion
       operationId: RolPersonaInstitucionController.Put
-=======
-      - persona
-      description: update the Persona
-      operationId: PersonaController.Put
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
       parameters:
       - in: path
         name: id
@@ -2654,7 +2284,6 @@ paths:
         type: string
       - in: body
         name: body
-<<<<<<< HEAD
         description: body for RolPersonaInstitucion content
         required: true
         schema:
@@ -2664,29 +2293,13 @@ paths:
           description: ""
           schema:
             $ref: '#/definitions/models.RolPersonaInstitucion'
-=======
-        description: body for Persona content
-        required: true
-        schema:
-          $ref: '#/definitions/Persona'
-      responses:
-        "200":
-          schema:
-            $ref: '#/definitions/Persona'
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
         "403":
           description: :id is not int
     delete:
       tags:
-<<<<<<< HEAD
       - rol_persona_institucion
       description: delete the RolPersonaInstitucion
       operationId: RolPersonaInstitucionController.Delete
-=======
-      - persona
-      description: delete the Persona
-      operationId: PersonaController.Delete
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
       parameters:
       - in: path
         name: id
@@ -2698,21 +2311,12 @@ paths:
           description: '{string} delete success!'
         "403":
           description: id is empty
-<<<<<<< HEAD
   /tipo_alimento/:
     get:
       tags:
       - tipo_alimento
       description: get TipoAlimento
       operationId: TipoAlimentoController.Get All
-=======
-  /rango_edad/:
-    get:
-      tags:
-      - rango_edad
-      description: get RangoEdad
-      operationId: RangoEdadController.Get All
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
       parameters:
       - in: query
         name: query
@@ -2741,7 +2345,6 @@ paths:
         type: string
       responses:
         "200":
-<<<<<<< HEAD
           description: ""
           schema:
             $ref: '#/definitions/models.TipoAlimento'
@@ -2770,34 +2373,6 @@ paths:
       - tipo_alimento
       description: get TipoAlimento by id
       operationId: TipoAlimentoController.Get One
-=======
-          schema:
-            $ref: '#/definitions/RangoEdad'
-        "403": {}
-    post:
-      tags:
-      - rango_edad
-      description: create RangoEdad
-      operationId: RangoEdadController.Post
-      parameters:
-      - in: body
-        name: body
-        description: body for RangoEdad content
-        required: true
-        schema:
-          $ref: '#/definitions/RangoEdad'
-      responses:
-        "201":
-          description: '{int} models.RangoEdad'
-        "403":
-          description: body is empty
-  /rango_edad/{id}:
-    get:
-      tags:
-      - rango_edad
-      description: get RangoEdad by id
-      operationId: RangoEdadController.Get One
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
       parameters:
       - in: path
         name: id
@@ -2806,27 +2381,16 @@ paths:
         type: string
       responses:
         "200":
-<<<<<<< HEAD
           description: ""
           schema:
             $ref: '#/definitions/models.TipoAlimento'
-=======
-          schema:
-            $ref: '#/definitions/RangoEdad'
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
         "403":
           description: :id is empty
     put:
       tags:
-<<<<<<< HEAD
       - tipo_alimento
       description: update the TipoAlimento
       operationId: TipoAlimentoController.Put
-=======
-      - rango_edad
-      description: update the RangoEdad
-      operationId: RangoEdadController.Put
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
       parameters:
       - in: path
         name: id
@@ -2835,7 +2399,6 @@ paths:
         type: string
       - in: body
         name: body
-<<<<<<< HEAD
         description: body for TipoAlimento content
         required: true
         schema:
@@ -2845,29 +2408,13 @@ paths:
           description: ""
           schema:
             $ref: '#/definitions/models.TipoAlimento'
-=======
-        description: body for RangoEdad content
-        required: true
-        schema:
-          $ref: '#/definitions/RangoEdad'
-      responses:
-        "200":
-          schema:
-            $ref: '#/definitions/RangoEdad'
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
         "403":
           description: :id is not int
     delete:
       tags:
-<<<<<<< HEAD
       - tipo_alimento
       description: delete the TipoAlimento
       operationId: TipoAlimentoController.Delete
-=======
-      - rango_edad
-      description: delete the RangoEdad
-      operationId: RangoEdadController.Delete
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
       parameters:
       - in: path
         name: id
@@ -2913,17 +2460,11 @@ paths:
         type: string
       responses:
         "200":
-<<<<<<< HEAD
           description: ""
           schema:
             $ref: '#/definitions/models.TipoInstitucion'
         "403":
           description: ""
-=======
-          schema:
-            $ref: '#/definitions/TipoInstitucion'
-        "403": {}
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
     post:
       tags:
       - tipo_institucion
@@ -2935,11 +2476,7 @@ paths:
         description: body for TipoInstitucion content
         required: true
         schema:
-<<<<<<< HEAD
           $ref: '#/definitions/models.TipoInstitucion'
-=======
-          $ref: '#/definitions/TipoInstitucion'
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
       responses:
         "201":
           description: '{int} models.TipoInstitucion'
@@ -2959,14 +2496,9 @@ paths:
         type: string
       responses:
         "200":
-<<<<<<< HEAD
           description: ""
           schema:
             $ref: '#/definitions/models.TipoInstitucion'
-=======
-          schema:
-            $ref: '#/definitions/TipoInstitucion'
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
         "403":
           description: :id is empty
     put:
@@ -2985,20 +2517,12 @@ paths:
         description: body for TipoInstitucion content
         required: true
         schema:
-<<<<<<< HEAD
           $ref: '#/definitions/models.TipoInstitucion'
       responses:
         "200":
           description: ""
           schema:
             $ref: '#/definitions/models.TipoInstitucion'
-=======
-          $ref: '#/definitions/TipoInstitucion'
-      responses:
-        "200":
-          schema:
-            $ref: '#/definitions/TipoInstitucion'
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
         "403":
           description: :id is not int
     delete:
@@ -3051,17 +2575,11 @@ paths:
         type: string
       responses:
         "200":
-<<<<<<< HEAD
           description: ""
           schema:
             $ref: '#/definitions/models.TipoMinuta'
         "403":
           description: ""
-=======
-          schema:
-            $ref: '#/definitions/TipoMinuta'
-        "403": {}
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
     post:
       tags:
       - tipo_minuta
@@ -3073,11 +2591,7 @@ paths:
         description: body for TipoMinuta content
         required: true
         schema:
-<<<<<<< HEAD
           $ref: '#/definitions/models.TipoMinuta'
-=======
-          $ref: '#/definitions/TipoMinuta'
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
       responses:
         "201":
           description: '{int} models.TipoMinuta'
@@ -3097,14 +2611,9 @@ paths:
         type: string
       responses:
         "200":
-<<<<<<< HEAD
           description: ""
           schema:
             $ref: '#/definitions/models.TipoMinuta'
-=======
-          schema:
-            $ref: '#/definitions/TipoMinuta'
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
         "403":
           description: :id is empty
     put:
@@ -3123,20 +2632,12 @@ paths:
         description: body for TipoMinuta content
         required: true
         schema:
-<<<<<<< HEAD
           $ref: '#/definitions/models.TipoMinuta'
       responses:
         "200":
           description: ""
           schema:
             $ref: '#/definitions/models.TipoMinuta'
-=======
-          $ref: '#/definitions/TipoMinuta'
-      responses:
-        "200":
-          schema:
-            $ref: '#/definitions/TipoMinuta'
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
         "403":
           description: :id is not int
     delete:
@@ -3189,17 +2690,11 @@ paths:
         type: string
       responses:
         "200":
-<<<<<<< HEAD
           description: ""
           schema:
             $ref: '#/definitions/models.TipoMinutaTipoModalidad'
         "403":
           description: ""
-=======
-          schema:
-            $ref: '#/definitions/TipoMinutaTipoModalidad'
-        "403": {}
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
     post:
       tags:
       - tipo_minuta_tipo_modalidad
@@ -3211,11 +2706,7 @@ paths:
         description: body for TipoMinutaTipoModalidad content
         required: true
         schema:
-<<<<<<< HEAD
           $ref: '#/definitions/models.TipoMinutaTipoModalidad'
-=======
-          $ref: '#/definitions/TipoMinutaTipoModalidad'
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
       responses:
         "201":
           description: '{int} models.TipoMinutaTipoModalidad'
@@ -3235,14 +2726,9 @@ paths:
         type: string
       responses:
         "200":
-<<<<<<< HEAD
           description: ""
           schema:
             $ref: '#/definitions/models.TipoMinutaTipoModalidad'
-=======
-          schema:
-            $ref: '#/definitions/TipoMinutaTipoModalidad'
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
         "403":
           description: :id is empty
     put:
@@ -3261,20 +2747,12 @@ paths:
         description: body for TipoMinutaTipoModalidad content
         required: true
         schema:
-<<<<<<< HEAD
           $ref: '#/definitions/models.TipoMinutaTipoModalidad'
       responses:
         "200":
           description: ""
           schema:
             $ref: '#/definitions/models.TipoMinutaTipoModalidad'
-=======
-          $ref: '#/definitions/TipoMinutaTipoModalidad'
-      responses:
-        "200":
-          schema:
-            $ref: '#/definitions/TipoMinutaTipoModalidad'
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
         "403":
           description: :id is not int
     delete:
@@ -3327,17 +2805,11 @@ paths:
         type: string
       responses:
         "200":
-<<<<<<< HEAD
           description: ""
           schema:
             $ref: '#/definitions/models.TipoModalidad'
         "403":
           description: ""
-=======
-          schema:
-            $ref: '#/definitions/TipoModalidad'
-        "403": {}
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
     post:
       tags:
       - tipo_modalidad
@@ -3349,11 +2821,7 @@ paths:
         description: body for TipoModalidad content
         required: true
         schema:
-<<<<<<< HEAD
           $ref: '#/definitions/models.TipoModalidad'
-=======
-          $ref: '#/definitions/TipoModalidad'
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
       responses:
         "201":
           description: '{int} models.TipoModalidad'
@@ -3373,14 +2841,9 @@ paths:
         type: string
       responses:
         "200":
-<<<<<<< HEAD
           description: ""
           schema:
             $ref: '#/definitions/models.TipoModalidad'
-=======
-          schema:
-            $ref: '#/definitions/TipoModalidad'
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
         "403":
           description: :id is empty
     put:
@@ -3399,20 +2862,12 @@ paths:
         description: body for TipoModalidad content
         required: true
         schema:
-<<<<<<< HEAD
           $ref: '#/definitions/models.TipoModalidad'
       responses:
         "200":
           description: ""
           schema:
             $ref: '#/definitions/models.TipoModalidad'
-=======
-          $ref: '#/definitions/TipoModalidad'
-      responses:
-        "200":
-          schema:
-            $ref: '#/definitions/TipoModalidad'
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
         "403":
           description: :id is not int
     delete:
@@ -3432,11 +2887,7 @@ paths:
         "403":
           description: id is empty
 definitions:
-<<<<<<< HEAD
   models.Complemento:
-=======
-  Complemento:
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
     title: Complemento
     type: object
     properties:
@@ -3445,11 +2896,7 @@ definitions:
         format: int64
       Nombre:
         type: string
-<<<<<<< HEAD
   models.ComplementoInstitucion:
-=======
-  ComplementoInstitucion:
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
     title: ComplementoInstitucion
     type: object
     properties:
@@ -3457,17 +2904,12 @@ definitions:
         type: integer
         format: int64
       ComplementoId:
-<<<<<<< HEAD
         type: integer
         format: int64
-=======
-        $ref: '#/definitions/Complemento'
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
       Id:
         type: integer
         format: int64
       InstitucionId:
-<<<<<<< HEAD
         type: integer
         format: int64
       JornadaId:
@@ -3497,14 +2939,6 @@ definitions:
       MenuId:
         $ref: '#/definitions/models.Menu'
   models.Departamento:
-=======
-        $ref: '#/definitions/Institucion'
-      JornadaId:
-        $ref: '#/definitions/Jornada'
-      RangoEdadId:
-        $ref: '#/definitions/RangoEdad'
-  Departamento:
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
     title: Departamento
     type: object
     properties:
@@ -3515,11 +2949,7 @@ definitions:
         format: int64
       Nombre:
         type: string
-<<<<<<< HEAD
   models.Etc:
-=======
-  Etc:
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
     title: Etc
     type: object
     properties:
@@ -3528,11 +2958,7 @@ definitions:
         format: int64
       Nombre:
         type: string
-<<<<<<< HEAD
   models.Institucion:
-=======
-  Institucion:
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
     title: Institucion
     type: object
     properties:
@@ -3545,30 +2971,18 @@ definitions:
       CodigoDanePrincipal:
         type: integer
         format: int64
-<<<<<<< HEAD
       Descripcion:
         type: string
-=======
-      CoordinadorFundalianza:
-        $ref: '#/definitions/Persona'
-      CoordinadorPma:
-        $ref: '#/definitions/Persona'
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
       EsPrincipal:
         type: integer
         format: int32
       EtcId:
-<<<<<<< HEAD
         type: integer
         format: int64
-=======
-        $ref: '#/definitions/Etc'
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
       Id:
         type: integer
         format: int64
       MunicipioId:
-<<<<<<< HEAD
         type: integer
         format: int64
       Nombre:
@@ -3583,18 +2997,6 @@ definitions:
         type: integer
         format: int64
   models.Jornada:
-=======
-        $ref: '#/definitions/Municipio'
-      Nombre:
-        type: string
-      RectorId:
-        $ref: '#/definitions/Persona'
-      TipoInstitucionId:
-        $ref: '#/definitions/TipoInstitucion'
-      TipoMinutaTipoModalidadId:
-        $ref: '#/definitions/TipoMinutaTipoModalidad'
-  Jornada:
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
     title: Jornada
     type: object
     properties:
@@ -3603,7 +3005,6 @@ definitions:
         format: int64
       Nombre:
         type: string
-<<<<<<< HEAD
   models.Menu:
     title: Menu
     type: object
@@ -3614,31 +3015,20 @@ definitions:
       Nombre:
         type: string
   models.Municipio:
-=======
-  Municipio:
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
     title: Municipio
     type: object
     properties:
       CodigoDivipola:
         type: string
       DepartamentoId:
-<<<<<<< HEAD
         type: integer
         format: int64
-=======
-        $ref: '#/definitions/Departamento'
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
       Id:
         type: integer
         format: int64
       Nombre:
         type: string
-<<<<<<< HEAD
   models.Persona:
-=======
-  Persona:
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
     title: Persona
     type: object
     properties:
@@ -3659,7 +3049,6 @@ definitions:
         type: string
       Telefono:
         type: string
-<<<<<<< HEAD
   models.Preparacion:
     title: Preparacion
     type: object
@@ -3726,9 +3115,6 @@ definitions:
       Nombre:
         type: string
   models.RangoEdad:
-=======
-  RangoEdad:
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
     title: RangoEdad
     type: object
     properties:
@@ -3737,7 +3123,6 @@ definitions:
         format: int64
       Rango:
         type: string
-<<<<<<< HEAD
   models.Rol:
     title: Rol
     type: object
@@ -3773,9 +3158,6 @@ definitions:
       Nombre:
         type: string
   models.TipoInstitucion:
-=======
-  TipoInstitucion:
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
     title: TipoInstitucion
     type: object
     properties:
@@ -3784,11 +3166,7 @@ definitions:
         format: int64
       Nombre:
         type: string
-<<<<<<< HEAD
   models.TipoMinuta:
-=======
-  TipoMinuta:
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
     title: TipoMinuta
     type: object
     properties:
@@ -3797,11 +3175,7 @@ definitions:
         format: int64
       Nombre:
         type: string
-<<<<<<< HEAD
   models.TipoMinutaTipoModalidad:
-=======
-  TipoMinutaTipoModalidad:
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
     title: TipoMinutaTipoModalidad
     type: object
     properties:
@@ -3809,17 +3183,10 @@ definitions:
         type: integer
         format: int64
       TipoMinutaId:
-<<<<<<< HEAD
         $ref: '#/definitions/models.TipoMinuta'
       TipoModalidadId:
         $ref: '#/definitions/models.TipoModalidad'
   models.TipoModalidad:
-=======
-        $ref: '#/definitions/TipoMinuta'
-      TipoModalidadId:
-        $ref: '#/definitions/TipoModalidad'
-  TipoModalidad:
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
     title: TipoModalidad
     type: object
     properties:
@@ -3831,7 +3198,6 @@ definitions:
 tags:
 - name: complemento
   description: |
-<<<<<<< HEAD
     ComplementoController operations for Complemento
 - name: complemento_institucion
   description: |
@@ -3905,42 +3271,3 @@ tags:
 - name: tipo_modalidad
   description: |
     TipoModalidadController operations for TipoModalidad
-=======
-    ComplementoController oprations for Complemento
-- name: complemento_institucion
-  description: |
-    ComplementoInstitucionController oprations for ComplementoInstitucion
-- name: departamento
-  description: |
-    DepartamentoController oprations for Departamento
-- name: etc
-  description: |
-    EtcController oprations for Etc
-- name: institucion
-  description: |
-    InstitucionController oprations for Institucion
-- name: jornada
-  description: |
-    JornadaController oprations for Jornada
-- name: municipio
-  description: |
-    MunicipioController oprations for Municipio
-- name: persona
-  description: |
-    PersonaController oprations for Persona
-- name: rango_edad
-  description: |
-    RangoEdadController oprations for RangoEdad
-- name: tipo_institucion
-  description: |
-    TipoInstitucionController oprations for TipoInstitucion
-- name: tipo_minuta
-  description: |
-    TipoMinutaController oprations for TipoMinuta
-- name: tipo_minuta_tipo_modalidad
-  description: |
-    TipoMinutaTipoModalidadController oprations for TipoMinutaTipoModalidad
-- name: tipo_modalidad
-  description: |
-    TipoModalidadController oprations for TipoModalidad
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270

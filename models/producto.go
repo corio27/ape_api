@@ -10,15 +10,10 @@ import (
 )
 
 type Producto struct {
-<<<<<<< HEAD
 	Id             int           `orm:"column(id);auto"`
 	Nombre         string        `orm:"column(nombre);size(100);null"`
 	Codigo         int           `orm:"column(codigo);null"`
 	TipoAlimentoId *TipoAlimento `orm:"column(tipo_alimento_id);rel(fk)"`
-=======
-	Id     int    `orm:"column(id);auto"`
-	Nombre string `orm:"column(nombre);size(100);null"`
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
 }
 
 func (t *Producto) TableName() string {
@@ -53,24 +48,16 @@ func GetProductoById(id int) (v *Producto, err error) {
 func GetAllProducto(query map[string]string, fields []string, sortby []string, order []string,
 	offset int64, limit int64) (ml []interface{}, err error) {
 	o := orm.NewOrm()
-<<<<<<< HEAD
-	qs := o.QueryTable(new(Producto)).RelatedSel(5)
-=======
 	qs := o.QueryTable(new(Producto))
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
 	// query k=v
 	for k, v := range query {
 		// rewrite dot-notation to Object__Attribute
 		k = strings.Replace(k, ".", "__", -1)
-<<<<<<< HEAD
 		if strings.Contains(k, "isnull") {
 			qs = qs.Filter(k, (v == "true" || v == "1"))
 		} else {
 			qs = qs.Filter(k, v)
 		}
-=======
-		qs = qs.Filter(k, v)
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
 	}
 	// order by:
 	var sortFields []string

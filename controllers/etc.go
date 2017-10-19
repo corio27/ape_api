@@ -3,22 +3,14 @@ package controllers
 import (
 	"encoding/json"
 	"errors"
-<<<<<<< HEAD
 	"github.com/corio27/pae_api/models"
-=======
-	"pae_api/models"
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
 	"strconv"
 	"strings"
 
 	"github.com/astaxie/beego"
 )
 
-<<<<<<< HEAD
 // EtcController operations for Etc
-=======
-// EtcController oprations for Etc
->>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
 type EtcController struct {
 	beego.Controller
 }
