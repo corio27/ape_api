@@ -57,7 +57,15 @@ func GetAllPersona(query map[string]string, fields []string, sortby []string, or
 	for k, v := range query {
 		// rewrite dot-notation to Object__Attribute
 		k = strings.Replace(k, ".", "__", -1)
+<<<<<<< HEAD
+		if strings.Contains(k, "isnull") {
+			qs = qs.Filter(k, (v == "true" || v == "1"))
+		} else {
+			qs = qs.Filter(k, v)
+		}
+=======
 		qs = qs.Filter(k, v)
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
 	}
 	// order by:
 	var sortFields []string

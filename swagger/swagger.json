@@ -9,7 +9,12 @@
             "email": "astaxie@gmail.com"
         },
         "license": {
+<<<<<<< HEAD
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+=======
             "name": "Url http://www.apache.org/licenses/LICENSE-2.0.html"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
         }
     },
     "basePath": "/v1",
@@ -61,11 +66,22 @@
                 ],
                 "responses": {
                     "200": {
+<<<<<<< HEAD
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.Complemento"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+=======
                         "schema": {
                             "$ref": "#/definitions/Complemento"
                         }
                     },
                     "403": {}
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                 }
             },
             "post": {
@@ -81,7 +97,11 @@
                         "description": "body for Complemento content",
                         "required": true,
                         "schema": {
+<<<<<<< HEAD
+                            "$ref": "#/definitions/models.Complemento"
+=======
                             "$ref": "#/definitions/Complemento"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                         }
                     }
                 ],
@@ -113,8 +133,14 @@
                 ],
                 "responses": {
                     "200": {
+<<<<<<< HEAD
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.Complemento"
+=======
                         "schema": {
                             "$ref": "#/definitions/Complemento"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                         }
                     },
                     "403": {
@@ -142,14 +168,24 @@
                         "description": "body for Complemento content",
                         "required": true,
                         "schema": {
+<<<<<<< HEAD
+                            "$ref": "#/definitions/models.Complemento"
+=======
                             "$ref": "#/definitions/Complemento"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                         }
                     }
                 ],
                 "responses": {
                     "200": {
+<<<<<<< HEAD
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.Complemento"
+=======
                         "schema": {
                             "$ref": "#/definitions/Complemento"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                         }
                     },
                     "403": {
@@ -229,11 +265,22 @@
                 ],
                 "responses": {
                     "200": {
+<<<<<<< HEAD
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.ComplementoInstitucion"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+=======
                         "schema": {
                             "$ref": "#/definitions/ComplementoInstitucion"
                         }
                     },
                     "403": {}
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                 }
             },
             "post": {
@@ -249,7 +296,11 @@
                         "description": "body for ComplementoInstitucion content",
                         "required": true,
                         "schema": {
+<<<<<<< HEAD
+                            "$ref": "#/definitions/models.ComplementoInstitucion"
+=======
                             "$ref": "#/definitions/ComplementoInstitucion"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                         }
                     }
                 ],
@@ -281,8 +332,14 @@
                 ],
                 "responses": {
                     "200": {
+<<<<<<< HEAD
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.ComplementoInstitucion"
+=======
                         "schema": {
                             "$ref": "#/definitions/ComplementoInstitucion"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                         }
                     },
                     "403": {
@@ -310,14 +367,24 @@
                         "description": "body for ComplementoInstitucion content",
                         "required": true,
                         "schema": {
+<<<<<<< HEAD
+                            "$ref": "#/definitions/models.ComplementoInstitucion"
+=======
                             "$ref": "#/definitions/ComplementoInstitucion"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                         }
                     }
                 ],
                 "responses": {
                     "200": {
+<<<<<<< HEAD
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.ComplementoInstitucion"
+=======
                         "schema": {
                             "$ref": "#/definitions/ComplementoInstitucion"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                         }
                     },
                     "403": {
@@ -350,6 +417,15 @@
                 }
             }
         },
+<<<<<<< HEAD
+        "/componente/": {
+            "get": {
+                "tags": [
+                    "componente"
+                ],
+                "description": "get Componente",
+                "operationId": "ComponenteController.Get All",
+=======
         "/departamento/": {
             "get": {
                 "tags": [
@@ -357,6 +433,7 @@
                 ],
                 "description": "get Departamento",
                 "operationId": "DepartamentoController.Get All",
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                 "parameters": [
                     {
                         "in": "query",
@@ -397,33 +474,62 @@
                 ],
                 "responses": {
                     "200": {
+<<<<<<< HEAD
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.Componente"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+=======
                         "schema": {
                             "$ref": "#/definitions/Departamento"
                         }
                     },
                     "403": {}
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                 }
             },
             "post": {
                 "tags": [
+<<<<<<< HEAD
+                    "componente"
+                ],
+                "description": "create Componente",
+                "operationId": "ComponenteController.Post",
+=======
                     "departamento"
                 ],
                 "description": "create Departamento",
                 "operationId": "DepartamentoController.Post",
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                 "parameters": [
                     {
                         "in": "body",
                         "name": "body",
+<<<<<<< HEAD
+                        "description": "body for Componente content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.Componente"
+=======
                         "description": "body for Departamento content",
                         "required": true,
                         "schema": {
                             "$ref": "#/definitions/Departamento"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                         }
                     }
                 ],
                 "responses": {
                     "201": {
+<<<<<<< HEAD
+                        "description": "{int} models.Componente"
+=======
                         "description": "{int} models.Departamento"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                     },
                     "403": {
                         "description": "body is empty"
@@ -431,6 +537,15 @@
                 }
             }
         },
+<<<<<<< HEAD
+        "/componente/{id}": {
+            "get": {
+                "tags": [
+                    "componente"
+                ],
+                "description": "get Componente by id",
+                "operationId": "ComponenteController.Get One",
+=======
         "/departamento/{id}": {
             "get": {
                 "tags": [
@@ -438,6 +553,7 @@
                 ],
                 "description": "get Departamento by id",
                 "operationId": "DepartamentoController.Get One",
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                 "parameters": [
                     {
                         "in": "path",
@@ -449,8 +565,14 @@
                 ],
                 "responses": {
                     "200": {
+<<<<<<< HEAD
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.Componente"
+=======
                         "schema": {
                             "$ref": "#/definitions/Departamento"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                         }
                     },
                     "403": {
@@ -460,10 +582,17 @@
             },
             "put": {
                 "tags": [
+<<<<<<< HEAD
+                    "componente"
+                ],
+                "description": "update the Componente",
+                "operationId": "ComponenteController.Put",
+=======
                     "departamento"
                 ],
                 "description": "update the Departamento",
                 "operationId": "DepartamentoController.Put",
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                 "parameters": [
                     {
                         "in": "path",
@@ -475,17 +604,30 @@
                     {
                         "in": "body",
                         "name": "body",
+<<<<<<< HEAD
+                        "description": "body for Componente content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.Componente"
+=======
                         "description": "body for Departamento content",
                         "required": true,
                         "schema": {
                             "$ref": "#/definitions/Departamento"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                         }
                     }
                 ],
                 "responses": {
                     "200": {
+<<<<<<< HEAD
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.Componente"
+=======
                         "schema": {
                             "$ref": "#/definitions/Departamento"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                         }
                     },
                     "403": {
@@ -495,10 +637,17 @@
             },
             "delete": {
                 "tags": [
+<<<<<<< HEAD
+                    "componente"
+                ],
+                "description": "delete the Componente",
+                "operationId": "ComponenteController.Delete",
+=======
                     "departamento"
                 ],
                 "description": "delete the Departamento",
                 "operationId": "DepartamentoController.Delete",
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                 "parameters": [
                     {
                         "in": "path",
@@ -518,6 +667,15 @@
                 }
             }
         },
+<<<<<<< HEAD
+        "/componentes_menu/": {
+            "get": {
+                "tags": [
+                    "componentes_menu"
+                ],
+                "description": "get ComponentesMenu",
+                "operationId": "ComponentesMenuController.Get All",
+=======
         "/etc/": {
             "get": {
                 "tags": [
@@ -525,6 +683,7 @@
                 ],
                 "description": "get Etc",
                 "operationId": "EtcController.Get All",
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                 "parameters": [
                     {
                         "in": "query",
@@ -565,33 +724,62 @@
                 ],
                 "responses": {
                     "200": {
+<<<<<<< HEAD
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.ComponentesMenu"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+=======
                         "schema": {
                             "$ref": "#/definitions/Etc"
                         }
                     },
                     "403": {}
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                 }
             },
             "post": {
                 "tags": [
+<<<<<<< HEAD
+                    "componentes_menu"
+                ],
+                "description": "create ComponentesMenu",
+                "operationId": "ComponentesMenuController.Post",
+=======
                     "etc"
                 ],
                 "description": "create Etc",
                 "operationId": "EtcController.Post",
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                 "parameters": [
                     {
                         "in": "body",
                         "name": "body",
+<<<<<<< HEAD
+                        "description": "body for ComponentesMenu content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.ComponentesMenu"
+=======
                         "description": "body for Etc content",
                         "required": true,
                         "schema": {
                             "$ref": "#/definitions/Etc"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                         }
                     }
                 ],
                 "responses": {
                     "201": {
+<<<<<<< HEAD
+                        "description": "{int} models.ComponentesMenu"
+=======
                         "description": "{int} models.Etc"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                     },
                     "403": {
                         "description": "body is empty"
@@ -599,6 +787,15 @@
                 }
             }
         },
+<<<<<<< HEAD
+        "/componentes_menu/{id}": {
+            "get": {
+                "tags": [
+                    "componentes_menu"
+                ],
+                "description": "get ComponentesMenu by id",
+                "operationId": "ComponentesMenuController.Get One",
+=======
         "/etc/{id}": {
             "get": {
                 "tags": [
@@ -606,6 +803,7 @@
                 ],
                 "description": "get Etc by id",
                 "operationId": "EtcController.Get One",
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                 "parameters": [
                     {
                         "in": "path",
@@ -617,8 +815,14 @@
                 ],
                 "responses": {
                     "200": {
+<<<<<<< HEAD
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.ComponentesMenu"
+=======
                         "schema": {
                             "$ref": "#/definitions/Etc"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                         }
                     },
                     "403": {
@@ -628,10 +832,17 @@
             },
             "put": {
                 "tags": [
+<<<<<<< HEAD
+                    "componentes_menu"
+                ],
+                "description": "update the ComponentesMenu",
+                "operationId": "ComponentesMenuController.Put",
+=======
                     "etc"
                 ],
                 "description": "update the Etc",
                 "operationId": "EtcController.Put",
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                 "parameters": [
                     {
                         "in": "path",
@@ -643,17 +854,30 @@
                     {
                         "in": "body",
                         "name": "body",
+<<<<<<< HEAD
+                        "description": "body for ComponentesMenu content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.ComponentesMenu"
+=======
                         "description": "body for Etc content",
                         "required": true,
                         "schema": {
                             "$ref": "#/definitions/Etc"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                         }
                     }
                 ],
                 "responses": {
                     "200": {
+<<<<<<< HEAD
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.ComponentesMenu"
+=======
                         "schema": {
                             "$ref": "#/definitions/Etc"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                         }
                     },
                     "403": {
@@ -663,10 +887,17 @@
             },
             "delete": {
                 "tags": [
+<<<<<<< HEAD
+                    "componentes_menu"
+                ],
+                "description": "delete the ComponentesMenu",
+                "operationId": "ComponentesMenuController.Delete",
+=======
                     "etc"
                 ],
                 "description": "delete the Etc",
                 "operationId": "EtcController.Delete",
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                 "parameters": [
                     {
                         "in": "path",
@@ -686,6 +917,15 @@
                 }
             }
         },
+<<<<<<< HEAD
+        "/departamento/": {
+            "get": {
+                "tags": [
+                    "departamento"
+                ],
+                "description": "get Departamento",
+                "operationId": "DepartamentoController.Get All",
+=======
         "/institucion/": {
             "get": {
                 "tags": [
@@ -693,6 +933,7 @@
                 ],
                 "description": "get Institucion",
                 "operationId": "InstitucionController.Get All",
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                 "parameters": [
                     {
                         "in": "query",
@@ -733,33 +974,62 @@
                 ],
                 "responses": {
                     "200": {
+<<<<<<< HEAD
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.Departamento"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+=======
                         "schema": {
                             "$ref": "#/definitions/Institucion"
                         }
                     },
                     "403": {}
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                 }
             },
             "post": {
                 "tags": [
+<<<<<<< HEAD
+                    "departamento"
+                ],
+                "description": "create Departamento",
+                "operationId": "DepartamentoController.Post",
+=======
                     "institucion"
                 ],
                 "description": "create Institucion",
                 "operationId": "InstitucionController.Post",
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                 "parameters": [
                     {
                         "in": "body",
                         "name": "body",
+<<<<<<< HEAD
+                        "description": "body for Departamento content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.Departamento"
+=======
                         "description": "body for Institucion content",
                         "required": true,
                         "schema": {
                             "$ref": "#/definitions/Institucion"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                         }
                     }
                 ],
                 "responses": {
                     "201": {
+<<<<<<< HEAD
+                        "description": "{int} models.Departamento"
+=======
                         "description": "{int} models.Institucion"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                     },
                     "403": {
                         "description": "body is empty"
@@ -767,6 +1037,15 @@
                 }
             }
         },
+<<<<<<< HEAD
+        "/departamento/{id}": {
+            "get": {
+                "tags": [
+                    "departamento"
+                ],
+                "description": "get Departamento by id",
+                "operationId": "DepartamentoController.Get One",
+=======
         "/institucion/{id}": {
             "get": {
                 "tags": [
@@ -774,6 +1053,7 @@
                 ],
                 "description": "get Institucion by id",
                 "operationId": "InstitucionController.Get One",
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                 "parameters": [
                     {
                         "in": "path",
@@ -785,8 +1065,14 @@
                 ],
                 "responses": {
                     "200": {
+<<<<<<< HEAD
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.Departamento"
+=======
                         "schema": {
                             "$ref": "#/definitions/Institucion"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                         }
                     },
                     "403": {
@@ -796,10 +1082,17 @@
             },
             "put": {
                 "tags": [
+<<<<<<< HEAD
+                    "departamento"
+                ],
+                "description": "update the Departamento",
+                "operationId": "DepartamentoController.Put",
+=======
                     "institucion"
                 ],
                 "description": "update the Institucion",
                 "operationId": "InstitucionController.Put",
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                 "parameters": [
                     {
                         "in": "path",
@@ -811,17 +1104,30 @@
                     {
                         "in": "body",
                         "name": "body",
+<<<<<<< HEAD
+                        "description": "body for Departamento content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.Departamento"
+=======
                         "description": "body for Institucion content",
                         "required": true,
                         "schema": {
                             "$ref": "#/definitions/Institucion"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                         }
                     }
                 ],
                 "responses": {
                     "200": {
+<<<<<<< HEAD
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.Departamento"
+=======
                         "schema": {
                             "$ref": "#/definitions/Institucion"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                         }
                     },
                     "403": {
@@ -831,10 +1137,17 @@
             },
             "delete": {
                 "tags": [
+<<<<<<< HEAD
+                    "departamento"
+                ],
+                "description": "delete the Departamento",
+                "operationId": "DepartamentoController.Delete",
+=======
                     "institucion"
                 ],
                 "description": "delete the Institucion",
                 "operationId": "InstitucionController.Delete",
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                 "parameters": [
                     {
                         "in": "path",
@@ -854,6 +1167,15 @@
                 }
             }
         },
+<<<<<<< HEAD
+        "/etc/": {
+            "get": {
+                "tags": [
+                    "etc"
+                ],
+                "description": "get Etc",
+                "operationId": "EtcController.Get All",
+=======
         "/jornada/": {
             "get": {
                 "tags": [
@@ -861,6 +1183,7 @@
                 ],
                 "description": "get Jornada",
                 "operationId": "JornadaController.Get All",
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                 "parameters": [
                     {
                         "in": "query",
@@ -901,33 +1224,62 @@
                 ],
                 "responses": {
                     "200": {
+<<<<<<< HEAD
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.Etc"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+=======
                         "schema": {
                             "$ref": "#/definitions/Jornada"
                         }
                     },
                     "403": {}
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                 }
             },
             "post": {
                 "tags": [
+<<<<<<< HEAD
+                    "etc"
+                ],
+                "description": "create Etc",
+                "operationId": "EtcController.Post",
+=======
                     "jornada"
                 ],
                 "description": "create Jornada",
                 "operationId": "JornadaController.Post",
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                 "parameters": [
                     {
                         "in": "body",
                         "name": "body",
+<<<<<<< HEAD
+                        "description": "body for Etc content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.Etc"
+=======
                         "description": "body for Jornada content",
                         "required": true,
                         "schema": {
                             "$ref": "#/definitions/Jornada"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                         }
                     }
                 ],
                 "responses": {
                     "201": {
+<<<<<<< HEAD
+                        "description": "{int} models.Etc"
+=======
                         "description": "{int} models.Jornada"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                     },
                     "403": {
                         "description": "body is empty"
@@ -935,6 +1287,15 @@
                 }
             }
         },
+<<<<<<< HEAD
+        "/etc/{id}": {
+            "get": {
+                "tags": [
+                    "etc"
+                ],
+                "description": "get Etc by id",
+                "operationId": "EtcController.Get One",
+=======
         "/jornada/{id}": {
             "get": {
                 "tags": [
@@ -942,6 +1303,7 @@
                 ],
                 "description": "get Jornada by id",
                 "operationId": "JornadaController.Get One",
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                 "parameters": [
                     {
                         "in": "path",
@@ -953,8 +1315,14 @@
                 ],
                 "responses": {
                     "200": {
+<<<<<<< HEAD
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.Etc"
+=======
                         "schema": {
                             "$ref": "#/definitions/Jornada"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                         }
                     },
                     "403": {
@@ -964,10 +1332,17 @@
             },
             "put": {
                 "tags": [
+<<<<<<< HEAD
+                    "etc"
+                ],
+                "description": "update the Etc",
+                "operationId": "EtcController.Put",
+=======
                     "jornada"
                 ],
                 "description": "update the Jornada",
                 "operationId": "JornadaController.Put",
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                 "parameters": [
                     {
                         "in": "path",
@@ -979,17 +1354,30 @@
                     {
                         "in": "body",
                         "name": "body",
+<<<<<<< HEAD
+                        "description": "body for Etc content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.Etc"
+=======
                         "description": "body for Jornada content",
                         "required": true,
                         "schema": {
                             "$ref": "#/definitions/Jornada"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                         }
                     }
                 ],
                 "responses": {
                     "200": {
+<<<<<<< HEAD
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.Etc"
+=======
                         "schema": {
                             "$ref": "#/definitions/Jornada"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                         }
                     },
                     "403": {
@@ -999,10 +1387,17 @@
             },
             "delete": {
                 "tags": [
+<<<<<<< HEAD
+                    "etc"
+                ],
+                "description": "delete the Etc",
+                "operationId": "EtcController.Delete",
+=======
                     "jornada"
                 ],
                 "description": "delete the Jornada",
                 "operationId": "JornadaController.Delete",
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                 "parameters": [
                     {
                         "in": "path",
@@ -1022,6 +1417,15 @@
                 }
             }
         },
+<<<<<<< HEAD
+        "/institucion/": {
+            "get": {
+                "tags": [
+                    "institucion"
+                ],
+                "description": "get Institucion",
+                "operationId": "InstitucionController.Get All",
+=======
         "/municipio/": {
             "get": {
                 "tags": [
@@ -1029,6 +1433,7 @@
                 ],
                 "description": "get Municipio",
                 "operationId": "MunicipioController.Get All",
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                 "parameters": [
                     {
                         "in": "query",
@@ -1069,27 +1474,796 @@
                 ],
                 "responses": {
                     "200": {
+<<<<<<< HEAD
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.Institucion"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+=======
                         "schema": {
                             "$ref": "#/definitions/Municipio"
                         }
                     },
                     "403": {}
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                 }
             },
             "post": {
                 "tags": [
+<<<<<<< HEAD
+                    "institucion"
+                ],
+                "description": "create Institucion",
+                "operationId": "InstitucionController.Post",
+=======
                     "municipio"
                 ],
                 "description": "create Municipio",
                 "operationId": "MunicipioController.Post",
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                 "parameters": [
                     {
                         "in": "body",
                         "name": "body",
+<<<<<<< HEAD
+                        "description": "body for Institucion content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.Institucion"
+=======
                         "description": "body for Municipio content",
                         "required": true,
                         "schema": {
                             "$ref": "#/definitions/Municipio"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+<<<<<<< HEAD
+                        "description": "{int} models.Institucion"
+=======
+                        "description": "{int} models.Municipio"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+<<<<<<< HEAD
+        "/institucion/{id}": {
+            "get": {
+                "tags": [
+                    "institucion"
+                ],
+                "description": "get Institucion by id",
+                "operationId": "InstitucionController.Get One",
+=======
+        "/municipio/{id}": {
+            "get": {
+                "tags": [
+                    "municipio"
+                ],
+                "description": "get Municipio by id",
+                "operationId": "MunicipioController.Get One",
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+<<<<<<< HEAD
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.Institucion"
+=======
+                        "schema": {
+                            "$ref": "#/definitions/Municipio"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+<<<<<<< HEAD
+                    "institucion"
+                ],
+                "description": "update the Institucion",
+                "operationId": "InstitucionController.Put",
+=======
+                    "municipio"
+                ],
+                "description": "update the Municipio",
+                "operationId": "MunicipioController.Put",
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+<<<<<<< HEAD
+                        "description": "body for Institucion content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.Institucion"
+=======
+                        "description": "body for Municipio content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Municipio"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+<<<<<<< HEAD
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.Institucion"
+=======
+                        "schema": {
+                            "$ref": "#/definitions/Municipio"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+<<<<<<< HEAD
+                    "institucion"
+                ],
+                "description": "delete the Institucion",
+                "operationId": "InstitucionController.Delete",
+=======
+                    "municipio"
+                ],
+                "description": "delete the Municipio",
+                "operationId": "MunicipioController.Delete",
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
+<<<<<<< HEAD
+        "/jornada/": {
+            "get": {
+                "tags": [
+                    "jornada"
+                ],
+                "description": "get Jornada",
+                "operationId": "JornadaController.Get All",
+=======
+        "/persona/": {
+            "get": {
+                "tags": [
+                    "persona"
+                ],
+                "description": "get Persona",
+                "operationId": "PersonaController.Get All",
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+<<<<<<< HEAD
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.Jornada"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+=======
+                        "schema": {
+                            "$ref": "#/definitions/Persona"
+                        }
+                    },
+                    "403": {}
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
+                }
+            },
+            "post": {
+                "tags": [
+<<<<<<< HEAD
+                    "jornada"
+                ],
+                "description": "create Jornada",
+                "operationId": "JornadaController.Post",
+=======
+                    "persona"
+                ],
+                "description": "create Persona",
+                "operationId": "PersonaController.Post",
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+<<<<<<< HEAD
+                        "description": "body for Jornada content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.Jornada"
+=======
+                        "description": "body for Persona content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Persona"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+<<<<<<< HEAD
+                        "description": "{int} models.Jornada"
+=======
+                        "description": "{int} models.Persona"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+<<<<<<< HEAD
+        "/jornada/{id}": {
+            "get": {
+                "tags": [
+                    "jornada"
+                ],
+                "description": "get Jornada by id",
+                "operationId": "JornadaController.Get One",
+=======
+        "/persona/{id}": {
+            "get": {
+                "tags": [
+                    "persona"
+                ],
+                "description": "get Persona by id",
+                "operationId": "PersonaController.Get One",
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+<<<<<<< HEAD
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.Jornada"
+=======
+                        "schema": {
+                            "$ref": "#/definitions/Persona"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+<<<<<<< HEAD
+                    "jornada"
+                ],
+                "description": "update the Jornada",
+                "operationId": "JornadaController.Put",
+=======
+                    "persona"
+                ],
+                "description": "update the Persona",
+                "operationId": "PersonaController.Put",
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+<<<<<<< HEAD
+                        "description": "body for Jornada content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.Jornada"
+=======
+                        "description": "body for Persona content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Persona"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+<<<<<<< HEAD
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.Jornada"
+=======
+                        "schema": {
+                            "$ref": "#/definitions/Persona"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+<<<<<<< HEAD
+                    "jornada"
+                ],
+                "description": "delete the Jornada",
+                "operationId": "JornadaController.Delete",
+=======
+                    "persona"
+                ],
+                "description": "delete the Persona",
+                "operationId": "PersonaController.Delete",
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
+<<<<<<< HEAD
+        "/menu/": {
+            "get": {
+                "tags": [
+                    "menu"
+                ],
+                "description": "get Menu",
+                "operationId": "MenuController.Get All",
+=======
+        "/rango_edad/": {
+            "get": {
+                "tags": [
+                    "rango_edad"
+                ],
+                "description": "get RangoEdad",
+                "operationId": "RangoEdadController.Get All",
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+<<<<<<< HEAD
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.Menu"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+=======
+                        "schema": {
+                            "$ref": "#/definitions/RangoEdad"
+                        }
+                    },
+                    "403": {}
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
+                }
+            },
+            "post": {
+                "tags": [
+<<<<<<< HEAD
+                    "menu"
+                ],
+                "description": "create Menu",
+                "operationId": "MenuController.Post",
+=======
+                    "rango_edad"
+                ],
+                "description": "create RangoEdad",
+                "operationId": "RangoEdadController.Post",
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+<<<<<<< HEAD
+                        "description": "body for Menu content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.Menu"
+=======
+                        "description": "body for RangoEdad content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/RangoEdad"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+<<<<<<< HEAD
+                        "description": "{int} models.Menu"
+=======
+                        "description": "{int} models.RangoEdad"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+<<<<<<< HEAD
+        "/menu/{id}": {
+            "get": {
+                "tags": [
+                    "menu"
+                ],
+                "description": "get Menu by id",
+                "operationId": "MenuController.Get One",
+=======
+        "/rango_edad/{id}": {
+            "get": {
+                "tags": [
+                    "rango_edad"
+                ],
+                "description": "get RangoEdad by id",
+                "operationId": "RangoEdadController.Get One",
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+<<<<<<< HEAD
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.Menu"
+=======
+                        "schema": {
+                            "$ref": "#/definitions/RangoEdad"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+<<<<<<< HEAD
+                    "menu"
+                ],
+                "description": "update the Menu",
+                "operationId": "MenuController.Put",
+=======
+                    "rango_edad"
+                ],
+                "description": "update the RangoEdad",
+                "operationId": "RangoEdadController.Put",
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+<<<<<<< HEAD
+                        "description": "body for Menu content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.Menu"
+=======
+                        "description": "body for RangoEdad content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/RangoEdad"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+<<<<<<< HEAD
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.Menu"
+=======
+                        "schema": {
+                            "$ref": "#/definitions/RangoEdad"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+<<<<<<< HEAD
+                    "menu"
+                ],
+                "description": "delete the Menu",
+                "operationId": "MenuController.Delete",
+=======
+                    "rango_edad"
+                ],
+                "description": "delete the RangoEdad",
+                "operationId": "RangoEdadController.Delete",
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
+<<<<<<< HEAD
+        "/municipio/": {
+            "get": {
+                "tags": [
+                    "municipio"
+                ],
+                "description": "get Municipio",
+                "operationId": "MunicipioController.Get All",
+=======
+        "/tipo_institucion/": {
+            "get": {
+                "tags": [
+                    "tipo_institucion"
+                ],
+                "description": "get TipoInstitucion",
+                "operationId": "TipoInstitucionController.Get All",
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+<<<<<<< HEAD
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.Municipio"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+=======
+                        "schema": {
+                            "$ref": "#/definitions/TipoInstitucion"
+                        }
+                    },
+                    "403": {}
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
+                }
+            },
+            "post": {
+                "tags": [
+<<<<<<< HEAD
+                    "municipio"
+                ],
+                "description": "create Municipio",
+                "operationId": "MunicipioController.Post",
+=======
+                    "tipo_institucion"
+                ],
+                "description": "create TipoInstitucion",
+                "operationId": "TipoInstitucionController.Post",
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+<<<<<<< HEAD
+                        "description": "body for Municipio content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.Municipio"
                         }
                     }
                 ],
@@ -1121,8 +2295,9 @@
                 ],
                 "responses": {
                     "200": {
+                        "description": "",
                         "schema": {
-                            "$ref": "#/definitions/Municipio"
+                            "$ref": "#/definitions/models.Municipio"
                         }
                     },
                     "403": {
@@ -1150,14 +2325,15 @@
                         "description": "body for Municipio content",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/Municipio"
+                            "$ref": "#/definitions/models.Municipio"
                         }
                     }
                 ],
                 "responses": {
                     "200": {
+                        "description": "",
                         "schema": {
-                            "$ref": "#/definitions/Municipio"
+                            "$ref": "#/definitions/models.Municipio"
                         }
                     },
                     "403": {
@@ -1237,11 +2413,14 @@
                 ],
                 "responses": {
                     "200": {
+                        "description": "",
                         "schema": {
-                            "$ref": "#/definitions/Persona"
+                            "$ref": "#/definitions/models.Persona"
                         }
                     },
-                    "403": {}
+                    "403": {
+                        "description": ""
+                    }
                 }
             },
             "post": {
@@ -1257,7 +2436,7 @@
                         "description": "body for Persona content",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/Persona"
+                            "$ref": "#/definitions/models.Persona"
                         }
                     }
                 ],
@@ -1289,8 +2468,9 @@
                 ],
                 "responses": {
                     "200": {
+                        "description": "",
                         "schema": {
-                            "$ref": "#/definitions/Persona"
+                            "$ref": "#/definitions/models.Persona"
                         }
                     },
                     "403": {
@@ -1318,14 +2498,15 @@
                         "description": "body for Persona content",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/Persona"
+                            "$ref": "#/definitions/models.Persona"
                         }
                     }
                 ],
                 "responses": {
                     "200": {
+                        "description": "",
                         "schema": {
-                            "$ref": "#/definitions/Persona"
+                            "$ref": "#/definitions/models.Persona"
                         }
                     },
                     "403": {
@@ -1339,6 +2520,1044 @@
                 ],
                 "description": "delete the Persona",
                 "operationId": "PersonaController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
+        "/preparacion/": {
+            "get": {
+                "tags": [
+                    "preparacion"
+                ],
+                "description": "get Preparacion",
+                "operationId": "PreparacionController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.Preparacion"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "preparacion"
+                ],
+                "description": "create Preparacion",
+                "operationId": "PreparacionController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for Preparacion content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.Preparacion"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.Preparacion"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/preparacion/{id}": {
+            "get": {
+                "tags": [
+                    "preparacion"
+                ],
+                "description": "get Preparacion by id",
+                "operationId": "PreparacionController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.Preparacion"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "preparacion"
+                ],
+                "description": "update the Preparacion",
+                "operationId": "PreparacionController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for Preparacion content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.Preparacion"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.Preparacion"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "preparacion"
+                ],
+                "description": "delete the Preparacion",
+                "operationId": "PreparacionController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
+        "/preparaciones_componente/": {
+            "get": {
+                "tags": [
+                    "preparaciones_componente"
+                ],
+                "description": "get PreparacionesComponente",
+                "operationId": "PreparacionesComponenteController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PreparacionesComponente"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "preparaciones_componente"
+                ],
+                "description": "create PreparacionesComponente",
+                "operationId": "PreparacionesComponenteController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for PreparacionesComponente content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.PreparacionesComponente"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.PreparacionesComponente"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/preparaciones_componente/{id}": {
+            "get": {
+                "tags": [
+                    "preparaciones_componente"
+                ],
+                "description": "get PreparacionesComponente by id",
+                "operationId": "PreparacionesComponenteController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PreparacionesComponente"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "preparaciones_componente"
+                ],
+                "description": "update the PreparacionesComponente",
+                "operationId": "PreparacionesComponenteController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for PreparacionesComponente content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.PreparacionesComponente"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.PreparacionesComponente"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "preparaciones_componente"
+                ],
+                "description": "delete the PreparacionesComponente",
+                "operationId": "PreparacionesComponenteController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
+        "/producto/": {
+            "get": {
+                "tags": [
+                    "producto"
+                ],
+                "description": "get Producto",
+                "operationId": "ProductoController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.Producto"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "producto"
+                ],
+                "description": "create Producto",
+                "operationId": "ProductoController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for Producto content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.Producto"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.Producto"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/producto/{id}": {
+            "get": {
+                "tags": [
+                    "producto"
+                ],
+                "description": "get Producto by id",
+                "operationId": "ProductoController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.Producto"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "producto"
+                ],
+                "description": "update the Producto",
+                "operationId": "ProductoController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for Producto content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.Producto"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.Producto"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "producto"
+                ],
+                "description": "delete the Producto",
+                "operationId": "ProductoController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
+        "/productos_preparacion/": {
+            "get": {
+                "tags": [
+                    "productos_preparacion"
+                ],
+                "description": "get ProductosPreparacion",
+                "operationId": "ProductosPreparacionController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.ProductosPreparacion"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "productos_preparacion"
+                ],
+                "description": "create ProductosPreparacion",
+                "operationId": "ProductosPreparacionController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for ProductosPreparacion content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.ProductosPreparacion"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.ProductosPreparacion"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/productos_preparacion/{id}": {
+            "get": {
+                "tags": [
+                    "productos_preparacion"
+                ],
+                "description": "get ProductosPreparacion by id",
+                "operationId": "ProductosPreparacionController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.ProductosPreparacion"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "productos_preparacion"
+                ],
+                "description": "update the ProductosPreparacion",
+                "operationId": "ProductosPreparacionController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for ProductosPreparacion content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.ProductosPreparacion"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.ProductosPreparacion"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "productos_preparacion"
+                ],
+                "description": "delete the ProductosPreparacion",
+                "operationId": "ProductosPreparacionController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
+        "/productos_proveedor/": {
+            "get": {
+                "tags": [
+                    "productos_proveedor"
+                ],
+                "description": "get ProductosProveedor",
+                "operationId": "ProductosProveedorController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.ProductosProveedor"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "productos_proveedor"
+                ],
+                "description": "create ProductosProveedor",
+                "operationId": "ProductosProveedorController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for ProductosProveedor content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.ProductosProveedor"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.ProductosProveedor"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/productos_proveedor/{id}": {
+            "get": {
+                "tags": [
+                    "productos_proveedor"
+                ],
+                "description": "get ProductosProveedor by id",
+                "operationId": "ProductosProveedorController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.ProductosProveedor"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "productos_proveedor"
+                ],
+                "description": "update the ProductosProveedor",
+                "operationId": "ProductosProveedorController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for ProductosProveedor content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.ProductosProveedor"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.ProductosProveedor"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "productos_proveedor"
+                ],
+                "description": "delete the ProductosProveedor",
+                "operationId": "ProductosProveedorController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
+        "/proveedor/": {
+            "get": {
+                "tags": [
+                    "proveedor"
+                ],
+                "description": "get Proveedor",
+                "operationId": "ProveedorController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.Proveedor"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "proveedor"
+                ],
+                "description": "create Proveedor",
+                "operationId": "ProveedorController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for Proveedor content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.Proveedor"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.Proveedor"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/proveedor/{id}": {
+            "get": {
+                "tags": [
+                    "proveedor"
+                ],
+                "description": "get Proveedor by id",
+                "operationId": "ProveedorController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.Proveedor"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "proveedor"
+                ],
+                "description": "update the Proveedor",
+                "operationId": "ProveedorController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for Proveedor content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.Proveedor"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.Proveedor"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "proveedor"
+                ],
+                "description": "delete the Proveedor",
+                "operationId": "ProveedorController.Delete",
                 "parameters": [
                     {
                         "in": "path",
@@ -1405,11 +3624,14 @@
                 ],
                 "responses": {
                     "200": {
+                        "description": "",
                         "schema": {
-                            "$ref": "#/definitions/RangoEdad"
+                            "$ref": "#/definitions/models.RangoEdad"
                         }
                     },
-                    "403": {}
+                    "403": {
+                        "description": ""
+                    }
                 }
             },
             "post": {
@@ -1425,7 +3647,7 @@
                         "description": "body for RangoEdad content",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/RangoEdad"
+                            "$ref": "#/definitions/models.RangoEdad"
                         }
                     }
                 ],
@@ -1457,8 +3679,9 @@
                 ],
                 "responses": {
                     "200": {
+                        "description": "",
                         "schema": {
-                            "$ref": "#/definitions/RangoEdad"
+                            "$ref": "#/definitions/models.RangoEdad"
                         }
                     },
                     "403": {
@@ -1486,14 +3709,15 @@
                         "description": "body for RangoEdad content",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/RangoEdad"
+                            "$ref": "#/definitions/models.RangoEdad"
                         }
                     }
                 ],
                 "responses": {
                     "200": {
+                        "description": "",
                         "schema": {
-                            "$ref": "#/definitions/RangoEdad"
+                            "$ref": "#/definitions/models.RangoEdad"
                         }
                     },
                     "403": {
@@ -1507,6 +3731,525 @@
                 ],
                 "description": "delete the RangoEdad",
                 "operationId": "RangoEdadController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
+        "/rol/": {
+            "get": {
+                "tags": [
+                    "rol"
+                ],
+                "description": "get Rol",
+                "operationId": "RolController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.Rol"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "rol"
+                ],
+                "description": "create Rol",
+                "operationId": "RolController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for Rol content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.Rol"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.Rol"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/rol/{id}": {
+            "get": {
+                "tags": [
+                    "rol"
+                ],
+                "description": "get Rol by id",
+                "operationId": "RolController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.Rol"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "rol"
+                ],
+                "description": "update the Rol",
+                "operationId": "RolController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for Rol content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.Rol"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.Rol"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "rol"
+                ],
+                "description": "delete the Rol",
+                "operationId": "RolController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
+        "/rol_persona_institucion/": {
+            "get": {
+                "tags": [
+                    "rol_persona_institucion"
+                ],
+                "description": "get RolPersonaInstitucion",
+                "operationId": "RolPersonaInstitucionController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.RolPersonaInstitucion"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "rol_persona_institucion"
+                ],
+                "description": "create RolPersonaInstitucion",
+                "operationId": "RolPersonaInstitucionController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for RolPersonaInstitucion content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.RolPersonaInstitucion"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.RolPersonaInstitucion"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/rol_persona_institucion/{id}": {
+            "get": {
+                "tags": [
+                    "rol_persona_institucion"
+                ],
+                "description": "get RolPersonaInstitucion by id",
+                "operationId": "RolPersonaInstitucionController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.RolPersonaInstitucion"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "rol_persona_institucion"
+                ],
+                "description": "update the RolPersonaInstitucion",
+                "operationId": "RolPersonaInstitucionController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for RolPersonaInstitucion content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.RolPersonaInstitucion"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.RolPersonaInstitucion"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "rol_persona_institucion"
+                ],
+                "description": "delete the RolPersonaInstitucion",
+                "operationId": "RolPersonaInstitucionController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
+        "/tipo_alimento/": {
+            "get": {
+                "tags": [
+                    "tipo_alimento"
+                ],
+                "description": "get TipoAlimento",
+                "operationId": "TipoAlimentoController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.TipoAlimento"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "tipo_alimento"
+                ],
+                "description": "create TipoAlimento",
+                "operationId": "TipoAlimentoController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for TipoAlimento content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.TipoAlimento"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.TipoAlimento"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/tipo_alimento/{id}": {
+            "get": {
+                "tags": [
+                    "tipo_alimento"
+                ],
+                "description": "get TipoAlimento by id",
+                "operationId": "TipoAlimentoController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.TipoAlimento"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "tipo_alimento"
+                ],
+                "description": "update the TipoAlimento",
+                "operationId": "TipoAlimentoController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for TipoAlimento content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.TipoAlimento"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.TipoAlimento"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "tipo_alimento"
+                ],
+                "description": "delete the TipoAlimento",
+                "operationId": "TipoAlimentoController.Delete",
                 "parameters": [
                     {
                         "in": "path",
@@ -1573,11 +4316,14 @@
                 ],
                 "responses": {
                     "200": {
+                        "description": "",
                         "schema": {
-                            "$ref": "#/definitions/TipoInstitucion"
+                            "$ref": "#/definitions/models.TipoInstitucion"
                         }
                     },
-                    "403": {}
+                    "403": {
+                        "description": ""
+                    }
                 }
             },
             "post": {
@@ -1593,7 +4339,13 @@
                         "description": "body for TipoInstitucion content",
                         "required": true,
                         "schema": {
+                            "$ref": "#/definitions/models.TipoInstitucion"
+=======
+                        "description": "body for TipoInstitucion content",
+                        "required": true,
+                        "schema": {
                             "$ref": "#/definitions/TipoInstitucion"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                         }
                     }
                 ],
@@ -1625,8 +4377,14 @@
                 ],
                 "responses": {
                     "200": {
+<<<<<<< HEAD
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.TipoInstitucion"
+=======
                         "schema": {
                             "$ref": "#/definitions/TipoInstitucion"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                         }
                     },
                     "403": {
@@ -1654,14 +4412,24 @@
                         "description": "body for TipoInstitucion content",
                         "required": true,
                         "schema": {
+<<<<<<< HEAD
+                            "$ref": "#/definitions/models.TipoInstitucion"
+=======
                             "$ref": "#/definitions/TipoInstitucion"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                         }
                     }
                 ],
                 "responses": {
                     "200": {
+<<<<<<< HEAD
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.TipoInstitucion"
+=======
                         "schema": {
                             "$ref": "#/definitions/TipoInstitucion"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                         }
                     },
                     "403": {
@@ -1741,11 +4509,22 @@
                 ],
                 "responses": {
                     "200": {
+<<<<<<< HEAD
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.TipoMinuta"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+=======
                         "schema": {
                             "$ref": "#/definitions/TipoMinuta"
                         }
                     },
                     "403": {}
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                 }
             },
             "post": {
@@ -1761,7 +4540,11 @@
                         "description": "body for TipoMinuta content",
                         "required": true,
                         "schema": {
+<<<<<<< HEAD
+                            "$ref": "#/definitions/models.TipoMinuta"
+=======
                             "$ref": "#/definitions/TipoMinuta"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                         }
                     }
                 ],
@@ -1793,8 +4576,14 @@
                 ],
                 "responses": {
                     "200": {
+<<<<<<< HEAD
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.TipoMinuta"
+=======
                         "schema": {
                             "$ref": "#/definitions/TipoMinuta"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                         }
                     },
                     "403": {
@@ -1822,14 +4611,24 @@
                         "description": "body for TipoMinuta content",
                         "required": true,
                         "schema": {
+<<<<<<< HEAD
+                            "$ref": "#/definitions/models.TipoMinuta"
+=======
                             "$ref": "#/definitions/TipoMinuta"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                         }
                     }
                 ],
                 "responses": {
                     "200": {
+<<<<<<< HEAD
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.TipoMinuta"
+=======
                         "schema": {
                             "$ref": "#/definitions/TipoMinuta"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                         }
                     },
                     "403": {
@@ -1909,11 +4708,22 @@
                 ],
                 "responses": {
                     "200": {
+<<<<<<< HEAD
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.TipoMinutaTipoModalidad"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+=======
                         "schema": {
                             "$ref": "#/definitions/TipoMinutaTipoModalidad"
                         }
                     },
                     "403": {}
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                 }
             },
             "post": {
@@ -1929,7 +4739,11 @@
                         "description": "body for TipoMinutaTipoModalidad content",
                         "required": true,
                         "schema": {
+<<<<<<< HEAD
+                            "$ref": "#/definitions/models.TipoMinutaTipoModalidad"
+=======
                             "$ref": "#/definitions/TipoMinutaTipoModalidad"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                         }
                     }
                 ],
@@ -1961,8 +4775,14 @@
                 ],
                 "responses": {
                     "200": {
+<<<<<<< HEAD
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.TipoMinutaTipoModalidad"
+=======
                         "schema": {
                             "$ref": "#/definitions/TipoMinutaTipoModalidad"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                         }
                     },
                     "403": {
@@ -1990,14 +4810,24 @@
                         "description": "body for TipoMinutaTipoModalidad content",
                         "required": true,
                         "schema": {
+<<<<<<< HEAD
+                            "$ref": "#/definitions/models.TipoMinutaTipoModalidad"
+=======
                             "$ref": "#/definitions/TipoMinutaTipoModalidad"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                         }
                     }
                 ],
                 "responses": {
                     "200": {
+<<<<<<< HEAD
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.TipoMinutaTipoModalidad"
+=======
                         "schema": {
                             "$ref": "#/definitions/TipoMinutaTipoModalidad"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                         }
                     },
                     "403": {
@@ -2077,11 +4907,22 @@
                 ],
                 "responses": {
                     "200": {
+<<<<<<< HEAD
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.TipoModalidad"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+=======
                         "schema": {
                             "$ref": "#/definitions/TipoModalidad"
                         }
                     },
                     "403": {}
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                 }
             },
             "post": {
@@ -2097,7 +4938,11 @@
                         "description": "body for TipoModalidad content",
                         "required": true,
                         "schema": {
+<<<<<<< HEAD
+                            "$ref": "#/definitions/models.TipoModalidad"
+=======
                             "$ref": "#/definitions/TipoModalidad"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                         }
                     }
                 ],
@@ -2129,8 +4974,14 @@
                 ],
                 "responses": {
                     "200": {
+<<<<<<< HEAD
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.TipoModalidad"
+=======
                         "schema": {
                             "$ref": "#/definitions/TipoModalidad"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                         }
                     },
                     "403": {
@@ -2158,14 +5009,24 @@
                         "description": "body for TipoModalidad content",
                         "required": true,
                         "schema": {
+<<<<<<< HEAD
+                            "$ref": "#/definitions/models.TipoModalidad"
+=======
                             "$ref": "#/definitions/TipoModalidad"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                         }
                     }
                 ],
                 "responses": {
                     "200": {
+<<<<<<< HEAD
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.TipoModalidad"
+=======
                         "schema": {
                             "$ref": "#/definitions/TipoModalidad"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                         }
                     },
                     "403": {
@@ -2200,7 +5061,11 @@
         }
     },
     "definitions": {
+<<<<<<< HEAD
+        "models.Complemento": {
+=======
         "Complemento": {
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
             "title": "Complemento",
             "type": "object",
             "properties": {
@@ -2213,7 +5078,11 @@
                 }
             }
         },
+<<<<<<< HEAD
+        "models.ComplementoInstitucion": {
+=======
         "ComplementoInstitucion": {
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
             "title": "ComplementoInstitucion",
             "type": "object",
             "properties": {
@@ -2222,13 +5091,63 @@
                     "format": "int64"
                 },
                 "ComplementoId": {
+<<<<<<< HEAD
+                    "type": "integer",
+                    "format": "int64"
+=======
                     "$ref": "#/definitions/Complemento"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                 },
                 "Id": {
                     "type": "integer",
                     "format": "int64"
                 },
                 "InstitucionId": {
+<<<<<<< HEAD
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "JornadaId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "RangoEdadId": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            }
+        },
+        "models.Componente": {
+            "title": "Componente",
+            "type": "object",
+            "properties": {
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Nombre": {
+                    "type": "string"
+                }
+            }
+        },
+        "models.ComponentesMenu": {
+            "title": "ComponentesMenu",
+            "type": "object",
+            "properties": {
+                "ComponenteId": {
+                    "$ref": "#/definitions/models.Componente"
+                },
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "MenuId": {
+                    "$ref": "#/definitions/models.Menu"
+                }
+            }
+        },
+        "models.Departamento": {
+=======
                     "$ref": "#/definitions/Institucion"
                 },
                 "JornadaId": {
@@ -2240,6 +5159,7 @@
             }
         },
         "Departamento": {
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
             "title": "Departamento",
             "type": "object",
             "properties": {
@@ -2255,7 +5175,11 @@
                 }
             }
         },
+<<<<<<< HEAD
+        "models.Etc": {
+=======
         "Etc": {
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
             "title": "Etc",
             "type": "object",
             "properties": {
@@ -2268,7 +5192,11 @@
                 }
             }
         },
+<<<<<<< HEAD
+        "models.Institucion": {
+=======
         "Institucion": {
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
             "title": "Institucion",
             "type": "object",
             "properties": {
@@ -2284,29 +5212,61 @@
                     "type": "integer",
                     "format": "int64"
                 },
+<<<<<<< HEAD
+                "Descripcion": {
+                    "type": "string"
+=======
                 "CoordinadorFundalianza": {
                     "$ref": "#/definitions/Persona"
                 },
                 "CoordinadorPma": {
                     "$ref": "#/definitions/Persona"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                 },
                 "EsPrincipal": {
                     "type": "integer",
                     "format": "int32"
                 },
                 "EtcId": {
+<<<<<<< HEAD
+                    "type": "integer",
+                    "format": "int64"
+=======
                     "$ref": "#/definitions/Etc"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                 },
                 "Id": {
                     "type": "integer",
                     "format": "int64"
                 },
                 "MunicipioId": {
+<<<<<<< HEAD
+                    "type": "integer",
+                    "format": "int64"
+=======
                     "$ref": "#/definitions/Municipio"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                 },
                 "Nombre": {
                     "type": "string"
                 },
+<<<<<<< HEAD
+                "TipoInstitucionId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "TipoMinuta": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "TipoModalidad": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            }
+        },
+        "models.Jornada": {
+=======
                 "RectorId": {
                     "$ref": "#/definitions/Persona"
                 },
@@ -2319,6 +5279,7 @@
             }
         },
         "Jornada": {
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
             "title": "Jornada",
             "type": "object",
             "properties": {
@@ -2331,7 +5292,24 @@
                 }
             }
         },
+<<<<<<< HEAD
+        "models.Menu": {
+            "title": "Menu",
+            "type": "object",
+            "properties": {
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Nombre": {
+                    "type": "string"
+                }
+            }
+        },
+        "models.Municipio": {
+=======
         "Municipio": {
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
             "title": "Municipio",
             "type": "object",
             "properties": {
@@ -2339,7 +5317,12 @@
                     "type": "string"
                 },
                 "DepartamentoId": {
+<<<<<<< HEAD
+                    "type": "integer",
+                    "format": "int64"
+=======
                     "$ref": "#/definitions/Departamento"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
                 },
                 "Id": {
                     "type": "integer",
@@ -2350,7 +5333,11 @@
                 }
             }
         },
+<<<<<<< HEAD
+        "models.Persona": {
+=======
         "Persona": {
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
             "title": "Persona",
             "type": "object",
             "properties": {
@@ -2381,7 +5368,105 @@
                 }
             }
         },
+<<<<<<< HEAD
+        "models.Preparacion": {
+            "title": "Preparacion",
+            "type": "object",
+            "properties": {
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Nombre": {
+                    "type": "string"
+                }
+            }
+        },
+        "models.PreparacionesComponente": {
+            "title": "PreparacionesComponente",
+            "type": "object",
+            "properties": {
+                "ComponentesMenuId": {
+                    "$ref": "#/definitions/models.ComponentesMenu"
+                },
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "PreparacionId": {
+                    "$ref": "#/definitions/models.Preparacion"
+                }
+            }
+        },
+        "models.Producto": {
+            "title": "Producto",
+            "type": "object",
+            "properties": {
+                "Codigo": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Nombre": {
+                    "type": "string"
+                },
+                "TipoAlimentoId": {
+                    "$ref": "#/definitions/models.TipoAlimento"
+                }
+            }
+        },
+        "models.ProductosPreparacion": {
+            "title": "ProductosPreparacion",
+            "type": "object",
+            "properties": {
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "PreparacionId": {
+                    "$ref": "#/definitions/models.Preparacion"
+                },
+                "ProductoId": {
+                    "$ref": "#/definitions/models.Producto"
+                }
+            }
+        },
+        "models.ProductosProveedor": {
+            "title": "ProductosProveedor",
+            "type": "object",
+            "properties": {
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "ProductoId": {
+                    "$ref": "#/definitions/models.Producto"
+                },
+                "ProveedorId": {
+                    "$ref": "#/definitions/models.Proveedor"
+                }
+            }
+        },
+        "models.Proveedor": {
+            "title": "Proveedor",
+            "type": "object",
+            "properties": {
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Nombre": {
+                    "type": "string"
+                }
+            }
+        },
+        "models.RangoEdad": {
+=======
         "RangoEdad": {
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
             "title": "RangoEdad",
             "type": "object",
             "properties": {
@@ -2394,7 +5479,59 @@
                 }
             }
         },
+<<<<<<< HEAD
+        "models.Rol": {
+            "title": "Rol",
+            "type": "object",
+            "properties": {
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Nombre": {
+                    "type": "string"
+                }
+            }
+        },
+        "models.RolPersonaInstitucion": {
+            "title": "RolPersonaInstitucion",
+            "type": "object",
+            "properties": {
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "InstitucionId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "PersonaId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "RolId": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            }
+        },
+        "models.TipoAlimento": {
+            "title": "TipoAlimento",
+            "type": "object",
+            "properties": {
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Nombre": {
+                    "type": "string"
+                }
+            }
+        },
+        "models.TipoInstitucion": {
+=======
         "TipoInstitucion": {
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
             "title": "TipoInstitucion",
             "type": "object",
             "properties": {
@@ -2407,7 +5544,11 @@
                 }
             }
         },
+<<<<<<< HEAD
+        "models.TipoMinuta": {
+=======
         "TipoMinuta": {
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
             "title": "TipoMinuta",
             "type": "object",
             "properties": {
@@ -2420,7 +5561,11 @@
                 }
             }
         },
+<<<<<<< HEAD
+        "models.TipoMinutaTipoModalidad": {
+=======
         "TipoMinutaTipoModalidad": {
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
             "title": "TipoMinutaTipoModalidad",
             "type": "object",
             "properties": {
@@ -2429,6 +5574,16 @@
                     "format": "int64"
                 },
                 "TipoMinutaId": {
+<<<<<<< HEAD
+                    "$ref": "#/definitions/models.TipoMinuta"
+                },
+                "TipoModalidadId": {
+                    "$ref": "#/definitions/models.TipoModalidad"
+                }
+            }
+        },
+        "models.TipoModalidad": {
+=======
                     "$ref": "#/definitions/TipoMinuta"
                 },
                 "TipoModalidadId": {
@@ -2437,6 +5592,7 @@
             }
         },
         "TipoModalidad": {
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
             "title": "TipoModalidad",
             "type": "object",
             "properties": {
@@ -2453,6 +5609,105 @@
     "tags": [
         {
             "name": "complemento",
+<<<<<<< HEAD
+            "description": "ComplementoController operations for Complemento\n"
+        },
+        {
+            "name": "complemento_institucion",
+            "description": "ComplementoInstitucionController operations for ComplementoInstitucion\n"
+        },
+        {
+            "name": "componente",
+            "description": "ComponenteController operations for Componente\n"
+        },
+        {
+            "name": "componentes_menu",
+            "description": "ComponentesMenuController operations for ComponentesMenu\n"
+        },
+        {
+            "name": "departamento",
+            "description": "DepartamentoController operations for Departamento\n"
+        },
+        {
+            "name": "etc",
+            "description": "EtcController operations for Etc\n"
+        },
+        {
+            "name": "institucion",
+            "description": "InstitucionController operations for Institucion\n"
+        },
+        {
+            "name": "jornada",
+            "description": "JornadaController operations for Jornada\n"
+        },
+        {
+            "name": "menu",
+            "description": "MenuController operations for Menu\n"
+        },
+        {
+            "name": "municipio",
+            "description": "MunicipioController operations for Municipio\n"
+        },
+        {
+            "name": "persona",
+            "description": "PersonaController operations for Persona\n"
+        },
+        {
+            "name": "preparacion",
+            "description": "PreparacionController operations for Preparacion\n"
+        },
+        {
+            "name": "preparaciones_componente",
+            "description": "PreparacionesComponenteController operations for PreparacionesComponente\n"
+        },
+        {
+            "name": "producto",
+            "description": "ProductoController operations for Producto\n"
+        },
+        {
+            "name": "productos_preparacion",
+            "description": "ProductosPreparacionController operations for ProductosPreparacion\n"
+        },
+        {
+            "name": "productos_proveedor",
+            "description": "ProductosProveedorController operations for ProductosProveedor\n"
+        },
+        {
+            "name": "proveedor",
+            "description": "ProveedorController operations for Proveedor\n"
+        },
+        {
+            "name": "rango_edad",
+            "description": "RangoEdadController operations for RangoEdad\n"
+        },
+        {
+            "name": "rol",
+            "description": "RolController operations for Rol\n"
+        },
+        {
+            "name": "rol_persona_institucion",
+            "description": "RolPersonaInstitucionController operations for RolPersonaInstitucion\n"
+        },
+        {
+            "name": "tipo_alimento",
+            "description": "TipoAlimentoController operations for TipoAlimento\n"
+        },
+        {
+            "name": "tipo_institucion",
+            "description": "TipoInstitucionController operations for TipoInstitucion\n"
+        },
+        {
+            "name": "tipo_minuta",
+            "description": "TipoMinutaController operations for TipoMinuta\n"
+        },
+        {
+            "name": "tipo_minuta_tipo_modalidad",
+            "description": "TipoMinutaTipoModalidadController operations for TipoMinutaTipoModalidad\n"
+        },
+        {
+            "name": "tipo_modalidad",
+            "description": "TipoModalidadController operations for TipoModalidad\n"
+=======
             "description": "ComplementoController oprations for Complemento\n"
         },
         {
@@ -2502,6 +5757,7 @@
         {
             "name": "tipo_modalidad",
             "description": "TipoModalidadController oprations for TipoModalidad\n"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
         }
     ]
 }

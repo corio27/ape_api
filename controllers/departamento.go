@@ -3,14 +3,22 @@ package controllers
 import (
 	"encoding/json"
 	"errors"
+<<<<<<< HEAD
+	"github.com/corio27/pae_api/models"
+=======
 	"pae_api/models"
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
 	"strconv"
 	"strings"
 
 	"github.com/astaxie/beego"
 )
 
+<<<<<<< HEAD
+// DepartamentoController operations for Departamento
+=======
 // DepartamentoController oprations for Departamento
+>>>>>>> c1d187705a12d73b3be4fd94851e77702888b270
 type DepartamentoController struct {
 	beego.Controller
 }
