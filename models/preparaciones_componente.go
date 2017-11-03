@@ -47,7 +47,7 @@ func GetPreparacionesComponenteById(id int) (v *PreparacionesComponente, err err
 func GetAllPreparacionesComponente(query map[string]string, fields []string, sortby []string, order []string,
 	offset int64, limit int64) (ml []interface{}, err error) {
 	o := orm.NewOrm()
-	qs := o.QueryTable(new(PreparacionesComponente))
+	qs := o.QueryTable(new(PreparacionesComponente)).RelatedSel(5)
 	// query k=v
 	for k, v := range query {
 		// rewrite dot-notation to Object__Attribute

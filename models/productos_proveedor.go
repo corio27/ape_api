@@ -10,9 +10,11 @@ import (
 )
 
 type ProductosProveedor struct {
-	Id          int        `orm:"column(id);auto"`
-	ProveedorId *Proveedor `orm:"column(proveedor_id);rel(fk)"`
-	ProductoId  *Producto  `orm:"column(producto_id);rel(fk)"`
+	Id             int           `orm:"column(id);auto"`
+	ProveedorId    *Proveedor    `orm:"column(proveedor_id);rel(fk)"`
+	ProductoId     *Producto     `orm:"column(producto_id);rel(fk)"`
+	UnidadMedidaId *UnidadMedida `orm:"column(unidad_medida_id);rel(fk)"`
+	Valor          int           `orm:"column(valor);null"`
 }
 
 func (t *ProductosProveedor) TableName() string {

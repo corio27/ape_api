@@ -165,6 +165,12 @@ func init() {
 				&controllers.TipoModalidadController{},
 			),
 		),
+
+		beego.NSNamespace("/unidad_medida",
+			beego.NSInclude(
+				&controllers.UnidadMedidaController{},
+			),
+		),
 	)
 	beego.AddNamespace(ns)
 }
