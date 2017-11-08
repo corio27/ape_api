@@ -10,18 +10,21 @@ import (
 )
 
 type Institucion struct {
-	Id                    int    `orm:"column(id);auto"`
-	Nombre                string `orm:"column(nombre);size(100);null"`
-	CodigoDane            int64  `orm:"column(codigo_dane);null"`
-	TipoInstitucionId     int    `orm:"column(tipo_institucion_id);null"`
-	MunicipioId           int    `orm:"column(municipio_id);null"`
-	EtcId                 int64  `orm:"column(etc_id);null"`
-	CantidadManipuladoras int    `orm:"column(cantidad_manipuladoras);null"`
-	EsPrincipal           int8   `orm:"column(es_principal);null"`
-	CodigoDanePrincipal   int64  `orm:"column(codigo_dane_principal);null"`
-	Descripcion           string `orm:"column(descripcion);size(45);null"`
-	TipoMinuta            int    `orm:"column(tipo_minuta);null"`
-	TipoModalidad         int    `orm:"column(tipo_modalidad);null"`
+	Id                    int     `orm:"column(id);auto"`
+	Nombre                string  `orm:"column(nombre);size(100);null"`
+	CodigoDane            int64   `orm:"column(codigo_dane);null"`
+	TipoInstitucionId     int     `orm:"column(tipo_institucion_id);null"`
+	MunicipioId           int     `orm:"column(municipio_id);null"`
+	EtcId                 int64   `orm:"column(etc_id);null"`
+	CantidadManipuladoras int     `orm:"column(cantidad_manipuladoras);null"`
+	EsPrincipal           int8    `orm:"column(es_principal);null"`
+	CodigoDanePrincipal   int64   `orm:"column(codigo_dane_principal);null"`
+	Descripcion           string  `orm:"column(descripcion);size(45);null"`
+	TipoMinuta            int     `orm:"column(tipo_minuta);null"`
+	TipoModalidad         int     `orm:"column(tipo_modalidad);null"`
+	Latitud               float64 `orm:"column(latitud);null"`
+	Longitud              float64 `orm:"column(longitud);null"`
+	Indicaciones          string  `orm:"column(indicaciones);size(255);null"`
 }
 
 func (t *Institucion) TableName() string {

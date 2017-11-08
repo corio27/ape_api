@@ -12,7 +12,6 @@ import (
 type ComplementoInstitucion struct {
 	Id            int `orm:"column(id);auto"`
 	ComplementoId int `orm:"column(complemento_id);null"`
-	JornadaId     int `orm:"column(jornada_id);null"`
 	Cantidad      int `orm:"column(cantidad);null"`
 	InstitucionId int `orm:"column(institucion_id);null"`
 	RangoEdadId   int `orm:"column(rango_edad_id);null"`
@@ -50,7 +49,7 @@ func GetComplementoInstitucionById(id int) (v *ComplementoInstitucion, err error
 func GetAllComplementoInstitucion(query map[string]string, fields []string, sortby []string, order []string,
 	offset int64, limit int64) (ml []interface{}, err error) {
 	o := orm.NewOrm()
-	qs := o.QueryTable(new(ComplementoInstitucion)).RelatedSel(5)
+	qs := o.QueryTable(new(ComplementoInstitucion))
 	// query k=v
 	for k, v := range query {
 		// rewrite dot-notation to Object__Attribute

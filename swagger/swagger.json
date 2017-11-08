@@ -1918,6 +1918,179 @@
                 }
             }
         },
+        "/planeacion/": {
+            "get": {
+                "tags": [
+                    "planeacion"
+                ],
+                "description": "get Planeacion",
+                "operationId": "PlaneacionController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.Planeacion"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "planeacion"
+                ],
+                "description": "create Planeacion",
+                "operationId": "PlaneacionController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for Planeacion content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.Planeacion"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.Planeacion"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/planeacion/{id}": {
+            "get": {
+                "tags": [
+                    "planeacion"
+                ],
+                "description": "get Planeacion by id",
+                "operationId": "PlaneacionController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.Planeacion"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "planeacion"
+                ],
+                "description": "update the Planeacion",
+                "operationId": "PlaneacionController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for Planeacion content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.Planeacion"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.Planeacion"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "planeacion"
+                ],
+                "description": "delete the Planeacion",
+                "operationId": "PlaneacionController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
         "/preparacion/": {
             "get": {
                 "tags": [
@@ -4548,10 +4721,6 @@
                     "type": "integer",
                     "format": "int64"
                 },
-                "JornadaId": {
-                    "type": "integer",
-                    "format": "int64"
-                },
                 "RangoEdadId": {
                     "type": "integer",
                     "format": "int64"
@@ -4646,6 +4815,17 @@
                 "Id": {
                     "type": "integer",
                     "format": "int64"
+                },
+                "Indicaciones": {
+                    "type": "string"
+                },
+                "Latitud": {
+                    "type": "number",
+                    "format": "double"
+                },
+                "Longitud": {
+                    "type": "number",
+                    "format": "double"
                 },
                 "MunicipioId": {
                     "type": "integer",
@@ -4742,6 +4922,32 @@
                 },
                 "Telefono": {
                     "type": "string"
+                }
+            }
+        },
+        "models.Planeacion": {
+            "title": "Planeacion",
+            "type": "object",
+            "properties": {
+                "ComplementoInstitucionId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "ComponentesMenuId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "PesoBruto": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "ProductosPreparacionId": {
+                    "type": "integer",
+                    "format": "int64"
                 }
             }
         },
@@ -5024,6 +5230,10 @@
         {
             "name": "persona",
             "description": "PersonaController operations for Persona\n"
+        },
+        {
+            "name": "planeacion",
+            "description": "PlaneacionController operations for Planeacion\n"
         },
         {
             "name": "preparacion",
