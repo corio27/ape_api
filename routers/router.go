@@ -76,6 +76,12 @@ func init() {
 			),
 		),
 
+		beego.NSNamespace("/periodo",
+			beego.NSInclude(
+				&controllers.PeriodoController{},
+			),
+		),
+
 		beego.NSNamespace("/persona",
 			beego.NSInclude(
 				&controllers.PersonaController{},
@@ -130,6 +136,12 @@ func init() {
 			),
 		),
 
+		beego.NSNamespace("/rangos_preparacion_producto",
+			beego.NSInclude(
+				&controllers.RangosPreparacionProductoController{},
+			),
+		),
+
 		beego.NSNamespace("/rol",
 			beego.NSInclude(
 				&controllers.RolController{},
@@ -160,21 +172,33 @@ func init() {
 			),
 		),
 
-		beego.NSNamespace("/tipo_minuta_tipo_modalidad",
-			beego.NSInclude(
-				&controllers.TipoMinutaTipoModalidadController{},
-			),
-		),
-
 		beego.NSNamespace("/tipo_modalidad",
 			beego.NSInclude(
 				&controllers.TipoModalidadController{},
 			),
 		),
 
+		beego.NSNamespace("/total_planeacion",
+			beego.NSInclude(
+				&controllers.TotalPlaneacionController{},
+			),
+		),
+
 		beego.NSNamespace("/unidad_medida",
 			beego.NSInclude(
 				&controllers.UnidadMedidaController{},
+			),
+		),
+
+		beego.NSNamespace("/waybill",
+			beego.NSInclude(
+				&controllers.WaybillController{},
+			),
+		),
+
+		beego.NSNamespace("/waybill_temporal",
+			beego.NSInclude(
+				&controllers.WaybillTemporalController{},
 			),
 		),
 	)

@@ -10,9 +10,9 @@ import (
 )
 
 type PreparacionesComponente struct {
-	Id                int              `orm:"column(id);auto"`
-	PreparacionId     *Preparacion     `orm:"column(preparacion_id);rel(fk)"`
-	ComponentesMenuId *ComponentesMenu `orm:"column(componentes_menu_id);rel(fk)"`
+	Id                int `orm:"column(id);auto"`
+	PreparacionId     int `orm:"column(preparacion_id);null"`
+	ComponentesMenuId int `orm:"column(componentes_menu_id);null"`
 }
 
 func (t *PreparacionesComponente) TableName() string {
@@ -47,7 +47,7 @@ func GetPreparacionesComponenteById(id int) (v *PreparacionesComponente, err err
 func GetAllPreparacionesComponente(query map[string]string, fields []string, sortby []string, order []string,
 	offset int64, limit int64) (ml []interface{}, err error) {
 	o := orm.NewOrm()
-	qs := o.QueryTable(new(PreparacionesComponente)).RelatedSel(5)
+	qs := o.QueryTable(new(PreparacionesComponente))
 	// query k=v
 	for k, v := range query {
 		// rewrite dot-notation to Object__Attribute

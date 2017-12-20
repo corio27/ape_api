@@ -5,19 +5,33 @@ import (
 	"fmt"
 	"reflect"
 	"strings"
+	"time"
 
 	"github.com/astaxie/beego/orm"
 )
 
 type Persona struct {
-	Id              int    `orm:"column(id);auto"`
-	PrimerNombre    string `orm:"column(primer_nombre);size(100);null"`
-	SegundoNombre   string `orm:"column(segundo_nombre);size(100);null"`
-	PrimerApellido  string `orm:"column(primer_apellido);size(100);null"`
-	SegundoApellido string `orm:"column(segundo_apellido);size(100);null"`
-	Telefono        string `orm:"column(telefono);size(100);null"`
-	Email           string `orm:"column(email);size(100);null"`
-	NombreCompleto  string `orm:"column(nombre_completo);size(100);null"`
+	Id                        int       `orm:"column(id);auto"`
+	PrimerNombre              string    `orm:"column(primer_nombre);size(100);null"`
+	SegundoNombre             string    `orm:"column(segundo_nombre);size(100);null"`
+	PrimerApellido            string    `orm:"column(primer_apellido);size(100);null"`
+	SegundoApellido           string    `orm:"column(segundo_apellido);size(100);null"`
+	Telefono                  string    `orm:"column(telefono);size(100);null"`
+	Email                     string    `orm:"column(email);size(100);null"`
+	NombreCompleto            string    `orm:"column(nombre_completo);size(100);null"`
+	Documento                 string    `orm:"column(documento);size(20);null"`
+	Direccion                 string    `orm:"column(direccion);size(100);null"`
+	Estrato                   int       `orm:"column(estrato);null"`
+	FechaNacimiento           time.Time `orm:"column(fecha_nacimiento);type(datetime);null"`
+	Edad                      int       `orm:"column(edad);null"`
+	Genero                    string    `orm:"column(genero);size(1);null"`
+	TipoDocumento             string    `orm:"column(tipo_documento);size(10);null"`
+	PoblacionVictimaConflicto int       `orm:"column(poblacion_victima_conflicto);null"`
+	Observaciones             string    `orm:"column(observaciones);size(31);null"`
+	CodigoEtnia               int       `orm:"column(codigo_etnia);null"`
+	Etnia                     string    `orm:"column(etnia);size(50);null"`
+	CodigoGrado               int       `orm:"column(codigo_grado);null"`
+	Grado                     string    `orm:"column(grado);size(50);null"`
 }
 
 func (t *Persona) TableName() string {

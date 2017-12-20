@@ -1745,6 +1745,179 @@
                 }
             }
         },
+        "/periodo/": {
+            "get": {
+                "tags": [
+                    "periodo"
+                ],
+                "description": "get Periodo",
+                "operationId": "PeriodoController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.Periodo"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "periodo"
+                ],
+                "description": "create Periodo",
+                "operationId": "PeriodoController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for Periodo content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.Periodo"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.Periodo"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/periodo/{id}": {
+            "get": {
+                "tags": [
+                    "periodo"
+                ],
+                "description": "get Periodo by id",
+                "operationId": "PeriodoController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.Periodo"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "periodo"
+                ],
+                "description": "update the Periodo",
+                "operationId": "PeriodoController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for Periodo content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.Periodo"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.Periodo"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "periodo"
+                ],
+                "description": "delete the Periodo",
+                "operationId": "PeriodoController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
         "/persona/": {
             "get": {
                 "tags": [
@@ -3302,6 +3475,179 @@
                 }
             }
         },
+        "/rangos_preparacion_producto/": {
+            "get": {
+                "tags": [
+                    "rangos_preparacion_producto"
+                ],
+                "description": "get RangosPreparacionProducto",
+                "operationId": "RangosPreparacionProductoController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.RangosPreparacionProducto"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "rangos_preparacion_producto"
+                ],
+                "description": "create RangosPreparacionProducto",
+                "operationId": "RangosPreparacionProductoController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for RangosPreparacionProducto content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.RangosPreparacionProducto"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.RangosPreparacionProducto"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/rangos_preparacion_producto/{id}": {
+            "get": {
+                "tags": [
+                    "rangos_preparacion_producto"
+                ],
+                "description": "get RangosPreparacionProducto by id",
+                "operationId": "RangosPreparacionProductoController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.RangosPreparacionProducto"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "rangos_preparacion_producto"
+                ],
+                "description": "update the RangosPreparacionProducto",
+                "operationId": "RangosPreparacionProductoController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for RangosPreparacionProducto content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.RangosPreparacionProducto"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.RangosPreparacionProducto"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "rangos_preparacion_producto"
+                ],
+                "description": "delete the RangosPreparacionProducto",
+                "operationId": "RangosPreparacionProductoController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
         "/rol/": {
             "get": {
                 "tags": [
@@ -4167,179 +4513,6 @@
                 }
             }
         },
-        "/tipo_minuta_tipo_modalidad/": {
-            "get": {
-                "tags": [
-                    "tipo_minuta_tipo_modalidad"
-                ],
-                "description": "get TipoMinutaTipoModalidad",
-                "operationId": "TipoMinutaTipoModalidadController.Get All",
-                "parameters": [
-                    {
-                        "in": "query",
-                        "name": "query",
-                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
-                        "type": "string"
-                    },
-                    {
-                        "in": "query",
-                        "name": "fields",
-                        "description": "Fields returned. e.g. col1,col2 ...",
-                        "type": "string"
-                    },
-                    {
-                        "in": "query",
-                        "name": "sortby",
-                        "description": "Sorted-by fields. e.g. col1,col2 ...",
-                        "type": "string"
-                    },
-                    {
-                        "in": "query",
-                        "name": "order",
-                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
-                        "type": "string"
-                    },
-                    {
-                        "in": "query",
-                        "name": "limit",
-                        "description": "Limit the size of result set. Must be an integer",
-                        "type": "string"
-                    },
-                    {
-                        "in": "query",
-                        "name": "offset",
-                        "description": "Start position of result set. Must be an integer",
-                        "type": "string"
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "",
-                        "schema": {
-                            "$ref": "#/definitions/models.TipoMinutaTipoModalidad"
-                        }
-                    },
-                    "403": {
-                        "description": ""
-                    }
-                }
-            },
-            "post": {
-                "tags": [
-                    "tipo_minuta_tipo_modalidad"
-                ],
-                "description": "create TipoMinutaTipoModalidad",
-                "operationId": "TipoMinutaTipoModalidadController.Post",
-                "parameters": [
-                    {
-                        "in": "body",
-                        "name": "body",
-                        "description": "body for TipoMinutaTipoModalidad content",
-                        "required": true,
-                        "schema": {
-                            "$ref": "#/definitions/models.TipoMinutaTipoModalidad"
-                        }
-                    }
-                ],
-                "responses": {
-                    "201": {
-                        "description": "{int} models.TipoMinutaTipoModalidad"
-                    },
-                    "403": {
-                        "description": "body is empty"
-                    }
-                }
-            }
-        },
-        "/tipo_minuta_tipo_modalidad/{id}": {
-            "get": {
-                "tags": [
-                    "tipo_minuta_tipo_modalidad"
-                ],
-                "description": "get TipoMinutaTipoModalidad by id",
-                "operationId": "TipoMinutaTipoModalidadController.Get One",
-                "parameters": [
-                    {
-                        "in": "path",
-                        "name": "id",
-                        "description": "The key for staticblock",
-                        "required": true,
-                        "type": "string"
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "",
-                        "schema": {
-                            "$ref": "#/definitions/models.TipoMinutaTipoModalidad"
-                        }
-                    },
-                    "403": {
-                        "description": ":id is empty"
-                    }
-                }
-            },
-            "put": {
-                "tags": [
-                    "tipo_minuta_tipo_modalidad"
-                ],
-                "description": "update the TipoMinutaTipoModalidad",
-                "operationId": "TipoMinutaTipoModalidadController.Put",
-                "parameters": [
-                    {
-                        "in": "path",
-                        "name": "id",
-                        "description": "The id you want to update",
-                        "required": true,
-                        "type": "string"
-                    },
-                    {
-                        "in": "body",
-                        "name": "body",
-                        "description": "body for TipoMinutaTipoModalidad content",
-                        "required": true,
-                        "schema": {
-                            "$ref": "#/definitions/models.TipoMinutaTipoModalidad"
-                        }
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "",
-                        "schema": {
-                            "$ref": "#/definitions/models.TipoMinutaTipoModalidad"
-                        }
-                    },
-                    "403": {
-                        "description": ":id is not int"
-                    }
-                }
-            },
-            "delete": {
-                "tags": [
-                    "tipo_minuta_tipo_modalidad"
-                ],
-                "description": "delete the TipoMinutaTipoModalidad",
-                "operationId": "TipoMinutaTipoModalidadController.Delete",
-                "parameters": [
-                    {
-                        "in": "path",
-                        "name": "id",
-                        "description": "The id you want to delete",
-                        "required": true,
-                        "type": "string"
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "{string} delete success!"
-                    },
-                    "403": {
-                        "description": "id is empty"
-                    }
-                }
-            }
-        },
         "/tipo_modalidad/": {
             "get": {
                 "tags": [
@@ -4494,6 +4667,179 @@
                 ],
                 "description": "delete the TipoModalidad",
                 "operationId": "TipoModalidadController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
+        "/total_planeacion/": {
+            "get": {
+                "tags": [
+                    "total_planeacion"
+                ],
+                "description": "get TotalPlaneacion",
+                "operationId": "TotalPlaneacionController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.TotalPlaneacion"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "total_planeacion"
+                ],
+                "description": "create TotalPlaneacion",
+                "operationId": "TotalPlaneacionController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for TotalPlaneacion content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.TotalPlaneacion"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.TotalPlaneacion"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/total_planeacion/{id}": {
+            "get": {
+                "tags": [
+                    "total_planeacion"
+                ],
+                "description": "get TotalPlaneacion by id",
+                "operationId": "TotalPlaneacionController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.TotalPlaneacion"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "total_planeacion"
+                ],
+                "description": "update the TotalPlaneacion",
+                "operationId": "TotalPlaneacionController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for TotalPlaneacion content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.TotalPlaneacion"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.TotalPlaneacion"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "total_planeacion"
+                ],
+                "description": "delete the TotalPlaneacion",
+                "operationId": "TotalPlaneacionController.Delete",
                 "parameters": [
                     {
                         "in": "path",
@@ -4685,6 +5031,352 @@
                     }
                 }
             }
+        },
+        "/waybill/": {
+            "get": {
+                "tags": [
+                    "waybill"
+                ],
+                "description": "get Waybill",
+                "operationId": "WaybillController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.Waybill"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "waybill"
+                ],
+                "description": "create Waybill",
+                "operationId": "WaybillController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for Waybill content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.Waybill"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.Waybill"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/waybill/{id}": {
+            "get": {
+                "tags": [
+                    "waybill"
+                ],
+                "description": "get Waybill by id",
+                "operationId": "WaybillController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.Waybill"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "waybill"
+                ],
+                "description": "update the Waybill",
+                "operationId": "WaybillController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for Waybill content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.Waybill"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.Waybill"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "waybill"
+                ],
+                "description": "delete the Waybill",
+                "operationId": "WaybillController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
+        "/waybill_temporal/": {
+            "get": {
+                "tags": [
+                    "waybill_temporal"
+                ],
+                "description": "get WaybillTemporal",
+                "operationId": "WaybillTemporalController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.WaybillTemporal"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "waybill_temporal"
+                ],
+                "description": "create WaybillTemporal",
+                "operationId": "WaybillTemporalController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for WaybillTemporal content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.WaybillTemporal"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.WaybillTemporal"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/waybill_temporal/{id}": {
+            "get": {
+                "tags": [
+                    "waybill_temporal"
+                ],
+                "description": "get WaybillTemporal by id",
+                "operationId": "WaybillTemporalController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.WaybillTemporal"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "waybill_temporal"
+                ],
+                "description": "update the WaybillTemporal",
+                "operationId": "WaybillTemporalController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for WaybillTemporal content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.WaybillTemporal"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.WaybillTemporal"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "waybill_temporal"
+                ],
+                "description": "delete the WaybillTemporal",
+                "operationId": "WaybillTemporalController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
         }
     },
     "definitions": {
@@ -4745,14 +5437,28 @@
             "type": "object",
             "properties": {
                 "ComponenteId": {
-                    "$ref": "#/definitions/models.Componente"
+                    "type": "integer",
+                    "format": "int64"
                 },
                 "Id": {
                     "type": "integer",
                     "format": "int64"
                 },
                 "MenuId": {
-                    "$ref": "#/definitions/models.Menu"
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "PreparacionId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "TipoComplementoId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "TipoMinutaId": {
+                    "type": "integer",
+                    "format": "int64"
                 }
             }
         },
@@ -4894,11 +5600,68 @@
                 }
             }
         },
+        "models.Periodo": {
+            "title": "Periodo",
+            "type": "object",
+            "properties": {
+                "Ano": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Estado": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Semana": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            }
+        },
         "models.Persona": {
             "title": "Persona",
             "type": "object",
             "properties": {
+                "CodigoEtnia": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "CodigoGrado": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Direccion": {
+                    "type": "string"
+                },
+                "Documento": {
+                    "type": "string"
+                },
+                "Edad": {
+                    "type": "integer",
+                    "format": "int64"
+                },
                 "Email": {
+                    "type": "string"
+                },
+                "Estrato": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Etnia": {
+                    "type": "string"
+                },
+                "FechaNacimiento": {
+                    "type": "string",
+                    "format": "string"
+                },
+                "Genero": {
+                    "type": "string"
+                },
+                "Grado": {
                     "type": "string"
                 },
                 "Id": {
@@ -4907,6 +5670,13 @@
                 },
                 "NombreCompleto": {
                     "type": "string"
+                },
+                "Observaciones": {
+                    "type": "string"
+                },
+                "PoblacionVictimaConflicto": {
+                    "type": "integer",
+                    "format": "int64"
                 },
                 "PrimerApellido": {
                     "type": "string"
@@ -4922,6 +5692,9 @@
                 },
                 "Telefono": {
                     "type": "string"
+                },
+                "TipoDocumento": {
+                    "type": "string"
                 }
             }
         },
@@ -4929,25 +5702,70 @@
             "title": "Planeacion",
             "type": "object",
             "properties": {
-                "ComplementoInstitucionId": {
+                "Cantidad": {
                     "type": "integer",
                     "format": "int64"
                 },
-                "ComponentesMenuId": {
+                "Complemento": {
+                    "type": "string"
+                },
+                "ComplementoId": {
                     "type": "integer",
                     "format": "int64"
+                },
+                "Fecha": {
+                    "type": "string",
+                    "format": "string"
                 },
                 "Id": {
                     "type": "integer",
                     "format": "int64"
                 },
-                "PesoBruto": {
+                "Institucion": {
+                    "type": "string"
+                },
+                "InstitucionId": {
                     "type": "integer",
                     "format": "int64"
                 },
-                "ProductosPreparacionId": {
+                "Menu": {
+                    "type": "string"
+                },
+                "MenuId": {
                     "type": "integer",
                     "format": "int64"
+                },
+                "PesoBruto": {
+                    "type": "number",
+                    "format": "double"
+                },
+                "Preparacion": {
+                    "type": "string"
+                },
+                "PreparacionId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Producto": {
+                    "type": "string"
+                },
+                "ProductoId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Rango": {
+                    "type": "string"
+                },
+                "RangoId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "RangoMenu": {
+                    "type": "string"
+                },
+                "Total": {
+                    "type": "number",
+                    "format": "double"
                 }
             }
         },
@@ -4969,14 +5787,16 @@
             "type": "object",
             "properties": {
                 "ComponentesMenuId": {
-                    "$ref": "#/definitions/models.ComponentesMenu"
+                    "type": "integer",
+                    "format": "int64"
                 },
                 "Id": {
                     "type": "integer",
                     "format": "int64"
                 },
                 "PreparacionId": {
-                    "$ref": "#/definitions/models.Preparacion"
+                    "type": "integer",
+                    "format": "int64"
                 }
             }
         },
@@ -4985,6 +5805,10 @@
             "type": "object",
             "properties": {
                 "Codigo": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "CodigoNutricional": {
                     "type": "integer",
                     "format": "int64"
                 },
@@ -5009,10 +5833,12 @@
                     "format": "int64"
                 },
                 "PreparacionId": {
-                    "$ref": "#/definitions/models.Preparacion"
+                    "type": "integer",
+                    "format": "int64"
                 },
                 "ProductoId": {
-                    "$ref": "#/definitions/models.Producto"
+                    "type": "integer",
+                    "format": "int64"
                 }
             }
         },
@@ -5062,6 +5888,36 @@
                 },
                 "Rango": {
                     "type": "string"
+                }
+            }
+        },
+        "models.RangosPreparacionProducto": {
+            "title": "RangosPreparacionProducto",
+            "type": "object",
+            "properties": {
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "MenuId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "PesoBruto": {
+                    "type": "number",
+                    "format": "double"
+                },
+                "PesoNeto": {
+                    "type": "number",
+                    "format": "double"
+                },
+                "ProductosPreparacionId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "RangoId": {
+                    "type": "integer",
+                    "format": "int64"
                 }
             }
         },
@@ -5130,28 +5986,15 @@
             "title": "TipoMinuta",
             "type": "object",
             "properties": {
+                "Abreviacion": {
+                    "type": "string"
+                },
                 "Id": {
                     "type": "integer",
                     "format": "int64"
                 },
                 "Nombre": {
                     "type": "string"
-                }
-            }
-        },
-        "models.TipoMinutaTipoModalidad": {
-            "title": "TipoMinutaTipoModalidad",
-            "type": "object",
-            "properties": {
-                "Id": {
-                    "type": "integer",
-                    "format": "int64"
-                },
-                "TipoMinutaId": {
-                    "$ref": "#/definitions/models.TipoMinuta"
-                },
-                "TipoModalidadId": {
-                    "$ref": "#/definitions/models.TipoModalidad"
                 }
             }
         },
@@ -5168,6 +6011,45 @@
                 }
             }
         },
+        "models.TotalPlaneacion": {
+            "title": "TotalPlaneacion",
+            "type": "object",
+            "properties": {
+                "Cantidad": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Institucion": {
+                    "type": "string"
+                },
+                "InstitucionId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Peso": {
+                    "type": "number",
+                    "format": "double"
+                },
+                "Producto": {
+                    "type": "string"
+                },
+                "ProductoId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "RangoMenu": {
+                    "type": "string"
+                },
+                "Total": {
+                    "type": "number",
+                    "format": "double"
+                }
+            }
+        },
         "models.UnidadMedida": {
             "title": "UnidadMedida",
             "type": "object",
@@ -5180,6 +6062,166 @@
                     "type": "string"
                 },
                 "Peso": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            }
+        },
+        "models.Waybill": {
+            "title": "Waybill",
+            "type": "object",
+            "properties": {
+                "Alimento": {
+                    "type": "string"
+                },
+                "Almuerzo": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Anio": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "CuposMañana": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "CuposTarde": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Direccion": {
+                    "type": "string"
+                },
+                "EntregaReal": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Fecha": {
+                    "type": "string",
+                    "format": "string"
+                },
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Institucion": {
+                    "type": "string"
+                },
+                "Menu": {
+                    "type": "string"
+                },
+                "Observacion": {
+                    "type": "string"
+                },
+                "Origen": {
+                    "type": "string"
+                },
+                "Peso": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "PesoPresentacion": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Presentacion": {
+                    "type": "string"
+                },
+                "ProductoId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Semana": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "TipoAlimento": {
+                    "type": "string"
+                },
+                "Unidades": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            }
+        },
+        "models.WaybillTemporal": {
+            "title": "WaybillTemporal",
+            "type": "object",
+            "properties": {
+                "Cantidad": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Complemento": {
+                    "type": "string"
+                },
+                "ComplementoId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Estado": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Indicaciones": {
+                    "type": "string"
+                },
+                "Institucion": {
+                    "type": "string"
+                },
+                "InstitucionId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Origen": {
+                    "type": "string"
+                },
+                "OrigenId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Peso": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Presentacion": {
+                    "type": "string"
+                },
+                "Producto": {
+                    "type": "string"
+                },
+                "ProductoId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "RangoMenu": {
+                    "type": "string"
+                },
+                "Resta": {
+                    "type": "number",
+                    "format": "double"
+                },
+                "Sobrante": {
+                    "type": "number",
+                    "format": "double"
+                },
+                "TipoProducto": {
+                    "type": "string"
+                },
+                "Total": {
+                    "type": "number",
+                    "format": "double"
+                },
+                "Unidad": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "UnidadId": {
                     "type": "integer",
                     "format": "int64"
                 }
@@ -5228,6 +6270,10 @@
             "description": "MunicipioController operations for Municipio\n"
         },
         {
+            "name": "periodo",
+            "description": "PeriodoController operations for Periodo\n"
+        },
+        {
             "name": "persona",
             "description": "PersonaController operations for Persona\n"
         },
@@ -5264,6 +6310,10 @@
             "description": "RangoEdadController operations for RangoEdad\n"
         },
         {
+            "name": "rangos_preparacion_producto",
+            "description": "RangosPreparacionProductoController operations for RangosPreparacionProducto\n"
+        },
+        {
             "name": "rol",
             "description": "RolController operations for Rol\n"
         },
@@ -5284,16 +6334,24 @@
             "description": "TipoMinutaController operations for TipoMinuta\n"
         },
         {
-            "name": "tipo_minuta_tipo_modalidad",
-            "description": "TipoMinutaTipoModalidadController operations for TipoMinutaTipoModalidad\n"
-        },
-        {
             "name": "tipo_modalidad",
             "description": "TipoModalidadController operations for TipoModalidad\n"
         },
         {
+            "name": "total_planeacion",
+            "description": "TotalPlaneacionController operations for TotalPlaneacion\n"
+        },
+        {
             "name": "unidad_medida",
             "description": "UnidadMedidaController operations for UnidadMedida\n"
+        },
+        {
+            "name": "waybill",
+            "description": "WaybillController operations for Waybill\n"
+        },
+        {
+            "name": "waybill_temporal",
+            "description": "WaybillTemporalController operations for WaybillTemporal\n"
         }
     ]
 }

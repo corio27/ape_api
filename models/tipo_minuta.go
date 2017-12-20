@@ -10,8 +10,9 @@ import (
 )
 
 type TipoMinuta struct {
-	Id     int    `orm:"column(id);auto"`
-	Nombre string `orm:"column(nombre);size(100);null"`
+	Id          int    `orm:"column(id);auto"`
+	Nombre      string `orm:"column(nombre);size(100);null"`
+	Abreviacion string `orm:"column(abreviacion);size(45);null"`
 }
 
 func (t *TipoMinuta) TableName() string {

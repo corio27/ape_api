@@ -10,7 +10,7 @@ import (
 )
 
 type ComplementoInstitucion struct {
-	Id            int `orm:"column(id);auto"`
+	Id            int `orm:"column(id);pk"`
 	ComplementoId int `orm:"column(complemento_id);null"`
 	Cantidad      int `orm:"column(cantidad);null"`
 	InstitucionId int `orm:"column(institucion_id);null"`

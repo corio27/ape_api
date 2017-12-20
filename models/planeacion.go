@@ -5,16 +5,30 @@ import (
 	"fmt"
 	"reflect"
 	"strings"
+	"time"
 
 	"github.com/astaxie/beego/orm"
 )
 
 type Planeacion struct {
-	Id                       int `orm:"column(id);auto"`
-	ComplementoInstitucionId int `orm:"column(complemento_institucion_id);null"`
-	ComponentesMenuId        int `orm:"column(componentes_menu_id);null"`
-	ProductosPreparacionId   int `orm:"column(productos_preparacion_id);null"`
-	PesoBruto                int `orm:"column(peso_bruto);null"`
+	Id            int       `orm:"column(id);auto"`
+	InstitucionId int       `orm:"column(institucion_id);null"`
+	Institucion   string    `orm:"column(institucion);size(100);null"`
+	RangoId       int       `orm:"column(rango_id)"`
+	Rango         string    `orm:"column(rango);size(100);null"`
+	MenuId        int       `orm:"column(menu_id)"`
+	Menu          string    `orm:"column(menu);size(45);null"`
+	ComplementoId int       `orm:"column(complemento_id)"`
+	Complemento   string    `orm:"column(complemento);size(100);null"`
+	PreparacionId int       `orm:"column(preparacion_id)"`
+	Preparacion   string    `orm:"column(preparacion);size(100);null"`
+	ProductoId    int       `orm:"column(producto_id)"`
+	Producto      string    `orm:"column(producto);size(100);null"`
+	Cantidad      int       `orm:"column(cantidad);null"`
+	PesoBruto     float64   `orm:"column(peso_bruto);null"`
+	Total         float64   `orm:"column(total);null"`
+	RangoMenu     string    `orm:"column(rango_menu);size(50);null"`
+	Fecha         time.Time `orm:"column(fecha);type(datetime);null"`
 }
 
 func (t *Planeacion) TableName() string {

@@ -10,10 +10,11 @@ import (
 )
 
 type Producto struct {
-	Id             int           `orm:"column(id);auto"`
-	Nombre         string        `orm:"column(nombre);size(100);null"`
-	Codigo         int           `orm:"column(codigo);null"`
-	TipoAlimentoId *TipoAlimento `orm:"column(tipo_alimento_id);rel(fk)"`
+	Id                int           `orm:"column(id);auto"`
+	Nombre            string        `orm:"column(nombre);size(100);null"`
+	Codigo            int           `orm:"column(codigo);null"`
+	TipoAlimentoId    *TipoAlimento `orm:"column(tipo_alimento_id);rel(fk)"`
+	CodigoNutricional int           `orm:"column(codigo_nutricional);null"`
 }
 
 func (t *Producto) TableName() string {
@@ -48,7 +49,7 @@ func GetProductoById(id int) (v *Producto, err error) {
 func GetAllProducto(query map[string]string, fields []string, sortby []string, order []string,
 	offset int64, limit int64) (ml []interface{}, err error) {
 	o := orm.NewOrm()
-	qs := o.QueryTable(new(Producto)).RelatedSel(5)
+	qs := o.QueryTable(new(Producto))
 	// query k=v
 	for k, v := range query {
 		// rewrite dot-notation to Object__Attribute
