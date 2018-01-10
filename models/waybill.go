@@ -21,7 +21,7 @@ type Waybill struct {
 	Origen           string    `orm:"column(origen);size(45);null"`
 	Institucion      string    `orm:"column(institucion);size(255);null"`
 	Direccion        string    `orm:"column(direccion);size(45);null"`
-	CuposMañana      int       `orm:"column(cupos_mañana);null"`
+	CuposManana      int       `orm:"column(cupos_manana);null"`
 	CuposTarde       int       `orm:"column(cupos_tarde);null"`
 	Almuerzo         int       `orm:"column(almuerzo);null"`
 	Menu             string    `orm:"column(menu);size(50);null"`

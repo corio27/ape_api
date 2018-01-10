@@ -1161,6 +1161,121 @@ paths:
           description: '{string} delete success!'
         "403":
           description: id is empty
+  /municipios_proveedor/:
+    get:
+      tags:
+      - municipios_proveedor
+      description: get MunicipiosProveedor
+      operationId: MunicipiosProveedorController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.MunicipiosProveedor'
+        "403":
+          description: ""
+    post:
+      tags:
+      - municipios_proveedor
+      description: create MunicipiosProveedor
+      operationId: MunicipiosProveedorController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for MunicipiosProveedor content
+        required: true
+        schema:
+          $ref: '#/definitions/models.MunicipiosProveedor'
+      responses:
+        "201":
+          description: '{int} models.MunicipiosProveedor'
+        "403":
+          description: body is empty
+  /municipios_proveedor/{id}:
+    get:
+      tags:
+      - municipios_proveedor
+      description: get MunicipiosProveedor by id
+      operationId: MunicipiosProveedorController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.MunicipiosProveedor'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - municipios_proveedor
+      description: update the MunicipiosProveedor
+      operationId: MunicipiosProveedorController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for MunicipiosProveedor content
+        required: true
+        schema:
+          $ref: '#/definitions/models.MunicipiosProveedor'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.MunicipiosProveedor'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - municipios_proveedor
+      description: delete the MunicipiosProveedor
+      operationId: MunicipiosProveedorController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
   /periodo/:
     get:
       tags:
@@ -3605,6 +3720,9 @@ definitions:
       RangoEdadId:
         type: integer
         format: int64
+      TipoMinutaId:
+        type: integer
+        format: int64
   models.Componente:
     title: Componente
     type: object
@@ -3733,6 +3851,18 @@ definitions:
         type: integer
         format: int64
       Nombre:
+        type: string
+  models.MunicipiosProveedor:
+    title: MunicipiosProveedor
+    type: object
+    properties:
+      Id:
+        type: integer
+        format: int64
+      MunicipioId:
+        type: integer
+        format: int64
+      ProveedorId:
         type: string
   models.Periodo:
     title: Periodo
@@ -4077,7 +4207,7 @@ definitions:
       Anio:
         type: integer
         format: int64
-      CuposMañana:
+      CuposManana:
         type: integer
         format: int64
       CuposTarde:
@@ -4211,6 +4341,9 @@ tags:
 - name: municipio
   description: |
     MunicipioController operations for Municipio
+- name: municipios_proveedor
+  description: |
+    MunicipiosProveedorController operations for MunicipiosProveedor
 - name: periodo
   description: |
     PeriodoController operations for Periodo

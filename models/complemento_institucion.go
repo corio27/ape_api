@@ -15,6 +15,7 @@ type ComplementoInstitucion struct {
 	Cantidad      int `orm:"column(cantidad);null"`
 	InstitucionId int `orm:"column(institucion_id);null"`
 	RangoEdadId   int `orm:"column(rango_edad_id);null"`
+	TipoMinutaId  int `orm:"column(tipo_minuta_id);null"`
 }
 
 func (t *ComplementoInstitucion) TableName() string {

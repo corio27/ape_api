@@ -9,7 +9,7 @@ import (
 )
 
 func init() {
-	orm.RegisterDataBase("default", "mysql", "root:esguerra@tcp(127.0.0.1:3306)/pma_pae")
+	orm.RegisterDataBase("default", "mysql", "pma_pae:PM44P1@tcp(127.0.0.1:3306)/pma_pae")
 }
 
 func main() {

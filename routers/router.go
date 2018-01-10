@@ -76,6 +76,12 @@ func init() {
 			),
 		),
 
+		beego.NSNamespace("/municipios_proveedor",
+			beego.NSInclude(
+				&controllers.MunicipiosProveedorController{},
+			),
+		),
+
 		beego.NSNamespace("/periodo",
 			beego.NSInclude(
 				&controllers.PeriodoController{},
