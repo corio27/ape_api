@@ -10,12 +10,12 @@ import (
 )
 
 type ComponentesMenu struct {
-	Id                int `orm:"column(id);auto"`
-	MenuId            int `orm:"column(menu_id);null"`
-	ComponenteId      int `orm:"column(componente_id);null"`
-	TipoComplementoId int `orm:"column(tipo_complemento_id);null"`
-	PreparacionId     int `orm:"column(preparacion_id);null"`
-	TipoMinutaId      int `orm:"column(tipo_minuta_id);null"`
+	Id                int         `orm:"column(id);auto"`
+	MenuId            *Menu       `orm:"column(menu_id);rel(fk)"`
+	ComponenteId      *Componente `orm:"column(componente_id);rel(fk)"`
+	TipoComplementoId int         `orm:"column(tipo_complemento_id);null"`
+	PreparacionId     int         `orm:"column(preparacion_id);null"`
+	TipoMinutaId      int         `orm:"column(tipo_minuta_id);null"`
 }
 
 func (t *ComponentesMenu) TableName() string {
@@ -50,7 +50,7 @@ func GetComponentesMenuById(id int) (v *ComponentesMenu, err error) {
 func GetAllComponentesMenu(query map[string]string, fields []string, sortby []string, order []string,
 	offset int64, limit int64) (ml []interface{}, err error) {
 	o := orm.NewOrm()
-	qs := o.QueryTable(new(ComponentesMenu))
+	qs := o.QueryTable(new(ComponentesMenu)).RelatedSel(2)
 	// query k=v
 	for k, v := range query {
 		// rewrite dot-notation to Object__Attribute

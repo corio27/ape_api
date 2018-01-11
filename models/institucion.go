@@ -5,26 +5,30 @@ import (
 	"fmt"
 	"reflect"
 	"strings"
+	"time"
 
 	"github.com/astaxie/beego/orm"
 )
 
 type Institucion struct {
-	Id                    int     `orm:"column(id);auto"`
-	Nombre                string  `orm:"column(nombre);size(100);null"`
-	CodigoDane            int64   `orm:"column(codigo_dane);null"`
-	TipoInstitucionId     int     `orm:"column(tipo_institucion_id);null"`
-	MunicipioId           int     `orm:"column(municipio_id);null"`
-	EtcId                 int64   `orm:"column(etc_id);null"`
-	CantidadManipuladoras int     `orm:"column(cantidad_manipuladoras);null"`
-	EsPrincipal           int8    `orm:"column(es_principal);null"`
-	CodigoDanePrincipal   int64   `orm:"column(codigo_dane_principal);null"`
-	Descripcion           string  `orm:"column(descripcion);size(45);null"`
-	TipoMinuta            int     `orm:"column(tipo_minuta);null"`
-	TipoModalidad         int     `orm:"column(tipo_modalidad);null"`
-	Latitud               float64 `orm:"column(latitud);null"`
-	Longitud              float64 `orm:"column(longitud);null"`
-	Indicaciones          string  `orm:"column(indicaciones);size(255);null"`
+	Id                    int       `orm:"column(id);auto"`
+	Nombre                string    `orm:"column(nombre);size(100);null"`
+	CodigoDane            int64     `orm:"column(codigo_dane);null"`
+	TipoInstitucionId     int       `orm:"column(tipo_institucion_id);null"`
+	MunicipioId           int       `orm:"column(municipio_id);null"`
+	EtcId                 int64     `orm:"column(etc_id);null"`
+	CantidadManipuladoras int       `orm:"column(cantidad_manipuladoras);null"`
+	EsPrincipal           int8      `orm:"column(es_principal);null"`
+	CodigoDanePrincipal   int64     `orm:"column(codigo_dane_principal);null"`
+	Descripcion           string    `orm:"column(descripcion);size(45);null"`
+	TipoMinuta            int       `orm:"column(tipo_minuta);null"`
+	TipoModalidad         int       `orm:"column(tipo_modalidad);null"`
+	Latitud               float64   `orm:"column(latitud);null"`
+	Longitud              float64   `orm:"column(longitud);null"`
+	Indicaciones          string    `orm:"column(indicaciones);size(255);null"`
+	Estado                int       `orm:"column(estado);null"`
+	FechaRegistro         time.Time `orm:"column(fecha_registro);type(date);null"`
+	FechaActualizacion    time.Time `orm:"column(fecha_actualizacion);type(date);null"`
 }
 
 func (t *Institucion) TableName() string {
@@ -59,7 +63,7 @@ func GetInstitucionById(id int) (v *Institucion, err error) {
 func GetAllInstitucion(query map[string]string, fields []string, sortby []string, order []string,
 	offset int64, limit int64) (ml []interface{}, err error) {
 	o := orm.NewOrm()
-	qs := o.QueryTable(new(Institucion))
+	qs := o.QueryTable(new(Institucion)).RelatedSel(2)
 	// query k=v
 	for k, v := range query {
 		// rewrite dot-notation to Object__Attribute

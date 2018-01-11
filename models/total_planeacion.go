@@ -10,15 +10,19 @@ import (
 )
 
 type TotalPlaneacion struct {
-	Id            int     `orm:"column(id);pk"`
-	InstitucionId int     `orm:"column(institucion_id);null"`
-	Institucion   string  `orm:"column(institucion);size(100);null"`
-	ProductoId    int     `orm:"column(producto_id)"`
-	Producto      string  `orm:"column(producto);size(100);null"`
-	RangoMenu     string  `orm:"column(rango_menu);size(50);null"`
-	Cantidad      int     `orm:"column(cantidad);null"`
-	Peso          float64 `orm:"column(peso);null"`
-	Total         float64 `orm:"column(total);null"`
+	Id            int    `orm:"column(id);pk"`
+	InstitucionId int    `orm:"column(institucion_id);null"`
+	Institucion   string `orm:"column(institucion);size(100);null"`
+	ProductoId    int    `orm:"column(producto_id)"`
+	Producto      string `orm:"column(producto);size(100);null"`
+	RangoMenu     string `orm:"column(rango_menu);size(50);null"`
+	Cantidad      int    `orm:"column(cantidad);null"`
+	Peso          int    `orm:"column(peso);null"`
+	Total         int    `orm:"column(total);null"`
+	CodigoDane    int64  `orm:"column(codigo_dane);null"`
+	Anio          int    `orm:"column(anio)"`
+	Semana        int    `orm:"column(semana)"`
+	Uid           string `orm:"column(uid);size(45);null"`
 }
 
 func (t *TotalPlaneacion) TableName() string {
@@ -53,7 +57,7 @@ func GetTotalPlaneacionById(id int) (v *TotalPlaneacion, err error) {
 func GetAllTotalPlaneacion(query map[string]string, fields []string, sortby []string, order []string,
 	offset int64, limit int64) (ml []interface{}, err error) {
 	o := orm.NewOrm()
-	qs := o.QueryTable(new(TotalPlaneacion))
+	qs := o.QueryTable(new(TotalPlaneacion)).RelatedSel(2)
 	// query k=v
 	for k, v := range query {
 		// rewrite dot-notation to Object__Attribute

@@ -50,7 +50,7 @@ func GetRangosPreparacionProductoById(id int) (v *RangosPreparacionProducto, err
 func GetAllRangosPreparacionProducto(query map[string]string, fields []string, sortby []string, order []string,
 	offset int64, limit int64) (ml []interface{}, err error) {
 	o := orm.NewOrm()
-	qs := o.QueryTable(new(RangosPreparacionProducto))
+	qs := o.QueryTable(new(RangosPreparacionProducto)).RelatedSel(2)
 	// query k=v
 	for k, v := range query {
 		// rewrite dot-notation to Object__Attribute

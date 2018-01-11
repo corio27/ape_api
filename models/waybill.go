@@ -31,6 +31,7 @@ type Waybill struct {
 	Fecha            time.Time `orm:"column(fecha);type(date);null"`
 	EntregaReal      int       `orm:"column(entrega_real);null"`
 	Anio             int       `orm:"column(anio);null"`
+	Uid              string    `orm:"column(uid);size(45);null"`
 }
 
 func (t *Waybill) TableName() string {

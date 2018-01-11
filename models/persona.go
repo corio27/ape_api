@@ -32,6 +32,7 @@ type Persona struct {
 	Etnia                     string    `orm:"column(etnia);size(50);null"`
 	CodigoGrado               int       `orm:"column(codigo_grado);null"`
 	Grado                     string    `orm:"column(grado);size(50);null"`
+	Estado                    string    `orm:"column(estado);size(45);null"`
 }
 
 func (t *Persona) TableName() string {
@@ -66,7 +67,7 @@ func GetPersonaById(id int) (v *Persona, err error) {
 func GetAllPersona(query map[string]string, fields []string, sortby []string, order []string,
 	offset int64, limit int64) (ml []interface{}, err error) {
 	o := orm.NewOrm()
-	qs := o.QueryTable(new(Persona))
+	qs := o.QueryTable(new(Persona)).RelatedSel(2)
 	// query k=v
 	for k, v := range query {
 		// rewrite dot-notation to Object__Attribute

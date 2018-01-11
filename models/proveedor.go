@@ -5,13 +5,17 @@ import (
 	"fmt"
 	"reflect"
 	"strings"
+	"time"
 
 	"github.com/astaxie/beego/orm"
 )
 
 type Proveedor struct {
-	Id     int    `orm:"column(id);auto"`
-	Nombre string `orm:"column(nombre);size(100);null"`
+	Id                 int       `orm:"column(id);auto"`
+	Nombre             string    `orm:"column(nombre);size(100);null"`
+	Estado             int       `orm:"column(estado);null"`
+	FechaRegistro      time.Time `orm:"column(fecha_registro);type(date);null"`
+	FechaActualizacion time.Time `orm:"column(fecha_actualizacion);type(date);null"`
 }
 
 func (t *Proveedor) TableName() string {
@@ -46,7 +50,7 @@ func GetProveedorById(id int) (v *Proveedor, err error) {
 func GetAllProveedor(query map[string]string, fields []string, sortby []string, order []string,
 	offset int64, limit int64) (ml []interface{}, err error) {
 	o := orm.NewOrm()
-	qs := o.QueryTable(new(Proveedor))
+	qs := o.QueryTable(new(Proveedor)).RelatedSel(2)
 	// query k=v
 	for k, v := range query {
 		// rewrite dot-notation to Object__Attribute

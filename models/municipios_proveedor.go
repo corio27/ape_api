@@ -10,9 +10,9 @@ import (
 )
 
 type MunicipiosProveedor struct {
-	Id          int    `orm:"column(id);auto"`
-	MunicipioId int    `orm:"column(municipio_id);null"`
-	ProveedorId string `orm:"column(proveedor_id);size(45);null"`
+	Id          int        `orm:"column(id);auto"`
+	MunicipioId *Municipio `orm:"column(municipio_id);rel(fk)"`
+	ProveedorId *Proveedor `orm:"column(proveedor_id);rel(fk)"`
 }
 
 func (t *MunicipiosProveedor) TableName() string {
@@ -47,7 +47,7 @@ func GetMunicipiosProveedorById(id int) (v *MunicipiosProveedor, err error) {
 func GetAllMunicipiosProveedor(query map[string]string, fields []string, sortby []string, order []string,
 	offset int64, limit int64) (ml []interface{}, err error) {
 	o := orm.NewOrm()
-	qs := o.QueryTable(new(MunicipiosProveedor))
+	qs := o.QueryTable(new(MunicipiosProveedor)).RelatedSel(2)
 	// query k=v
 	for k, v := range query {
 		// rewrite dot-notation to Object__Attribute

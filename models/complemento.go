@@ -5,13 +5,17 @@ import (
 	"fmt"
 	"reflect"
 	"strings"
+	"time"
 
 	"github.com/astaxie/beego/orm"
 )
 
 type Complemento struct {
-	Id     int    `orm:"column(id);pk"`
-	Nombre string `orm:"column(nombre);size(100);null"`
+	Id                 int       `orm:"column(id);auto"`
+	Nombre             string    `orm:"column(nombre);size(100);null"`
+	EstadoId           int       `orm:"column(estado_id);null"`
+	FechaCreacion      time.Time `orm:"column(fecha_creacion);type(date);null"`
+	FechaActualizacion time.Time `orm:"column(fecha_actualizacion);type(date);null"`
 }
 
 func (t *Complemento) TableName() string {
@@ -46,7 +50,7 @@ func GetComplementoById(id int) (v *Complemento, err error) {
 func GetAllComplemento(query map[string]string, fields []string, sortby []string, order []string,
 	offset int64, limit int64) (ml []interface{}, err error) {
 	o := orm.NewOrm()
-	qs := o.QueryTable(new(Complemento))
+	qs := o.QueryTable(new(Complemento)).RelatedSel(2)
 	// query k=v
 	for k, v := range query {
 		// rewrite dot-notation to Object__Attribute

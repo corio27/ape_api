@@ -880,6 +880,179 @@
                 }
             }
         },
+        "/estado/": {
+            "get": {
+                "tags": [
+                    "estado"
+                ],
+                "description": "get Estado",
+                "operationId": "EstadoController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.Estado"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "estado"
+                ],
+                "description": "create Estado",
+                "operationId": "EstadoController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for Estado content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.Estado"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.Estado"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/estado/{id}": {
+            "get": {
+                "tags": [
+                    "estado"
+                ],
+                "description": "get Estado by id",
+                "operationId": "EstadoController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.Estado"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "estado"
+                ],
+                "description": "update the Estado",
+                "operationId": "EstadoController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for Estado content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.Estado"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.Estado"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "estado"
+                ],
+                "description": "delete the Estado",
+                "operationId": "EstadoController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
         "/etc/": {
             "get": {
                 "tags": [
@@ -2264,13 +2437,13 @@
                 }
             }
         },
-        "/planeacion/": {
+        "/plan/": {
             "get": {
                 "tags": [
-                    "planeacion"
+                    "plan"
                 ],
-                "description": "get Planeacion",
-                "operationId": "PlaneacionController.Get All",
+                "description": "get Plan",
+                "operationId": "PlanController.Get All",
                 "parameters": [
                     {
                         "in": "query",
@@ -2313,7 +2486,7 @@
                     "200": {
                         "description": "",
                         "schema": {
-                            "$ref": "#/definitions/models.Planeacion"
+                            "$ref": "#/definitions/models.Plan"
                         }
                     },
                     "403": {
@@ -2323,24 +2496,24 @@
             },
             "post": {
                 "tags": [
-                    "planeacion"
+                    "plan"
                 ],
-                "description": "create Planeacion",
-                "operationId": "PlaneacionController.Post",
+                "description": "create Plan",
+                "operationId": "PlanController.Post",
                 "parameters": [
                     {
                         "in": "body",
                         "name": "body",
-                        "description": "body for Planeacion content",
+                        "description": "body for Plan content",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/models.Planeacion"
+                            "$ref": "#/definitions/models.Plan"
                         }
                     }
                 ],
                 "responses": {
                     "201": {
-                        "description": "{int} models.Planeacion"
+                        "description": "{int} models.Plan"
                     },
                     "403": {
                         "description": "body is empty"
@@ -2348,13 +2521,13 @@
                 }
             }
         },
-        "/planeacion/{id}": {
+        "/plan/{id}": {
             "get": {
                 "tags": [
-                    "planeacion"
+                    "plan"
                 ],
-                "description": "get Planeacion by id",
-                "operationId": "PlaneacionController.Get One",
+                "description": "get Plan by id",
+                "operationId": "PlanController.Get One",
                 "parameters": [
                     {
                         "in": "path",
@@ -2368,7 +2541,7 @@
                     "200": {
                         "description": "",
                         "schema": {
-                            "$ref": "#/definitions/models.Planeacion"
+                            "$ref": "#/definitions/models.Plan"
                         }
                     },
                     "403": {
@@ -2378,10 +2551,10 @@
             },
             "put": {
                 "tags": [
-                    "planeacion"
+                    "plan"
                 ],
-                "description": "update the Planeacion",
-                "operationId": "PlaneacionController.Put",
+                "description": "update the Plan",
+                "operationId": "PlanController.Put",
                 "parameters": [
                     {
                         "in": "path",
@@ -2393,10 +2566,10 @@
                     {
                         "in": "body",
                         "name": "body",
-                        "description": "body for Planeacion content",
+                        "description": "body for Plan content",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/models.Planeacion"
+                            "$ref": "#/definitions/models.Plan"
                         }
                     }
                 ],
@@ -2404,7 +2577,7 @@
                     "200": {
                         "description": "",
                         "schema": {
-                            "$ref": "#/definitions/models.Planeacion"
+                            "$ref": "#/definitions/models.Plan"
                         }
                     },
                     "403": {
@@ -2414,10 +2587,10 @@
             },
             "delete": {
                 "tags": [
-                    "planeacion"
+                    "plan"
                 ],
-                "description": "delete the Planeacion",
-                "operationId": "PlaneacionController.Delete",
+                "description": "delete the Plan",
+                "operationId": "PlanController.Delete",
                 "parameters": [
                     {
                         "in": "path",
@@ -5550,6 +5723,352 @@
                     }
                 }
             }
+        },
+        "/waybill_temporal_cuatro/": {
+            "get": {
+                "tags": [
+                    "waybill_temporal_cuatro"
+                ],
+                "description": "get WaybillTemporalCuatro",
+                "operationId": "WaybillTemporalCuatroController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.WaybillTemporalCuatro"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "waybill_temporal_cuatro"
+                ],
+                "description": "create WaybillTemporalCuatro",
+                "operationId": "WaybillTemporalCuatroController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for WaybillTemporalCuatro content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.WaybillTemporalCuatro"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.WaybillTemporalCuatro"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/waybill_temporal_cuatro/{id}": {
+            "get": {
+                "tags": [
+                    "waybill_temporal_cuatro"
+                ],
+                "description": "get WaybillTemporalCuatro by id",
+                "operationId": "WaybillTemporalCuatroController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.WaybillTemporalCuatro"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "waybill_temporal_cuatro"
+                ],
+                "description": "update the WaybillTemporalCuatro",
+                "operationId": "WaybillTemporalCuatroController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for WaybillTemporalCuatro content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.WaybillTemporalCuatro"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.WaybillTemporalCuatro"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "waybill_temporal_cuatro"
+                ],
+                "description": "delete the WaybillTemporalCuatro",
+                "operationId": "WaybillTemporalCuatroController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
+        },
+        "/waybill_temporal_dos/": {
+            "get": {
+                "tags": [
+                    "waybill_temporal_dos"
+                ],
+                "description": "get WaybillTemporalDos",
+                "operationId": "WaybillTemporalDosController.Get All",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "query",
+                        "description": "Filter. e.g. col1:v1,col2:v2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "fields",
+                        "description": "Fields returned. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "sortby",
+                        "description": "Sorted-by fields. e.g. col1,col2 ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "order",
+                        "description": "Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ...",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "limit",
+                        "description": "Limit the size of result set. Must be an integer",
+                        "type": "string"
+                    },
+                    {
+                        "in": "query",
+                        "name": "offset",
+                        "description": "Start position of result set. Must be an integer",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.WaybillTemporalDos"
+                        }
+                    },
+                    "403": {
+                        "description": ""
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "waybill_temporal_dos"
+                ],
+                "description": "create WaybillTemporalDos",
+                "operationId": "WaybillTemporalDosController.Post",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for WaybillTemporalDos content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.WaybillTemporalDos"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "{int} models.WaybillTemporalDos"
+                    },
+                    "403": {
+                        "description": "body is empty"
+                    }
+                }
+            }
+        },
+        "/waybill_temporal_dos/{id}": {
+            "get": {
+                "tags": [
+                    "waybill_temporal_dos"
+                ],
+                "description": "get WaybillTemporalDos by id",
+                "operationId": "WaybillTemporalDosController.Get One",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The key for staticblock",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.WaybillTemporalDos"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is empty"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "waybill_temporal_dos"
+                ],
+                "description": "update the WaybillTemporalDos",
+                "operationId": "WaybillTemporalDosController.Put",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to update",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "body for WaybillTemporalDos content",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/models.WaybillTemporalDos"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/models.WaybillTemporalDos"
+                        }
+                    },
+                    "403": {
+                        "description": ":id is not int"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "waybill_temporal_dos"
+                ],
+                "description": "delete the WaybillTemporalDos",
+                "operationId": "WaybillTemporalDosController.Delete",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "description": "The id you want to delete",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{string} delete success!"
+                    },
+                    "403": {
+                        "description": "id is empty"
+                    }
+                }
+            }
         }
     },
     "definitions": {
@@ -5557,6 +6076,18 @@
             "title": "Complemento",
             "type": "object",
             "properties": {
+                "EstadoId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "FechaActualizacion": {
+                    "type": "string",
+                    "format": "string"
+                },
+                "FechaCreacion": {
+                    "type": "string",
+                    "format": "string"
+                },
                 "Id": {
                     "type": "integer",
                     "format": "int64"
@@ -5614,16 +6145,14 @@
             "type": "object",
             "properties": {
                 "ComponenteId": {
-                    "type": "integer",
-                    "format": "int64"
+                    "$ref": "#/definitions/models.Componente"
                 },
                 "Id": {
                     "type": "integer",
                     "format": "int64"
                 },
                 "MenuId": {
-                    "type": "integer",
-                    "format": "int64"
+                    "$ref": "#/definitions/models.Menu"
                 },
                 "PreparacionId": {
                     "type": "integer",
@@ -5646,6 +6175,19 @@
                 "CodigoDivipola": {
                     "type": "string"
                 },
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Nombre": {
+                    "type": "string"
+                }
+            }
+        },
+        "models.Estado": {
+            "title": "Estado",
+            "type": "object",
+            "properties": {
                 "Id": {
                     "type": "integer",
                     "format": "int64"
@@ -5691,9 +6233,21 @@
                     "type": "integer",
                     "format": "int32"
                 },
+                "Estado": {
+                    "type": "integer",
+                    "format": "int64"
+                },
                 "EtcId": {
                     "type": "integer",
                     "format": "int64"
+                },
+                "FechaActualizacion": {
+                    "type": "string",
+                    "format": "string"
+                },
+                "FechaRegistro": {
+                    "type": "string",
+                    "format": "string"
                 },
                 "Id": {
                     "type": "integer",
@@ -5786,11 +6340,10 @@
                     "format": "int64"
                 },
                 "MunicipioId": {
-                    "type": "integer",
-                    "format": "int64"
+                    "$ref": "#/definitions/models.Municipio"
                 },
                 "ProveedorId": {
-                    "type": "string"
+                    "$ref": "#/definitions/models.Proveedor"
                 }
             }
         },
@@ -5839,6 +6392,9 @@
                     "format": "int64"
                 },
                 "Email": {
+                    "type": "string"
+                },
+                "Estado": {
                     "type": "string"
                 },
                 "Estrato": {
@@ -5892,24 +6448,46 @@
                 }
             }
         },
-        "models.Planeacion": {
-            "title": "Planeacion",
+        "models.Plan": {
+            "title": "Plan",
             "type": "object",
             "properties": {
-                "Cantidad": {
-                    "type": "integer",
-                    "format": "int64"
-                },
-                "Complemento": {
+                "Abreviacion": {
                     "type": "string"
                 },
-                "ComplementoId": {
+                "Anio": {
                     "type": "integer",
                     "format": "int64"
                 },
-                "Fecha": {
-                    "type": "string",
-                    "format": "string"
+                "CodigoDane": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Departamento": {
+                    "type": "string"
+                },
+                "DepartamentoCodigoDivipola": {
+                    "type": "string"
+                },
+                "DepartamentoId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "DiasAtencion": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Direccion": {
+                    "type": "string"
+                },
+                "Estado": {
+                    "type": "string"
+                },
+                "FechaEntrega": {
+                    "type": "string"
+                },
+                "FechasGeneradas": {
+                    "type": "string"
                 },
                 "Id": {
                     "type": "integer",
@@ -5922,44 +6500,40 @@
                     "type": "integer",
                     "format": "int64"
                 },
-                "Menu": {
-                    "type": "string"
-                },
-                "MenuId": {
+                "MenuFinal": {
                     "type": "integer",
                     "format": "int64"
                 },
-                "PesoBruto": {
-                    "type": "number",
-                    "format": "double"
-                },
-                "Preparacion": {
-                    "type": "string"
-                },
-                "PreparacionId": {
+                "MenuInicial": {
                     "type": "integer",
                     "format": "int64"
                 },
-                "Producto": {
+                "Municipio": {
                     "type": "string"
                 },
-                "ProductoId": {
-                    "type": "integer",
-                    "format": "int64"
-                },
-                "Rango": {
+                "MunicipioCodigoDivipola": {
                     "type": "string"
                 },
-                "RangoId": {
+                "MunicipioId": {
                     "type": "integer",
                     "format": "int64"
                 },
                 "RangoMenu": {
                     "type": "string"
                 },
-                "Total": {
-                    "type": "number",
-                    "format": "double"
+                "Semana": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "TipoMinuta": {
+                    "type": "string"
+                },
+                "TipoMinutaId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Uid": {
+                    "type": "string"
                 }
             }
         },
@@ -5981,16 +6555,14 @@
             "type": "object",
             "properties": {
                 "ComponentesMenuId": {
-                    "type": "integer",
-                    "format": "int64"
+                    "$ref": "#/definitions/models.ComponentesMenu"
                 },
                 "Id": {
                     "type": "integer",
                     "format": "int64"
                 },
                 "PreparacionId": {
-                    "type": "integer",
-                    "format": "int64"
+                    "$ref": "#/definitions/models.Preparacion"
                 }
             }
         },
@@ -6027,12 +6599,10 @@
                     "format": "int64"
                 },
                 "PreparacionId": {
-                    "type": "integer",
-                    "format": "int64"
+                    "$ref": "#/definitions/models.Preparacion"
                 },
                 "ProductoId": {
-                    "type": "integer",
-                    "format": "int64"
+                    "$ref": "#/definitions/models.Producto"
                 }
             }
         },
@@ -6040,6 +6610,14 @@
             "title": "ProductosProveedor",
             "type": "object",
             "properties": {
+                "Estado": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "FechaAplicacion": {
+                    "type": "string",
+                    "format": "string"
+                },
                 "Id": {
                     "type": "integer",
                     "format": "int64"
@@ -6063,6 +6641,18 @@
             "title": "Proveedor",
             "type": "object",
             "properties": {
+                "Estado": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "FechaActualizacion": {
+                    "type": "string",
+                    "format": "string"
+                },
+                "FechaRegistro": {
+                    "type": "string",
+                    "format": "string"
+                },
                 "Id": {
                     "type": "integer",
                     "format": "int64"
@@ -6209,7 +6799,15 @@
             "title": "TotalPlaneacion",
             "type": "object",
             "properties": {
+                "Anio": {
+                    "type": "integer",
+                    "format": "int64"
+                },
                 "Cantidad": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "CodigoDane": {
                     "type": "integer",
                     "format": "int64"
                 },
@@ -6225,8 +6823,8 @@
                     "format": "int64"
                 },
                 "Peso": {
-                    "type": "number",
-                    "format": "double"
+                    "type": "integer",
+                    "format": "int64"
                 },
                 "Producto": {
                     "type": "string"
@@ -6238,9 +6836,16 @@
                 "RangoMenu": {
                     "type": "string"
                 },
+                "Semana": {
+                    "type": "integer",
+                    "format": "int64"
+                },
                 "Total": {
-                    "type": "number",
-                    "format": "double"
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Uid": {
+                    "type": "string"
                 }
             }
         },
@@ -6333,6 +6938,9 @@
                 "TipoAlimento": {
                     "type": "string"
                 },
+                "Uid": {
+                    "type": "string"
+                },
                 "Unidades": {
                     "type": "integer",
                     "format": "int64"
@@ -6343,7 +6951,15 @@
             "title": "WaybillTemporal",
             "type": "object",
             "properties": {
+                "Anio": {
+                    "type": "integer",
+                    "format": "int64"
+                },
                 "Cantidad": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "CodigoDane": {
                     "type": "integer",
                     "format": "int64"
                 },
@@ -6397,19 +7013,220 @@
                     "type": "string"
                 },
                 "Resta": {
-                    "type": "number",
-                    "format": "double"
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Semana": {
+                    "type": "integer",
+                    "format": "int64"
                 },
                 "Sobrante": {
-                    "type": "number",
-                    "format": "double"
+                    "type": "integer",
+                    "format": "int64"
                 },
                 "TipoProducto": {
                     "type": "string"
                 },
                 "Total": {
-                    "type": "number",
-                    "format": "double"
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Uid": {
+                    "type": "string"
+                },
+                "Unidad": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "UnidadId": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            }
+        },
+        "models.WaybillTemporalCuatro": {
+            "title": "WaybillTemporalCuatro",
+            "type": "object",
+            "properties": {
+                "Anio": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Cantidad": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "CodigoDane": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Complemento": {
+                    "type": "string"
+                },
+                "ComplementoId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Estado": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Indicaciones": {
+                    "type": "string"
+                },
+                "Institucion": {
+                    "type": "string"
+                },
+                "InstitucionId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Origen": {
+                    "type": "string"
+                },
+                "OrigenId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Peso": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Presentacion": {
+                    "type": "string"
+                },
+                "Producto": {
+                    "type": "string"
+                },
+                "ProductoId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "RangoMenu": {
+                    "type": "string"
+                },
+                "Resta": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Semana": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Sobrante": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "TipoProducto": {
+                    "type": "string"
+                },
+                "Total": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Uid": {
+                    "type": "string"
+                },
+                "Unidad": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "UnidadId": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            }
+        },
+        "models.WaybillTemporalDos": {
+            "title": "WaybillTemporalDos",
+            "type": "object",
+            "properties": {
+                "Anio": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Cantidad": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "CodigoDane": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Complemento": {
+                    "type": "string"
+                },
+                "ComplementoId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Estado": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Id": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Indicaciones": {
+                    "type": "string"
+                },
+                "Institucion": {
+                    "type": "string"
+                },
+                "InstitucionId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Origen": {
+                    "type": "string"
+                },
+                "OrigenId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Peso": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Presentacion": {
+                    "type": "string"
+                },
+                "Producto": {
+                    "type": "string"
+                },
+                "ProductoId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "RangoMenu": {
+                    "type": "string"
+                },
+                "Resta": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Semana": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Sobrante": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "TipoProducto": {
+                    "type": "string"
+                },
+                "Total": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "Uid": {
+                    "type": "string"
                 },
                 "Unidad": {
                     "type": "integer",
@@ -6444,6 +7261,10 @@
             "description": "DepartamentoController operations for Departamento\n"
         },
         {
+            "name": "estado",
+            "description": "EstadoController operations for Estado\n"
+        },
+        {
             "name": "etc",
             "description": "EtcController operations for Etc\n"
         },
@@ -6476,8 +7297,8 @@
             "description": "PersonaController operations for Persona\n"
         },
         {
-            "name": "planeacion",
-            "description": "PlaneacionController operations for Planeacion\n"
+            "name": "plan",
+            "description": "PlanController operations for Plan\n"
         },
         {
             "name": "preparacion",
@@ -6550,6 +7371,14 @@
         {
             "name": "waybill_temporal",
             "description": "WaybillTemporalController operations for WaybillTemporal\n"
+        },
+        {
+            "name": "waybill_temporal_cuatro",
+            "description": "WaybillTemporalCuatroController operations for WaybillTemporalCuatro\n"
+        },
+        {
+            "name": "waybill_temporal_dos",
+            "description": "WaybillTemporalDosController operations for WaybillTemporalDos\n"
         }
     ]
 }

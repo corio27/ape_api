@@ -46,7 +46,7 @@ func GetTipoAlimentoById(id int) (v *TipoAlimento, err error) {
 func GetAllTipoAlimento(query map[string]string, fields []string, sortby []string, order []string,
 	offset int64, limit int64) (ml []interface{}, err error) {
 	o := orm.NewOrm()
-	qs := o.QueryTable(new(TipoAlimento))
+	qs := o.QueryTable(new(TipoAlimento)).RelatedSel(2)
 	// query k=v
 	for k, v := range query {
 		// rewrite dot-notation to Object__Attribute

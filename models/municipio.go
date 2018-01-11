@@ -48,7 +48,7 @@ func GetMunicipioById(id int) (v *Municipio, err error) {
 func GetAllMunicipio(query map[string]string, fields []string, sortby []string, order []string,
 	offset int64, limit int64) (ml []interface{}, err error) {
 	o := orm.NewOrm()
-	qs := o.QueryTable(new(Municipio))
+	qs := o.QueryTable(new(Municipio)).RelatedSel(2)
 	// query k=v
 	for k, v := range query {
 		// rewrite dot-notation to Object__Attribute

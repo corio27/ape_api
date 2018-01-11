@@ -46,7 +46,7 @@ func GetRangoEdadById(id int) (v *RangoEdad, err error) {
 func GetAllRangoEdad(query map[string]string, fields []string, sortby []string, order []string,
 	offset int64, limit int64) (ml []interface{}, err error) {
 	o := orm.NewOrm()
-	qs := o.QueryTable(new(RangoEdad))
+	qs := o.QueryTable(new(RangoEdad)).RelatedSel(2)
 	// query k=v
 	for k, v := range query {
 		// rewrite dot-notation to Object__Attribute

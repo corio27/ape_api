@@ -48,7 +48,7 @@ func GetPeriodoById(id int) (v *Periodo, err error) {
 func GetAllPeriodo(query map[string]string, fields []string, sortby []string, order []string,
 	offset int64, limit int64) (ml []interface{}, err error) {
 	o := orm.NewOrm()
-	qs := o.QueryTable(new(Periodo))
+	qs := o.QueryTable(new(Periodo)).RelatedSel(2)
 	// query k=v
 	for k, v := range query {
 		// rewrite dot-notation to Object__Attribute

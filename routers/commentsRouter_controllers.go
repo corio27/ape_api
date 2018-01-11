@@ -207,6 +207,46 @@ func init() {
 			MethodParams: param.Make(),
 			Params: nil})
 
+	beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:EstadoController"] = append(beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:EstadoController"],
+		beego.ControllerComments{
+			Method: "Post",
+			Router: `/`,
+			AllowHTTPMethods: []string{"post"},
+			MethodParams: param.Make(),
+			Params: nil})
+
+	beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:EstadoController"] = append(beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:EstadoController"],
+		beego.ControllerComments{
+			Method: "GetAll",
+			Router: `/`,
+			AllowHTTPMethods: []string{"get"},
+			MethodParams: param.Make(),
+			Params: nil})
+
+	beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:EstadoController"] = append(beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:EstadoController"],
+		beego.ControllerComments{
+			Method: "GetOne",
+			Router: `/:id`,
+			AllowHTTPMethods: []string{"get"},
+			MethodParams: param.Make(),
+			Params: nil})
+
+	beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:EstadoController"] = append(beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:EstadoController"],
+		beego.ControllerComments{
+			Method: "Put",
+			Router: `/:id`,
+			AllowHTTPMethods: []string{"put"},
+			MethodParams: param.Make(),
+			Params: nil})
+
+	beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:EstadoController"] = append(beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:EstadoController"],
+		beego.ControllerComments{
+			Method: "Delete",
+			Router: `/:id`,
+			AllowHTTPMethods: []string{"delete"},
+			MethodParams: param.Make(),
+			Params: nil})
+
 	beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:EtcController"] = append(beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:EtcController"],
 		beego.ControllerComments{
 			Method: "Post",
@@ -527,7 +567,7 @@ func init() {
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:PlaneacionController"] = append(beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:PlaneacionController"],
+	beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:PlanController"] = append(beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:PlanController"],
 		beego.ControllerComments{
 			Method: "Post",
 			Router: `/`,
@@ -535,7 +575,7 @@ func init() {
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:PlaneacionController"] = append(beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:PlaneacionController"],
+	beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:PlanController"] = append(beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:PlanController"],
 		beego.ControllerComments{
 			Method: "GetAll",
 			Router: `/`,
@@ -543,7 +583,7 @@ func init() {
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:PlaneacionController"] = append(beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:PlaneacionController"],
+	beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:PlanController"] = append(beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:PlanController"],
 		beego.ControllerComments{
 			Method: "GetOne",
 			Router: `/:id`,
@@ -551,7 +591,7 @@ func init() {
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:PlaneacionController"] = append(beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:PlaneacionController"],
+	beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:PlanController"] = append(beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:PlanController"],
 		beego.ControllerComments{
 			Method: "Put",
 			Router: `/:id`,
@@ -559,7 +599,7 @@ func init() {
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:PlaneacionController"] = append(beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:PlaneacionController"],
+	beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:PlanController"] = append(beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:PlanController"],
 		beego.ControllerComments{
 			Method: "Delete",
 			Router: `/:id`,
@@ -1280,6 +1320,86 @@ func init() {
 			Params: nil})
 
 	beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:WaybillTemporalController"] = append(beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:WaybillTemporalController"],
+		beego.ControllerComments{
+			Method: "Delete",
+			Router: `/:id`,
+			AllowHTTPMethods: []string{"delete"},
+			MethodParams: param.Make(),
+			Params: nil})
+
+	beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:WaybillTemporalCuatroController"] = append(beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:WaybillTemporalCuatroController"],
+		beego.ControllerComments{
+			Method: "Post",
+			Router: `/`,
+			AllowHTTPMethods: []string{"post"},
+			MethodParams: param.Make(),
+			Params: nil})
+
+	beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:WaybillTemporalCuatroController"] = append(beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:WaybillTemporalCuatroController"],
+		beego.ControllerComments{
+			Method: "GetAll",
+			Router: `/`,
+			AllowHTTPMethods: []string{"get"},
+			MethodParams: param.Make(),
+			Params: nil})
+
+	beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:WaybillTemporalCuatroController"] = append(beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:WaybillTemporalCuatroController"],
+		beego.ControllerComments{
+			Method: "GetOne",
+			Router: `/:id`,
+			AllowHTTPMethods: []string{"get"},
+			MethodParams: param.Make(),
+			Params: nil})
+
+	beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:WaybillTemporalCuatroController"] = append(beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:WaybillTemporalCuatroController"],
+		beego.ControllerComments{
+			Method: "Put",
+			Router: `/:id`,
+			AllowHTTPMethods: []string{"put"},
+			MethodParams: param.Make(),
+			Params: nil})
+
+	beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:WaybillTemporalCuatroController"] = append(beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:WaybillTemporalCuatroController"],
+		beego.ControllerComments{
+			Method: "Delete",
+			Router: `/:id`,
+			AllowHTTPMethods: []string{"delete"},
+			MethodParams: param.Make(),
+			Params: nil})
+
+	beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:WaybillTemporalDosController"] = append(beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:WaybillTemporalDosController"],
+		beego.ControllerComments{
+			Method: "Post",
+			Router: `/`,
+			AllowHTTPMethods: []string{"post"},
+			MethodParams: param.Make(),
+			Params: nil})
+
+	beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:WaybillTemporalDosController"] = append(beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:WaybillTemporalDosController"],
+		beego.ControllerComments{
+			Method: "GetAll",
+			Router: `/`,
+			AllowHTTPMethods: []string{"get"},
+			MethodParams: param.Make(),
+			Params: nil})
+
+	beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:WaybillTemporalDosController"] = append(beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:WaybillTemporalDosController"],
+		beego.ControllerComments{
+			Method: "GetOne",
+			Router: `/:id`,
+			AllowHTTPMethods: []string{"get"},
+			MethodParams: param.Make(),
+			Params: nil})
+
+	beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:WaybillTemporalDosController"] = append(beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:WaybillTemporalDosController"],
+		beego.ControllerComments{
+			Method: "Put",
+			Router: `/:id`,
+			AllowHTTPMethods: []string{"put"},
+			MethodParams: param.Make(),
+			Params: nil})
+
+	beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:WaybillTemporalDosController"] = append(beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:WaybillTemporalDosController"],
 		beego.ControllerComments{
 			Method: "Delete",
 			Router: `/:id`,

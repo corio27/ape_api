@@ -46,6 +46,12 @@ func init() {
 			),
 		),
 
+		beego.NSNamespace("/estado",
+			beego.NSInclude(
+				&controllers.EstadoController{},
+			),
+		),
+
 		beego.NSNamespace("/etc",
 			beego.NSInclude(
 				&controllers.EtcController{},
@@ -94,9 +100,9 @@ func init() {
 			),
 		),
 
-		beego.NSNamespace("/planeacion",
+		beego.NSNamespace("/plan",
 			beego.NSInclude(
-				&controllers.PlaneacionController{},
+				&controllers.PlanController{},
 			),
 		),
 
@@ -205,6 +211,18 @@ func init() {
 		beego.NSNamespace("/waybill_temporal",
 			beego.NSInclude(
 				&controllers.WaybillTemporalController{},
+			),
+		),
+
+		beego.NSNamespace("/waybill_temporal_cuatro",
+			beego.NSInclude(
+				&controllers.WaybillTemporalCuatroController{},
+			),
+		),
+
+		beego.NSNamespace("/waybill_temporal_dos",
+			beego.NSInclude(
+				&controllers.WaybillTemporalDosController{},
 			),
 		),
 	)
