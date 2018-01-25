@@ -31,6 +31,7 @@ type Waybill struct {
 	Fecha            time.Time `orm:"column(fecha);type(date);null"`
 	EntregaReal      int       `orm:"column(entrega_real);null"`
 	Anio             int       `orm:"column(anio);null"`
+	CodigoDane       int64     `orm:"column(codigo_dane);null"`
 	Uid              string    `orm:"column(uid);size(45);null"`
 }
 
@@ -66,7 +67,7 @@ func GetWaybillById(id int) (v *Waybill, err error) {
 func GetAllWaybill(query map[string]string, fields []string, sortby []string, order []string,
 	offset int64, limit int64) (ml []interface{}, err error) {
 	o := orm.NewOrm()
-	qs := o.QueryTable(new(Waybill))
+	qs := o.QueryTable(new(Waybill)).RelatedSel(2)
 	// query k=v
 	for k, v := range query {
 		// rewrite dot-notation to Object__Attribute

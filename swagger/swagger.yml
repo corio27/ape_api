@@ -471,6 +471,121 @@ paths:
           description: '{string} delete success!'
         "403":
           description: id is empty
+  /componentes_menu_temp/:
+    get:
+      tags:
+      - componentes_menu_temp
+      description: get ComponentesMenuTemp
+      operationId: ComponentesMenuTempController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.ComponentesMenuTemp'
+        "403":
+          description: ""
+    post:
+      tags:
+      - componentes_menu_temp
+      description: create ComponentesMenuTemp
+      operationId: ComponentesMenuTempController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for ComponentesMenuTemp content
+        required: true
+        schema:
+          $ref: '#/definitions/models.ComponentesMenuTemp'
+      responses:
+        "201":
+          description: '{int} models.ComponentesMenuTemp'
+        "403":
+          description: body is empty
+  /componentes_menu_temp/{id}:
+    get:
+      tags:
+      - componentes_menu_temp
+      description: get ComponentesMenuTemp by id
+      operationId: ComponentesMenuTempController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.ComponentesMenuTemp'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - componentes_menu_temp
+      description: update the ComponentesMenuTemp
+      operationId: ComponentesMenuTempController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for ComponentesMenuTemp content
+        required: true
+        schema:
+          $ref: '#/definitions/models.ComponentesMenuTemp'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.ComponentesMenuTemp'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - componentes_menu_temp
+      description: delete the ComponentesMenuTemp
+      operationId: ComponentesMenuTempController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
   /departamento/:
     get:
       tags:
@@ -575,6 +690,351 @@ paths:
       - departamento
       description: delete the Departamento
       operationId: DepartamentoController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /elemento/:
+    get:
+      tags:
+      - elemento
+      description: get Elemento
+      operationId: ElementoController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Elemento'
+        "403":
+          description: ""
+    post:
+      tags:
+      - elemento
+      description: create Elemento
+      operationId: ElementoController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for Elemento content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Elemento'
+      responses:
+        "201":
+          description: '{int} models.Elemento'
+        "403":
+          description: body is empty
+  /elemento/{id}:
+    get:
+      tags:
+      - elemento
+      description: get Elemento by id
+      operationId: ElementoController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Elemento'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - elemento
+      description: update the Elemento
+      operationId: ElementoController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for Elemento content
+        required: true
+        schema:
+          $ref: '#/definitions/models.Elemento'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.Elemento'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - elemento
+      description: delete the Elemento
+      operationId: ElementoController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /elementos_institucion/:
+    get:
+      tags:
+      - elementos_institucion
+      description: get ElementosInstitucion
+      operationId: ElementosInstitucionController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.ElementosInstitucion'
+        "403":
+          description: ""
+    post:
+      tags:
+      - elementos_institucion
+      description: create ElementosInstitucion
+      operationId: ElementosInstitucionController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for ElementosInstitucion content
+        required: true
+        schema:
+          $ref: '#/definitions/models.ElementosInstitucion'
+      responses:
+        "201":
+          description: '{int} models.ElementosInstitucion'
+        "403":
+          description: body is empty
+  /elementos_institucion/{id}:
+    get:
+      tags:
+      - elementos_institucion
+      description: get ElementosInstitucion by id
+      operationId: ElementosInstitucionController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.ElementosInstitucion'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - elementos_institucion
+      description: update the ElementosInstitucion
+      operationId: ElementosInstitucionController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for ElementosInstitucion content
+        required: true
+        schema:
+          $ref: '#/definitions/models.ElementosInstitucion'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.ElementosInstitucion'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - elementos_institucion
+      description: delete the ElementosInstitucion
+      operationId: ElementosInstitucionController.Delete
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to delete
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} delete success!'
+        "403":
+          description: id is empty
+  /elementos_proveedor/:
+    get:
+      tags:
+      - elementos_proveedor
+      description: get ElementosProveedor
+      operationId: ElementosProveedorController.Get All
+      parameters:
+      - in: query
+        name: query
+        description: Filter. e.g. col1:v1,col2:v2 ...
+        type: string
+      - in: query
+        name: fields
+        description: Fields returned. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: sortby
+        description: Sorted-by fields. e.g. col1,col2 ...
+        type: string
+      - in: query
+        name: order
+        description: Order corresponding to each sortby field, if single value, apply
+          to all sortby fields. e.g. desc,asc ...
+        type: string
+      - in: query
+        name: limit
+        description: Limit the size of result set. Must be an integer
+        type: string
+      - in: query
+        name: offset
+        description: Start position of result set. Must be an integer
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.ElementosProveedor'
+        "403":
+          description: ""
+    post:
+      tags:
+      - elementos_proveedor
+      description: create ElementosProveedor
+      operationId: ElementosProveedorController.Post
+      parameters:
+      - in: body
+        name: body
+        description: body for ElementosProveedor content
+        required: true
+        schema:
+          $ref: '#/definitions/models.ElementosProveedor'
+      responses:
+        "201":
+          description: '{int} models.ElementosProveedor'
+        "403":
+          description: body is empty
+  /elementos_proveedor/{id}:
+    get:
+      tags:
+      - elementos_proveedor
+      description: get ElementosProveedor by id
+      operationId: ElementosProveedorController.Get One
+      parameters:
+      - in: path
+        name: id
+        description: The key for staticblock
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.ElementosProveedor'
+        "403":
+          description: :id is empty
+    put:
+      tags:
+      - elementos_proveedor
+      description: update the ElementosProveedor
+      operationId: ElementosProveedorController.Put
+      parameters:
+      - in: path
+        name: id
+        description: The id you want to update
+        required: true
+        type: string
+      - in: body
+        name: body
+        description: body for ElementosProveedor content
+        required: true
+        schema:
+          $ref: '#/definitions/models.ElementosProveedor'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.ElementosProveedor'
+        "403":
+          description: :id is not int
+    delete:
+      tags:
+      - elementos_proveedor
+      description: delete the ElementosProveedor
+      operationId: ElementosProveedorController.Delete
       parameters:
       - in: path
         name: id
@@ -4092,6 +4552,8 @@ definitions:
     properties:
       ComponenteId:
         $ref: '#/definitions/models.Componente'
+      Estado:
+        type: string
       Id:
         type: integer
         format: int64
@@ -4106,6 +4568,17 @@ definitions:
       TipoMinutaId:
         type: integer
         format: int64
+  models.ComponentesMenuTemp:
+    title: ComponentesMenuTemp
+    type: object
+    properties:
+      ComponenteId:
+        $ref: '#/definitions/models.Componente'
+      Id:
+        type: integer
+        format: int64
+      MenuId:
+        $ref: '#/definitions/models.Menu'
   models.Departamento:
     title: Departamento
     type: object
@@ -4117,6 +4590,56 @@ definitions:
         format: int64
       Nombre:
         type: string
+  models.Elemento:
+    title: Elemento
+    type: object
+    properties:
+      Codigo:
+        type: string
+      Id:
+        type: integer
+        format: int64
+      Nombre:
+        type: string
+      TipoAlimentoId:
+        $ref: '#/definitions/models.TipoAlimento'
+  models.ElementosInstitucion:
+    title: ElementosInstitucion
+    type: object
+    properties:
+      Cantidad:
+        type: integer
+        format: int64
+      ElementoId:
+        type: integer
+        format: int64
+      Id:
+        type: integer
+        format: int64
+      InstitucionId:
+        type: integer
+        format: int64
+  models.ElementosProveedor:
+    title: ElementosProveedor
+    type: object
+    properties:
+      ElementoId:
+        $ref: '#/definitions/models.Elemento'
+      Estado:
+        type: string
+      FechaAplicacion:
+        type: string
+        format: string
+      Id:
+        type: integer
+        format: int64
+      ProveedorId:
+        $ref: '#/definitions/models.Proveedor'
+      UnidadMedidaId:
+        $ref: '#/definitions/models.UnidadMedida'
+      Valor:
+        type: integer
+        format: int64
   models.Estado:
     title: Estado
     type: object
@@ -4381,7 +4904,7 @@ definitions:
     type: object
     properties:
       ComponentesMenuId:
-        $ref: '#/definitions/models.ComponentesMenu'
+        $ref: '#/definitions/models.ComponentesMenuTemp'
       Id:
         type: integer
         format: int64
@@ -4420,8 +4943,7 @@ definitions:
     type: object
     properties:
       Estado:
-        type: integer
-        format: int64
+        type: string
       FechaAplicacion:
         type: string
         format: string
@@ -4610,6 +5132,9 @@ definitions:
         type: integer
         format: int64
       Anio:
+        type: integer
+        format: int64
+      CodigoDane:
         type: integer
         format: int64
       CuposManana:
@@ -4881,9 +5406,21 @@ tags:
 - name: componentes_menu
   description: |
     ComponentesMenuController operations for ComponentesMenu
+- name: componentes_menu_temp
+  description: |
+    ComponentesMenuTempController operations for ComponentesMenuTemp
 - name: departamento
   description: |
     DepartamentoController operations for Departamento
+- name: elemento
+  description: |
+    ElementoController operations for Elemento
+- name: elementos_institucion
+  description: |
+    ElementosInstitucionController operations for ElementosInstitucion
+- name: elementos_proveedor
+  description: |
+    ElementosProveedorController operations for ElementosProveedor
 - name: estado
   description: |
     EstadoController operations for Estado

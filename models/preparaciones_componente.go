@@ -10,9 +10,9 @@ import (
 )
 
 type PreparacionesComponente struct {
-	Id                int              `orm:"column(id);auto"`
-	PreparacionId     *Preparacion     `orm:"column(preparacion_id);rel(fk)"`
-	ComponentesMenuId *ComponentesMenu `orm:"column(componentes_menu_id);rel(fk)"`
+	Id                int                  `orm:"column(id);auto"`
+	PreparacionId     *Preparacion         `orm:"column(preparacion_id);rel(fk)"`
+	ComponentesMenuId *ComponentesMenuTemp `orm:"column(componentes_menu_id);rel(fk)"`
 }
 
 func (t *PreparacionesComponente) TableName() string {

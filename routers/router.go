@@ -40,9 +40,33 @@ func init() {
 			),
 		),
 
+		beego.NSNamespace("/componentes_menu_temp",
+			beego.NSInclude(
+				&controllers.ComponentesMenuTempController{},
+			),
+		),
+
 		beego.NSNamespace("/departamento",
 			beego.NSInclude(
 				&controllers.DepartamentoController{},
+			),
+		),
+
+		beego.NSNamespace("/elemento",
+			beego.NSInclude(
+				&controllers.ElementoController{},
+			),
+		),
+
+		beego.NSNamespace("/elementos_institucion",
+			beego.NSInclude(
+				&controllers.ElementosInstitucionController{},
+			),
+		),
+
+		beego.NSNamespace("/elementos_proveedor",
+			beego.NSInclude(
+				&controllers.ElementosProveedorController{},
 			),
 		),
 

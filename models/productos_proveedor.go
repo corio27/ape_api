@@ -17,7 +17,7 @@ type ProductosProveedor struct {
 	UnidadMedidaId  *UnidadMedida `orm:"column(unidad_medida_id);rel(fk)"`
 	Valor           int           `orm:"column(valor);null"`
 	FechaAplicacion time.Time     `orm:"column(fecha_aplicacion);type(date);null"`
-	Estado          int           `orm:"column(estado);null"`
+	Estado          string        `orm:"column(estado);size(45);null"`
 }
 
 func (t *ProductosProveedor) TableName() string {

@@ -16,6 +16,7 @@ type ComponentesMenu struct {
 	TipoComplementoId int         `orm:"column(tipo_complemento_id);null"`
 	PreparacionId     int         `orm:"column(preparacion_id);null"`
 	TipoMinutaId      int         `orm:"column(tipo_minuta_id);null"`
+	Estado            string      `orm:"column(estado);size(45)"`
 }
 
 func (t *ComponentesMenu) TableName() string {
