@@ -13,7 +13,7 @@ type Plan struct {
 	Id                         int    `orm:"column(id);auto"`
 	Uid                        string `orm:"column(uid);size(45);null"`
 	InstitucionId              int    `orm:"column(institucion_id)"`
-	CodigoDane                 int64  `orm:"column(codigo_dane);null"`
+	CodigoDane                 string `orm:"column(codigo_dane);size(45);null"`
 	Institucion                string `orm:"column(institucion);size(500);null"`
 	RangoMenu                  string `orm:"column(rango_menu);size(45);null"`
 	MenuInicial                int    `orm:"column(menu_inicial);null"`

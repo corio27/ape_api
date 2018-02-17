@@ -7286,8 +7286,7 @@
                     "format": "int64"
                 },
                 "CodigoDane": {
-                    "type": "integer",
-                    "format": "int64"
+                    "type": "string"
                 },
                 "Departamento": {
                     "type": "string"
