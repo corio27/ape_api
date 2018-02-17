@@ -10,31 +10,28 @@ import (
 )
 
 type WaybillTemporal struct {
-	Id            int    `orm:"column(id);pk"`
-	InstitucionId int    `orm:"column(institucion_id);null"`
-	Institucion   string `orm:"column(institucion);size(100);null"`
-	Indicaciones  string `orm:"column(indicaciones);size(255);null"`
-	ComplementoId int    `orm:"column(complemento_id)"`
-	Complemento   string `orm:"column(complemento);size(100);null"`
-	Cantidad      int    `orm:"column(cantidad);null"`
-	Producto      string `orm:"column(producto);size(100);null"`
-	ProductoId    int    `orm:"column(producto_id)"`
-	Total         int    `orm:"column(total);null"`
-	OrigenId      int    `orm:"column(origen_id)"`
-	Origen        string `orm:"column(origen);size(100);null"`
-	TipoProducto  string `orm:"column(tipo_producto);size(100);null"`
-	UnidadId      int    `orm:"column(unidad_id)"`
-	Presentacion  string `orm:"column(presentacion);size(45);null"`
-	Peso          int    `orm:"column(peso);null"`
-	Unidad        int64  `orm:"column(unidad);null"`
-	Sobrante      int    `orm:"column(sobrante);null"`
-	Resta         int    `orm:"column(resta);null"`
-	Estado        int    `orm:"column(estado);null"`
-	RangoMenu     string `orm:"column(rango_menu);size(50);null"`
-	CodigoDane    int64  `orm:"column(codigo_dane);null"`
-	Anio          int    `orm:"column(anio)"`
-	Semana        int    `orm:"column(semana)"`
-	Uid           string `orm:"column(uid);size(45);null"`
+	Id            int     `orm:"column(id);pk"`
+	InstitucionId int     `orm:"column(institucion_id);null"`
+	Institucion   string  `orm:"column(institucion);size(100);null"`
+	Indicaciones  string  `orm:"column(indicaciones);size(255);null"`
+	Producto      string  `orm:"column(producto);size(100);null"`
+	ProductoId    int     `orm:"column(producto_id)"`
+	Total         float64 `orm:"column(total);null"`
+	OrigenId      int     `orm:"column(origen_id)"`
+	Origen        string  `orm:"column(origen);size(100);null"`
+	TipoProducto  string  `orm:"column(tipo_producto);size(100);null"`
+	UnidadId      int     `orm:"column(unidad_id)"`
+	Presentacion  string  `orm:"column(presentacion);size(45);null"`
+	Peso          int     `orm:"column(peso);null"`
+	Unidad        int64   `orm:"column(unidad);null"`
+	Sobrante      int     `orm:"column(sobrante);null"`
+	Resta         int     `orm:"column(resta);null"`
+	Estado        int     `orm:"column(estado);null"`
+	RangoMenu     string  `orm:"column(rango_menu);size(50);null"`
+	CodigoDane    int64   `orm:"column(codigo_dane);null"`
+	Anio          int     `orm:"column(anio)"`
+	Semana        int     `orm:"column(semana)"`
+	Uid           string  `orm:"column(uid);size(45);null"`
 }
 
 func (t *WaybillTemporal) TableName() string {
@@ -69,7 +66,7 @@ func GetWaybillTemporalById(id int) (v *WaybillTemporal, err error) {
 func GetAllWaybillTemporal(query map[string]string, fields []string, sortby []string, order []string,
 	offset int64, limit int64) (ml []interface{}, err error) {
 	o := orm.NewOrm()
-	qs := o.QueryTable(new(WaybillTemporal)).RelatedSel(2)
+	qs := o.QueryTable(new(WaybillTemporal))
 	// query k=v
 	for k, v := range query {
 		// rewrite dot-notation to Object__Attribute

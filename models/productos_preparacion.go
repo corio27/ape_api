@@ -13,6 +13,7 @@ type ProductosPreparacion struct {
 	Id            int          `orm:"column(id);auto"`
 	PreparacionId *Preparacion `orm:"column(preparacion_id);rel(fk)"`
 	ProductoId    *Producto    `orm:"column(producto_id);rel(fk)"`
+	Peso          int          `orm:"column(peso);null"`
 }
 
 func (t *ProductosPreparacion) TableName() string {

@@ -15,7 +15,6 @@ type ComplementoInstitucion struct {
 	Cantidad      int `orm:"column(cantidad);null"`
 	InstitucionId int `orm:"column(institucion_id);null"`
 	RangoEdadId   int `orm:"column(rango_edad_id);null"`
-	TipoMinutaId  int `orm:"column(tipo_minuta_id);null"`
 }
 
 func (t *ComplementoInstitucion) TableName() string {
@@ -50,7 +49,7 @@ func GetComplementoInstitucionById(id int) (v *ComplementoInstitucion, err error
 func GetAllComplementoInstitucion(query map[string]string, fields []string, sortby []string, order []string,
 	offset int64, limit int64) (ml []interface{}, err error) {
 	o := orm.NewOrm()
-	qs := o.QueryTable(new(ComplementoInstitucion)).RelatedSel(2)
+	qs := o.QueryTable(new(ComplementoInstitucion)).RelatedSel(3)
 	// query k=v
 	for k, v := range query {
 		// rewrite dot-notation to Object__Attribute

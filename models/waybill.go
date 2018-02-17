@@ -11,28 +11,42 @@ import (
 )
 
 type Waybill struct {
-	Id               int       `orm:"column(id);pk"`
-	Alimento         string    `orm:"column(alimento);size(45);null"`
-	ProductoId       int       `orm:"column(producto_id);null"`
-	Peso             int       `orm:"column(peso);null"`
-	Presentacion     string    `orm:"column(presentacion);size(45);null"`
-	PesoPresentacion int       `orm:"column(peso_presentacion);null"`
-	Unidades         int       `orm:"column(unidades);null"`
-	Origen           string    `orm:"column(origen);size(45);null"`
-	Institucion      string    `orm:"column(institucion);size(255);null"`
-	Direccion        string    `orm:"column(direccion);size(45);null"`
-	CuposManana      int       `orm:"column(cupos_manana);null"`
-	CuposTarde       int       `orm:"column(cupos_tarde);null"`
-	Almuerzo         int       `orm:"column(almuerzo);null"`
-	Menu             string    `orm:"column(menu);size(50);null"`
-	TipoAlimento     string    `orm:"column(tipo_alimento);size(45);null"`
-	Observacion      string    `orm:"column(observacion);size(255);null"`
-	Semana           int       `orm:"column(semana);null"`
-	Fecha            time.Time `orm:"column(fecha);type(date);null"`
-	EntregaReal      int       `orm:"column(entrega_real);null"`
-	Anio             int       `orm:"column(anio);null"`
-	CodigoDane       int64     `orm:"column(codigo_dane);null"`
-	Uid              string    `orm:"column(uid);size(45);null"`
+	Id                   int       `orm:"column(id);auto"`
+	Alimento             string    `orm:"column(alimento);size(45);null"`
+	ProductoId           int       `orm:"column(producto_id);null"`
+	Peso                 float64   `orm:"column(peso);null"`
+	Presentacion         string    `orm:"column(presentacion);size(45);null"`
+	PesoPresentacion     int       `orm:"column(peso_presentacion);null"`
+	Unidades             int       `orm:"column(unidades);null"`
+	Origen               string    `orm:"column(origen);size(45);null"`
+	Institucion          string    `orm:"column(institucion);size(255);null"`
+	Direccion            string    `orm:"column(direccion);size(100);null"`
+	CuposManana          int       `orm:"column(cupos_manana);null"`
+	CuposTarde           int       `orm:"column(cupos_tarde);null"`
+	Almuerzo             int       `orm:"column(almuerzo);null"`
+	Menu                 string    `orm:"column(menu);size(50);null"`
+	TipoAlimento         string    `orm:"column(tipo_alimento);size(45);null"`
+	Observacion          string    `orm:"column(observacion);size(255);null"`
+	Semana               int       `orm:"column(semana);null"`
+	Fecha                time.Time `orm:"column(fecha);type(date);null"`
+	EntregaReal          int       `orm:"column(entrega_real);null"`
+	Anio                 int       `orm:"column(anio);null"`
+	CodigoDane           string    `orm:"column(codigo_dane);size(45);null"`
+	Uid                  string    `orm:"column(uid);size(45);null"`
+	InstitucionSecuencia int       `orm:"column(institucion_secuencia);null"`
+	Excedente            float64   `orm:"column(excedente);null"`
+	Saldo                float64   `orm:"column(saldo);null"`
+	InstitucionId        int       `orm:"column(institucion_id);null"`
+	NombreRector         string    `orm:"column(nombre_rector);size(255);null"`
+	TelefonoSede         string    `orm:"column(telefono_sede);size(50);null"`
+	Responsable          string    `orm:"column(responsable);size(255);null"`
+	ResponsableTelefono  string    `orm:"column(responsable_telefono);size(50);null"`
+	MonitorZona          string    `orm:"column(monitor_zona);size(255);null"`
+	EmailCoordinador     string    `orm:"column(email_coordinador);size(255);null"`
+	CoordinadorZona      string    `orm:"column(coordinador_zona);size(255);null"`
+	TelefonoCoordinador  string    `orm:"column(telefono_coordinador);size(55);null"`
+	Etc                  string    `orm:"column(etc);size(100);null"`
+	Zona                 string    `orm:"column(zona);size(100);null"`
 }
 
 func (t *Waybill) TableName() string {
@@ -67,7 +81,7 @@ func GetWaybillById(id int) (v *Waybill, err error) {
 func GetAllWaybill(query map[string]string, fields []string, sortby []string, order []string,
 	offset int64, limit int64) (ml []interface{}, err error) {
 	o := orm.NewOrm()
-	qs := o.QueryTable(new(Waybill)).RelatedSel(2)
+	qs := o.QueryTable(new(Waybill))
 	// query k=v
 	for k, v := range query {
 		// rewrite dot-notation to Object__Attribute

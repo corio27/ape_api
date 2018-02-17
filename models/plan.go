@@ -12,14 +12,14 @@ import (
 type Plan struct {
 	Id                         int    `orm:"column(id);auto"`
 	Uid                        string `orm:"column(uid);size(45);null"`
-	InstitucionId              int    `orm:"column(institucion_id);null"`
+	InstitucionId              int    `orm:"column(institucion_id)"`
 	CodigoDane                 int64  `orm:"column(codigo_dane);null"`
 	Institucion                string `orm:"column(institucion);size(500);null"`
 	RangoMenu                  string `orm:"column(rango_menu);size(45);null"`
 	MenuInicial                int    `orm:"column(menu_inicial);null"`
 	MenuFinal                  int    `orm:"column(menu_final);null"`
-	Anio                       int    `orm:"column(anio);null"`
-	Semana                     int    `orm:"column(semana);null"`
+	Anio                       int    `orm:"column(anio)"`
+	Semana                     int    `orm:"column(semana)"`
 	Direccion                  string `orm:"column(direccion);size(500);null"`
 	FechaEntrega               string `orm:"column(fecha_entrega);size(10);null"`
 	TipoMinutaId               int    `orm:"column(tipo_minuta_id);null"`

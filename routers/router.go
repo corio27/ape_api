@@ -172,9 +172,9 @@ func init() {
 			),
 		),
 
-		beego.NSNamespace("/rangos_preparacion_producto",
+		beego.NSNamespace("/rangos_preparacion",
 			beego.NSInclude(
-				&controllers.RangosPreparacionProductoController{},
+				&controllers.RangosPreparacionController{},
 			),
 		),
 

@@ -13,22 +13,34 @@ import (
 type Institucion struct {
 	Id                    int       `orm:"column(id);auto"`
 	Nombre                string    `orm:"column(nombre);size(100);null"`
-	CodigoDane            int64     `orm:"column(codigo_dane);null"`
+	CodigoDane            string    `orm:"column(codigo_dane);size(50);null"`
 	TipoInstitucionId     int       `orm:"column(tipo_institucion_id);null"`
 	MunicipioId           int       `orm:"column(municipio_id);null"`
 	EtcId                 int64     `orm:"column(etc_id);null"`
 	CantidadManipuladoras int       `orm:"column(cantidad_manipuladoras);null"`
 	EsPrincipal           int8      `orm:"column(es_principal);null"`
-	CodigoDanePrincipal   int64     `orm:"column(codigo_dane_principal);null"`
+	CodigoDanePrincipal   string    `orm:"column(codigo_dane_principal);size(50);null"`
 	Descripcion           string    `orm:"column(descripcion);size(45);null"`
 	TipoMinuta            int       `orm:"column(tipo_minuta);null"`
 	TipoModalidad         int       `orm:"column(tipo_modalidad);null"`
 	Latitud               float64   `orm:"column(latitud);null"`
 	Longitud              float64   `orm:"column(longitud);null"`
 	Indicaciones          string    `orm:"column(indicaciones);size(255);null"`
-	Estado                int       `orm:"column(estado);null"`
 	FechaRegistro         time.Time `orm:"column(fecha_registro);type(date);null"`
 	FechaActualizacion    time.Time `orm:"column(fecha_actualizacion);type(date);null"`
+	Estado                string    `orm:"column(estado);size(45);null"`
+	CmRangoCuatro         int       `orm:"column(cm_rango_cuatro);null"`
+	CmRangoSiete          int       `orm:"column(cm_rango_siete);null"`
+	CmRangoTrece          int       `orm:"column(cm_rango_trece);null"`
+	CmRangoDieciocho      int       `orm:"column(cm_rango_dieciocho);null"`
+	CtRangoCuatro         int       `orm:"column(ct_rango_cuatro);null"`
+	CtRangoSiete          int       `orm:"column(ct_rango_siete);null"`
+	CtRangoTrece          int       `orm:"column(ct_rango_trece);null"`
+	CtRangoDieciocho      int       `orm:"column(ct_rango_dieciocho);null"`
+	AlRangoCuatro         int       `orm:"column(al_rango_cuatro);null"`
+	AlRangoSiete          int       `orm:"column(al_rango_siete);null"`
+	AlRangoTrece          int       `orm:"column(al_rango_trece);null"`
+	AlRangoDieciocho      int       `orm:"column(al_rango_dieciocho);null"`
 }
 
 func (t *Institucion) TableName() string {

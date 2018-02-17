@@ -14,6 +14,7 @@ type Municipio struct {
 	Nombre         string `orm:"column(nombre);size(100);null"`
 	DepartamentoId int    `orm:"column(departamento_id)"`
 	CodigoDivipola string `orm:"column(codigo_divipola);size(100);null"`
+	Zona           string `orm:"column(zona);size(255);null"`
 }
 
 func (t *Municipio) TableName() string {

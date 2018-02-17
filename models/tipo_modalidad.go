@@ -46,7 +46,7 @@ func GetTipoModalidadById(id int) (v *TipoModalidad, err error) {
 func GetAllTipoModalidad(query map[string]string, fields []string, sortby []string, order []string,
 	offset int64, limit int64) (ml []interface{}, err error) {
 	o := orm.NewOrm()
-	qs := o.QueryTable(new(TipoModalidad)).RelatedSel(2)
+	qs := o.QueryTable(new(TipoModalidad))
 	// query k=v
 	for k, v := range query {
 		// rewrite dot-notation to Object__Attribute

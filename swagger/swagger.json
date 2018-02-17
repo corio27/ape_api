@@ -4513,13 +4513,13 @@
                 }
             }
         },
-        "/rangos_preparacion_producto/": {
+        "/rangos_preparacion/": {
             "get": {
                 "tags": [
-                    "rangos_preparacion_producto"
+                    "rangos_preparacion"
                 ],
-                "description": "get RangosPreparacionProducto",
-                "operationId": "RangosPreparacionProductoController.Get All",
+                "description": "get RangosPreparacion",
+                "operationId": "RangosPreparacionController.Get All",
                 "parameters": [
                     {
                         "in": "query",
@@ -4562,7 +4562,7 @@
                     "200": {
                         "description": "",
                         "schema": {
-                            "$ref": "#/definitions/models.RangosPreparacionProducto"
+                            "$ref": "#/definitions/models.RangosPreparacion"
                         }
                     },
                     "403": {
@@ -4572,24 +4572,24 @@
             },
             "post": {
                 "tags": [
-                    "rangos_preparacion_producto"
+                    "rangos_preparacion"
                 ],
-                "description": "create RangosPreparacionProducto",
-                "operationId": "RangosPreparacionProductoController.Post",
+                "description": "create RangosPreparacion",
+                "operationId": "RangosPreparacionController.Post",
                 "parameters": [
                     {
                         "in": "body",
                         "name": "body",
-                        "description": "body for RangosPreparacionProducto content",
+                        "description": "body for RangosPreparacion content",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/models.RangosPreparacionProducto"
+                            "$ref": "#/definitions/models.RangosPreparacion"
                         }
                     }
                 ],
                 "responses": {
                     "201": {
-                        "description": "{int} models.RangosPreparacionProducto"
+                        "description": "{int} models.RangosPreparacion"
                     },
                     "403": {
                         "description": "body is empty"
@@ -4597,13 +4597,13 @@
                 }
             }
         },
-        "/rangos_preparacion_producto/{id}": {
+        "/rangos_preparacion/{id}": {
             "get": {
                 "tags": [
-                    "rangos_preparacion_producto"
+                    "rangos_preparacion"
                 ],
-                "description": "get RangosPreparacionProducto by id",
-                "operationId": "RangosPreparacionProductoController.Get One",
+                "description": "get RangosPreparacion by id",
+                "operationId": "RangosPreparacionController.Get One",
                 "parameters": [
                     {
                         "in": "path",
@@ -4617,7 +4617,7 @@
                     "200": {
                         "description": "",
                         "schema": {
-                            "$ref": "#/definitions/models.RangosPreparacionProducto"
+                            "$ref": "#/definitions/models.RangosPreparacion"
                         }
                     },
                     "403": {
@@ -4627,10 +4627,10 @@
             },
             "put": {
                 "tags": [
-                    "rangos_preparacion_producto"
+                    "rangos_preparacion"
                 ],
-                "description": "update the RangosPreparacionProducto",
-                "operationId": "RangosPreparacionProductoController.Put",
+                "description": "update the RangosPreparacion",
+                "operationId": "RangosPreparacionController.Put",
                 "parameters": [
                     {
                         "in": "path",
@@ -4642,10 +4642,10 @@
                     {
                         "in": "body",
                         "name": "body",
-                        "description": "body for RangosPreparacionProducto content",
+                        "description": "body for RangosPreparacion content",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/models.RangosPreparacionProducto"
+                            "$ref": "#/definitions/models.RangosPreparacion"
                         }
                     }
                 ],
@@ -4653,7 +4653,7 @@
                     "200": {
                         "description": "",
                         "schema": {
-                            "$ref": "#/definitions/models.RangosPreparacionProducto"
+                            "$ref": "#/definitions/models.RangosPreparacion"
                         }
                     },
                     "403": {
@@ -4663,10 +4663,10 @@
             },
             "delete": {
                 "tags": [
-                    "rangos_preparacion_producto"
+                    "rangos_preparacion"
                 ],
-                "description": "delete the RangosPreparacionProducto",
-                "operationId": "RangosPreparacionProductoController.Delete",
+                "description": "delete the RangosPreparacion",
+                "operationId": "RangosPreparacionController.Delete",
                 "parameters": [
                     {
                         "in": "path",
@@ -6812,10 +6812,6 @@
                 "RangoEdadId": {
                     "type": "integer",
                     "format": "int64"
-                },
-                "TipoMinutaId": {
-                    "type": "integer",
-                    "format": "int64"
                 }
             }
         },
@@ -6996,15 +6992,61 @@
             "title": "Institucion",
             "type": "object",
             "properties": {
+                "AlRangoCuatro": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "AlRangoDieciocho": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "AlRangoSiete": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "AlRangoTrece": {
+                    "type": "integer",
+                    "format": "int64"
+                },
                 "CantidadManipuladoras": {
                     "type": "integer",
                     "format": "int64"
                 },
-                "CodigoDane": {
+                "CmRangoCuatro": {
                     "type": "integer",
                     "format": "int64"
                 },
+                "CmRangoDieciocho": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "CmRangoSiete": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "CmRangoTrece": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "CodigoDane": {
+                    "type": "string"
+                },
                 "CodigoDanePrincipal": {
+                    "type": "string"
+                },
+                "CtRangoCuatro": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "CtRangoDieciocho": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "CtRangoSiete": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "CtRangoTrece": {
                     "type": "integer",
                     "format": "int64"
                 },
@@ -7016,8 +7058,7 @@
                     "format": "int32"
                 },
                 "Estado": {
-                    "type": "integer",
-                    "format": "int64"
+                    "type": "string"
                 },
                 "EtcId": {
                     "type": "integer",
@@ -7109,6 +7150,9 @@
                     "format": "int64"
                 },
                 "Nombre": {
+                    "type": "string"
+                },
+                "Zona": {
                     "type": "string"
                 }
             }
@@ -7380,6 +7424,10 @@
                     "type": "integer",
                     "format": "int64"
                 },
+                "Peso": {
+                    "type": "integer",
+                    "format": "int64"
+                },
                 "PreparacionId": {
                     "$ref": "#/definitions/models.Preparacion"
                 },
@@ -7392,13 +7440,6 @@
             "title": "ProductosProveedor",
             "type": "object",
             "properties": {
-                "Estado": {
-                    "type": "string"
-                },
-                "FechaAplicacion": {
-                    "type": "string",
-                    "format": "string"
-                },
                 "Id": {
                     "type": "integer",
                     "format": "int64"
@@ -7456,8 +7497,8 @@
                 }
             }
         },
-        "models.RangosPreparacionProducto": {
-            "title": "RangosPreparacionProducto",
+        "models.RangosPreparacion": {
+            "title": "RangosPreparacion",
             "type": "object",
             "properties": {
                 "Id": {
@@ -7472,15 +7513,19 @@
                     "type": "number",
                     "format": "double"
                 },
-                "PesoNeto": {
-                    "type": "number",
-                    "format": "double"
+                "PreparacionId": {
+                    "type": "integer",
+                    "format": "int64"
                 },
-                "ProductosPreparacionId": {
+                "ProductoId": {
                     "type": "integer",
                     "format": "int64"
                 },
                 "RangoId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "TipoMinutaId": {
                     "type": "integer",
                     "format": "int64"
                 }
@@ -7604,8 +7649,8 @@
                     "format": "int64"
                 },
                 "Peso": {
-                    "type": "integer",
-                    "format": "int64"
+                    "type": "number",
+                    "format": "double"
                 },
                 "Producto": {
                     "type": "string"
@@ -7622,8 +7667,8 @@
                     "format": "int64"
                 },
                 "Total": {
-                    "type": "integer",
-                    "format": "int64"
+                    "type": "number",
+                    "format": "double"
                 },
                 "Uid": {
                     "type": "string"
@@ -7663,8 +7708,10 @@
                     "format": "int64"
                 },
                 "CodigoDane": {
-                    "type": "integer",
-                    "format": "int64"
+                    "type": "string"
+                },
+                "CoordinadorZona": {
+                    "type": "string"
                 },
                 "CuposManana": {
                     "type": "integer",
@@ -7677,9 +7724,19 @@
                 "Direccion": {
                     "type": "string"
                 },
+                "EmailCoordinador": {
+                    "type": "string"
+                },
                 "EntregaReal": {
                     "type": "integer",
                     "format": "int64"
+                },
+                "Etc": {
+                    "type": "string"
+                },
+                "Excedente": {
+                    "type": "number",
+                    "format": "double"
                 },
                 "Fecha": {
                     "type": "string",
@@ -7692,7 +7749,21 @@
                 "Institucion": {
                     "type": "string"
                 },
+                "InstitucionId": {
+                    "type": "integer",
+                    "format": "int64"
+                },
+                "InstitucionSecuencia": {
+                    "type": "integer",
+                    "format": "int64"
+                },
                 "Menu": {
+                    "type": "string"
+                },
+                "MonitorZona": {
+                    "type": "string"
+                },
+                "NombreRector": {
                     "type": "string"
                 },
                 "Observacion": {
@@ -7702,8 +7773,8 @@
                     "type": "string"
                 },
                 "Peso": {
-                    "type": "integer",
-                    "format": "int64"
+                    "type": "number",
+                    "format": "double"
                 },
                 "PesoPresentacion": {
                     "type": "integer",
@@ -7716,9 +7787,25 @@
                     "type": "integer",
                     "format": "int64"
                 },
+                "Responsable": {
+                    "type": "string"
+                },
+                "ResponsableTelefono": {
+                    "type": "string"
+                },
+                "Saldo": {
+                    "type": "number",
+                    "format": "double"
+                },
                 "Semana": {
                     "type": "integer",
                     "format": "int64"
+                },
+                "TelefonoCoordinador": {
+                    "type": "string"
+                },
+                "TelefonoSede": {
+                    "type": "string"
                 },
                 "TipoAlimento": {
                     "type": "string"
@@ -7729,6 +7816,9 @@
                 "Unidades": {
                     "type": "integer",
                     "format": "int64"
+                },
+                "Zona": {
+                    "type": "string"
                 }
             }
         },
@@ -7740,18 +7830,7 @@
                     "type": "integer",
                     "format": "int64"
                 },
-                "Cantidad": {
-                    "type": "integer",
-                    "format": "int64"
-                },
                 "CodigoDane": {
-                    "type": "integer",
-                    "format": "int64"
-                },
-                "Complemento": {
-                    "type": "string"
-                },
-                "ComplementoId": {
                     "type": "integer",
                     "format": "int64"
                 },
@@ -7813,8 +7892,8 @@
                     "type": "string"
                 },
                 "Total": {
-                    "type": "integer",
-                    "format": "int64"
+                    "type": "number",
+                    "format": "double"
                 },
                 "Uid": {
                     "type": "string"
@@ -7934,18 +8013,7 @@
                     "type": "integer",
                     "format": "int64"
                 },
-                "Cantidad": {
-                    "type": "integer",
-                    "format": "int64"
-                },
                 "CodigoDane": {
-                    "type": "integer",
-                    "format": "int64"
-                },
-                "Complemento": {
-                    "type": "string"
-                },
-                "ComplementoId": {
                     "type": "integer",
                     "format": "int64"
                 },
@@ -7975,8 +8043,8 @@
                     "format": "int64"
                 },
                 "Peso": {
-                    "type": "integer",
-                    "format": "int64"
+                    "type": "number",
+                    "format": "double"
                 },
                 "Presentacion": {
                     "type": "string"
@@ -8007,8 +8075,8 @@
                     "type": "string"
                 },
                 "Total": {
-                    "type": "integer",
-                    "format": "int64"
+                    "type": "number",
+                    "format": "double"
                 },
                 "Uid": {
                     "type": "string"
@@ -8130,8 +8198,8 @@
             "description": "RangoEdadController operations for RangoEdad\n"
         },
         {
-            "name": "rangos_preparacion_producto",
-            "description": "RangosPreparacionProductoController operations for RangosPreparacionProducto\n"
+            "name": "rangos_preparacion",
+            "description": "RangosPreparacionController operations for RangosPreparacion\n"
         },
         {
             "name": "rol",

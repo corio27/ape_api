@@ -1047,7 +1047,7 @@ func init() {
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:RangosPreparacionProductoController"] = append(beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:RangosPreparacionProductoController"],
+	beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:RangosPreparacionController"] = append(beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:RangosPreparacionController"],
 		beego.ControllerComments{
 			Method: "Post",
 			Router: `/`,
@@ -1055,7 +1055,7 @@ func init() {
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:RangosPreparacionProductoController"] = append(beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:RangosPreparacionProductoController"],
+	beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:RangosPreparacionController"] = append(beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:RangosPreparacionController"],
 		beego.ControllerComments{
 			Method: "GetAll",
 			Router: `/`,
@@ -1063,7 +1063,7 @@ func init() {
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:RangosPreparacionProductoController"] = append(beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:RangosPreparacionProductoController"],
+	beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:RangosPreparacionController"] = append(beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:RangosPreparacionController"],
 		beego.ControllerComments{
 			Method: "GetOne",
 			Router: `/:id`,
@@ -1071,7 +1071,7 @@ func init() {
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:RangosPreparacionProductoController"] = append(beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:RangosPreparacionProductoController"],
+	beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:RangosPreparacionController"] = append(beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:RangosPreparacionController"],
 		beego.ControllerComments{
 			Method: "Put",
 			Router: `/:id`,
@@ -1079,7 +1079,7 @@ func init() {
 			MethodParams: param.Make(),
 			Params: nil})
 
-	beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:RangosPreparacionProductoController"] = append(beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:RangosPreparacionProductoController"],
+	beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:RangosPreparacionController"] = append(beego.GlobalControllerRouter["github.com/corio27/pae_api/controllers:RangosPreparacionController"],
 		beego.ControllerComments{
 			Method: "Delete",
 			Router: `/:id`,
